@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+venv/
+ENV/
+build/
+dist/
+
+# --- SPACY / NLP ---
+# No subir modelos descargados localmente si los guardas en carpetas
+/models/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- OS / IDEs ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- PDF / Temp ---
+# Por si guardas archivos temporales durante el procesamiento
+*.pdf
+/temp_files/
+
+# --- Logs ---
+*.log
