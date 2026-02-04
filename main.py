@@ -1,13 +1,13 @@
 import asyncio
 import re
 import time
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 from typing import List
 
 import fitz
 import numpy as np
 import spacy
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from sklearn.feature_extraction.text import TfidfVectorizer
 from umap import UMAP
@@ -22,8 +22,8 @@ app.add_middleware(
 )
 
 # Cargamos spaCy optimizado (solo lematización)
-nlp = spacy.load("en_core_web_sm", disable=["ner", "parser"])
-executor = ProcessPoolExecutor()
+nlp = spacy.load("en_core_web_sm", disable=["ner", "parser", "tagger"])
+executor = ThreadPoolExecutor()
 
 
 def clean_paper_noise(text: str) -> str:
@@ -44,7 +44,6 @@ def extract_text(file_bytes: bytes) -> str:
 @app.post("/convert-pdfs/")
 async def convert_pdfs(
     files: List[UploadFile] = File(...),
-    n_top: int = Form(10),
 ):
     # --- RESTRICCIÓN DE SEGURIDAD ---
     if len(files) < 3:
@@ -81,13 +80,18 @@ async def convert_pdfs(
     feature_names = np.array(vectorizer.get_feature_names_out())
 
     # 4. Reducción UMAP (2D)
-    matrix_dense = matrix.toarray()
+    # matrix_dense = matrix.toarray()
     n_neighbors = min(len(processed_texts) - 1, 15)
 
-    reducer = UMAP(n_components=2, n_neighbors=n_neighbors, min_dist=0.1)
-    embedding = reducer.fit_transform(matrix_dense)
+    reducer = UMAP(
+        n_components=2, n_neighbors=n_neighbors, min_dist=0.1, metric="cosine"
+    )
+    embedding = reducer.fit_transform(matrix)
 
-    # 5. Normalización 0-1
+    # reducer = UMAP(n_components=2, n_neighbors=n_neighbors, min_dist=0.1)
+    # embedding = reducer.fit_transform(matrix_dense)
+
+    # 5. Normalización
     mins = embedding.min(axis=0)
     maxs = embedding.max(axis=0)
     # Evitar división por cero si todos los puntos caen en el mismo lugar
@@ -99,7 +103,7 @@ async def convert_pdfs(
     for i in range(len(files)):
         # Obtener pesos TF-IDF del documento i
         row = matrix.getrow(i).toarray()[0]
-        top_indices = row.argsort()[-n_top:][::-1]
+        top_indices = row.argsort()[-30:][::-1]
 
         results.append(
             {
