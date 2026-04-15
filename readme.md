@@ -23,6 +23,7 @@ pip install requirements.txt
 Para correrlo:
 
 ```
+python3 generate_icons.py
 uvicorn main:app --reload
 ```
 

@@ -9,6 +9,7 @@ click==8.3.1
 cloudpathlib==0.23.0
 confection==0.1.5
 cymem==2.0.13
+distro==1.9.0
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl#sha256=1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85
 fastapi==0.128.0
 filelock==3.25.2
@@ -20,6 +21,7 @@ httpx==0.28.1
 huggingface_hub==1.7.2
 idna==3.11
 Jinja2==3.1.6
+jiter==0.13.0
 joblib==1.5.3
 keybert==0.9.0
 llvmlite==0.46.0
@@ -31,6 +33,7 @@ murmurhash==1.0.15
 networkx==3.6.1
 numba==0.63.1
 numpy==2.3.5
+openai==2.30.0
 packaging==26.0
 preshed==3.0.12
 pydantic==2.12.5
@@ -51,6 +54,7 @@ sentence-transformers==5.3.0
 setuptools==80.10.2
 shellingham==1.5.4
 smart_open==7.5.0
+sniffio==1.3.1
 spacy==3.8.11
 spacy-legacy==3.0.12
 spacy-loggers==1.0.5
