@@ -17,7 +17,10 @@ from keybert import KeyBERT
 from openai import AsyncOpenAI
 from pydantic import BaseModel
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import normalize
 from umap import UMAP
+
+from stopwords import ACADEMIC_STOPWORDS
 
 # ── Env ────────────────────────────────────────────────────────────────────────
 load_dotenv()
@@ -82,113 +85,8 @@ executor: ThreadPoolExecutor | None = None
 icon_index: dict[str, list[str]] = {}
 openai_client: AsyncOpenAI | None = None
 
-ACADEMIC_STOPWORDS = {
-    "et",
-    "al",
-    "et al",
-    "ibid",
-    "op cit",
-    "viz",
-    "ie",
-    "eg",
-    "figure",
-    "fig",
-    "table",
-    "section",
-    "appendix",
-    "chapter",
-    "abstract",
-    "introduction",
-    "conclusion",
-    "conclusions",
-    "references",
-    "bibliography",
-    "acknowledgements",
-    "acknowledgments",
-    "discussion",
-    "results",
-    "methods",
-    "methodology",
-    "related work",
-    "background",
-    "overview",
-    "summary",
-    "supplementary",
-    "show",
-    "shows",
-    "shown",
-    "propose",
-    "proposed",
-    "present",
-    "presents",
-    "use",
-    "used",
-    "using",
-    "based",
-    "paper",
-    "work",
-    "study",
-    "approach",
-    "method",
-    "result",
-    "experiment",
-    "experiments",
-    "evaluation",
-    "performance",
-    "analysis",
-    "compare",
-    "compared",
-    "comparison",
-    "dataset",
-    "data",
-    "task",
-    "tasks",
-    "model",
-    "models",
-    "training",
-    "testing",
-    "trained",
-    "test",
-    "train",
-    "number",
-    "set",
-    "state",
-    "also",
-    "however",
-    "therefore",
-    "thus",
-    "hence",
-    "arxiv",
-    "preprint",
-    "journal",
-    "conference",
-    "proceedings",
-    "vol",
-    "volume",
-    "pp",
-    "page",
-    "pages",
-    "doi",
-    "http",
-    "https",
-    "com",
-    "org",
-    "www",
-    "university",
-    "institute",
-    "department",
-    "email",
-    "corresponding",
-    "author",
-    "authors",
-    "ii",
-    "iii",
-    "iv",
-}
-
-
 # ──────────────────────────────────────────────────────────────────────────────
-# Helpers PDF
+# Helpers
 # ──────────────────────────────────────────────────────────────────────────────
 
 
@@ -227,6 +125,15 @@ def deduplicate_keywords(keywords: list, top_n: int = 30) -> list:
 def extract_text_from_bytes(file_bytes: bytes) -> str:
     with fitz.open(stream=file_bytes, filetype="pdf") as doc:
         return " ".join(page.get_text() for page in doc)
+
+
+def cosine_similarity_pair(mat) -> float:
+    """Similitud coseno entre exactamente 2 vectores TF-IDF."""
+    from sklearn.preprocessing import normalize
+
+    normed = normalize(mat, norm="l2")
+    score = float((normed[0] * normed[1]).sum())
+    return round(score, 4)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -322,18 +229,12 @@ class IconRequest(BaseModel):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Endpoint: convertir PDFs
+# Convertir PDFs
 # ──────────────────────────────────────────────────────────────────────────────
 
 
 @app.post("/convert-pdfs/")
 async def convert_pdfs(files: List[UploadFile] = File(...)):
-    if len(files) < 2:
-        raise HTTPException(
-            status_code=400,
-            detail="Se necesitan al menos 2 documentos para la proyección UMAP.",
-        )
-
     t_start = time.perf_counter()
     loop = asyncio.get_event_loop()
 
@@ -401,21 +302,37 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
     print(f"  KeyBERT ({len(files)} docs en paralelo): {time.perf_counter() - t0:.2f}s")
 
     # 6. UMAP — euclidean es ~3x más rápido que cosine en CPU
-    t0 = time.perf_counter()
-    from sklearn.preprocessing import normalize
-
-    tfidf_normalized = normalize(tfidf_matrix, norm="l2")
 
     n_samples = len(files)
-    # UMAP necesita n_neighbors < n_samples, y el layout espectral necesita
-    # al menos n_components+1 muestras. Con ≤3 docs usamos TruncatedSVD como fallback.
-    if n_samples <= 3:
-        from sklearn.decomposition import TruncatedSVD
 
-        embedding = TruncatedSVD(n_components=2, random_state=42).fit_transform(
-            tfidf_normalized
-        )
+    if n_samples == 1:
+        return {
+            "global": global_keywords,
+            "locals": [],
+            "similarity": None,
+        }
+    elif n_samples == 2:
+        similarity = cosine_similarity_pair(tfidf_matrix)
+
+        locals_response = [
+            {
+                "filename": files[i].filename,
+                "x": float(i),  # 0 y 1
+                "y": float(i),  # 0 y 1
+                "keywords": local_tfidf_keywords[i],
+            }
+            for i in range(2)
+        ]
+
+        return {
+            "global": global_keywords,
+            "locals": locals_response,
+            "similarity": similarity,
+        }
     else:
+        t0 = time.perf_counter()
+        tfidf_normalized = normalize(tfidf_matrix, norm="l2")
+
         reducer = UMAP(
             n_components=2,
             n_neighbors=min(n_samples - 1, 15),
@@ -425,27 +342,32 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
             low_memory=True,
         )
         embedding = reducer.fit_transform(tfidf_normalized)
-    print(f"  UMAP: {time.perf_counter() - t0:.2f}s")
 
-    # 7. Normalización 0–1
-    mins = embedding.min(axis=0)
-    maxs = embedding.max(axis=0)
-    ranges = np.where(maxs - mins == 0, 1, maxs - mins)
-    embedding_norm = (embedding - mins) / ranges
+        print(f"  UMAP: {time.perf_counter() - t0:.2f}s")
 
-    # 8. Respuesta
-    locals_response = [
-        {
-            "filename": files[i].filename,
-            "x": round(float(embedding_norm[i, 0]), 4),
-            "y": round(float(embedding_norm[i, 1]), 4),
-            "keywords": local_tfidf_keywords[i],
+        # 7. Normalización 0–1
+        mins = embedding.min(axis=0)
+        maxs = embedding.max(axis=0)
+        ranges = np.where(maxs - mins == 0, 1, maxs - mins)
+        embedding_norm = (embedding - mins) / ranges
+
+        # 8. Respuesta
+        locals_response = [
+            {
+                "filename": files[i].filename,
+                "x": round(float(embedding_norm[i, 0]), 4),
+                "y": round(float(embedding_norm[i, 1]), 4),
+                "keywords": local_tfidf_keywords[i],
+            }
+            for i in range(len(files))
+        ]
+
+        print(f"✅ Total {len(files)} docs: {time.perf_counter() - t_start:.2f}s")
+        return {
+            "global": global_keywords,
+            "locals": locals_response,
+            "similarity": None,
         }
-        for i in range(len(files))
-    ]
-
-    print(f"✅ Total {len(files)} docs: {time.perf_counter() - t_start:.2f}s")
-    return {"global": global_keywords, "locals": locals_response}
 
 
 # ──────────────────────────────────────────────────────────────────────────────
