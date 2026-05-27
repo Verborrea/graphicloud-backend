@@ -7,20 +7,20 @@ from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
 from typing import List
 
+import faiss
 import fitz
-import httpx
 import numpy as np
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from keybert import KeyBERT
-from openai import AsyncOpenAI
 from pydantic import BaseModel
+from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
 from umap import UMAP
 
-from stopwords import ACADEMIC_STOPWORDS
+from stopwords import STOPWORDS
 
 # ── Env ────────────────────────────────────────────────────────────────────────
 load_dotenv()
@@ -29,49 +29,75 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
 os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
 
-ICON_INDEX_PATH = os.getenv("ICON_INDEX_PATH", "icons_index.json")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-
-# Máx de caracteres que le pasamos a KeyBERT por documento.
-# all-MiniLM-L6-v2 tiene ventana de 256 tokens (~1200 chars).
-# Pasar más no mejora la calidad — solo enlentece.
+ICONS_ENRICHED = os.getenv("ICONS_ENRICHED_PATH", "icons_enriched.json")
+ICONS_SVG_DIR = os.getenv("ICONS_SVG_DIR", "icons")
+FAISS_THRESHOLD = float(os.getenv("FAISS_THRESHOLD", "0.40"))
 KEYBERT_MAX_CHARS = 4_000
+
+
+# ── Globals ───────────────────────────────────────────────────────────────────
+kw_model: KeyBERT | None = None
+embed_model: SentenceTransformer | None = None
+executor: ThreadPoolExecutor | None = None
+icon_index: dict[str, list[str]] = {}  # colecciones remotas (Iconify)
+
+# FAISS — íconos locales
+faiss_index: faiss.IndexFlatIP | None = None
+local_icon_names: list[str] = []  # ["brain", "graph", ...]
+local_icon_texts: list[str] = []  # textos enriquecidos
 
 
 # ── Lifespan ───────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global kw_model, executor, icon_index, openai_client
+    global kw_model, embed_model, executor, icon_index, faiss_index
+    global local_icon_names, local_icon_texts
 
-    print("⏳ Cargando modelo KeyBERT...")
-    kw_model = KeyBERT(model="all-MiniLM-L6-v2")
-    # Pre-warm: evita que el primer request pague el JIT del modelo
+    print("Cargando modelo de embeddings (all-MiniLM-L6-v2)...")
+    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    # keyBERT
+    kw_model = KeyBERT(model=embed_model)
     kw_model.extract_keywords("warmup", top_n=1)
-    print("✅ Modelo listo.")
+    print("Modelo listo.")
 
-    # Un hilo por CPU lógica — KeyBERT suelta el GIL durante la inferencia
     cpu_count = os.cpu_count() or 2
     executor = ThreadPoolExecutor(max_workers=cpu_count)
 
-    print("⏳ Cargando índice de íconos...")
+    # iconos FAISS
+    print(f"Construyendo índice FAISS con íconos locales ({ICONS_ENRICHED})...")
     try:
-        with open(ICON_INDEX_PATH, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-        if isinstance(raw, dict):
-            icon_index.update(raw)
-        total = sum(len(v) for v in icon_index.values())
-        print(f"✅ Índice cargado: {len(icon_index)} colecciones, {total} íconos.")
-    except FileNotFoundError:
-        print(f"⚠️  No se encontró {ICON_INDEX_PATH}.")
+        with open(ICONS_ENRICHED, "r", encoding="utf-8") as f:
+            enriched_data: list[dict] = json.load(f)
 
-    openai_client = AsyncOpenAI(api_key=OPENAI_API_KEY)
+        local_icon_names = [item["name"] for item in enriched_data]
+        local_icon_texts = [item["text"] for item in enriched_data]
+
+        vectors = embed_model.encode(
+            local_icon_texts,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        vectors = np.array(vectors, dtype="float32")
+
+        dim = vectors.shape[1]
+        faiss_index = faiss.IndexFlatIP(dim)
+        faiss_index.add(vectors)
+
+        print(f"FAISS listo: {faiss_index.ntotal} íconos locales indexados.")
+        for name, text in zip(local_icon_names, local_icon_texts):
+            print(f"   • {name}: {text[:60]}...")
+
+    except FileNotFoundError:
+        print(f"No se encontró {ICONS_ENRICHED} — búsqueda local deshabilitada.")
 
     yield
 
     executor.shutdown(wait=False)
-    print("🛑 Executor cerrado.")
+    print("Executor cerrado.")
 
 
+# ── App ────────────────────────────────────────────────────────────────────────
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
@@ -80,14 +106,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-kw_model: KeyBERT | None = None
-executor: ThreadPoolExecutor | None = None
-icon_index: dict[str, list[str]] = {}
-openai_client: AsyncOpenAI | None = None
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Helpers
-# ──────────────────────────────────────────────────────────────────────────────
+# Helpers — texto y keywords ────────────────────────────────────────────────────
 
 
 def clean_text(text: str) -> str:
@@ -104,9 +124,9 @@ def is_valid_keyword(kw: str) -> bool:
     kw_lower = kw.lower().strip()
     if len(kw_lower) < 3:
         return False
-    if kw_lower in ACADEMIC_STOPWORDS:
+    if kw_lower in STOPWORDS:
         return False
-    return not any(p in ACADEMIC_STOPWORDS for p in kw_lower.split())
+    return not any(p in STOPWORDS for p in kw_lower.split())
 
 
 def deduplicate_keywords(keywords: list, top_n: int = 30) -> list:
@@ -128,25 +148,16 @@ def extract_text_from_bytes(file_bytes: bytes) -> str:
 
 
 def cosine_similarity_pair(mat) -> float:
-    """Similitud coseno entre exactamente 2 vectores TF-IDF."""
-    from sklearn.preprocessing import normalize
-
     normed = normalize(mat, norm="l2")
-    score = float((normed[0] * normed[1]).sum())
-    return round(score, 4)
+    return round(float((normed[0] * normed[1]).sum()), 4)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# KeyBERT por documento (corre en hilo del executor)
+# KeyBERT (corre en executor para no bloquear el event loop)
 # ──────────────────────────────────────────────────────────────────────────────
 
 
 def extract_keybert_for_doc(text: str, top_n: int = 40) -> list[dict]:
-    """
-    Extrae keywords de UN documento con KeyBERT.
-    Se llama desde el executor para no bloquear el event loop.
-    Trunca el texto a KEYBERT_MAX_CHARS para que sea rápido.
-    """
     truncated = text[:KEYBERT_MAX_CHARS]
     raw = kw_model.extract_keywords(
         truncated,
@@ -164,10 +175,6 @@ def extract_keybert_for_doc(text: str, top_n: int = 40) -> list[dict]:
 
 
 def merge_keybert_results(per_doc: list[list[dict]], top_n: int = 30) -> list[dict]:
-    """
-    Fusiona keywords de todos los documentos.
-    Para cada palabra única, toma el score máximo entre documentos.
-    """
     merged: dict[str, float] = {}
     for doc_kws in per_doc:
         for item in doc_kws:
@@ -182,41 +189,54 @@ def merge_keybert_results(per_doc: list[list[dict]], top_n: int = 30) -> list[di
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Helpers íconos
+# FAISS
 # ──────────────────────────────────────────────────────────────────────────────
 
 
-def find_best_match(candidate: str, names: list[str]) -> str | None:
-    c = candidate.lower().strip()
-    if c in names:
-        return c
-    for name in names:
-        if c in name or name in c:
-            return name
-    c_tokens = set(re.split(r"[-_\s]", c))
-    best, best_score = None, 0
-    for name in names:
-        shared = len(c_tokens & set(re.split(r"[-_\s]", name)))
-        if shared > best_score:
-            best_score, best = shared, name
-    return best if best_score > 0 else None
+def _build_query_text(keywords: list["KeywordItem"]) -> str:
+    top_kws = sorted(keywords, key=lambda x: x.score, reverse=True)[:10]
+    parts = []
+    for kw in top_kws:
+        reps = max(1, round(kw.score * 4))
+        parts.extend([kw.word] * reps)
+    return " ".join(parts)
 
 
-async def fetch_svg_from_iconify(prefix: str, icon: str) -> str | None:
-    url = f"https://api.iconify.design/{prefix}/{icon}.svg"
-    async with httpx.AsyncClient(timeout=10) as client:
-        try:
-            r = await client.get(url)
-            if r.status_code == 200 and "<svg" in r.text:
-                return r.text
-        except httpx.RequestError:
-            pass
-    return None
+def search_local_icon(
+    keywords: list["KeywordItem"],
+) -> tuple[str | None, float, list[dict]]:
+    if faiss_index is None or not local_icon_names:
+        return None, 0.0, []
+
+    query_text = _build_query_text(keywords)
+    query_vec = embed_model.encode([query_text], normalize_embeddings=True)
+    query_vec = np.array(query_vec, dtype="float32")
+
+    k = min(3, len(local_icon_names))
+    scores, indices = faiss_index.search(query_vec, k=k)
+
+    top3 = [
+        {"name": local_icon_names[idx], "score": round(float(s), 4)}
+        for s, idx in zip(scores[0], indices[0])
+        if idx >= 0
+    ]
+
+    best_name = top3[0]["name"] if top3 else None
+    best_score = top3[0]["score"] if top3 else 0.0
+
+    if best_score < FAISS_THRESHOLD:
+        return None, best_score, top3
+
+    return best_name, best_score, top3
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Schemas
-# ──────────────────────────────────────────────────────────────────────────────
+def load_local_svg(icon_name: str) -> str | None:
+    path = os.path.join(ICONS_SVG_DIR, f"{icon_name}.svg")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        return None
 
 
 class KeywordItem(BaseModel):
@@ -228,20 +248,13 @@ class IconRequest(BaseModel):
     keywords: list[KeywordItem]
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Convertir PDFs
-# ──────────────────────────────────────────────────────────────────────────────
-
-
 @app.post("/convert-pdfs/")
 async def convert_pdfs(files: List[UploadFile] = File(...)):
     t_start = time.perf_counter()
     loop = asyncio.get_event_loop()
 
-    # 1. Leer archivos
     file_contents = [await f.read() for f in files]
 
-    # 2. Extracción de texto — paralela en hilos
     async def safe_extract(content: bytes, filename: str) -> str:
         try:
             return await loop.run_in_executor(
@@ -256,9 +269,8 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
     raw_texts = await asyncio.gather(
         *[safe_extract(c, files[i].filename) for i, c in enumerate(file_contents)]
     )
-    print(f"  PDF text extraction: {time.perf_counter() - t0:.2f}s")
+    print(f"PDF text extraction: {time.perf_counter() - t0:.2f}s")
 
-    # 3. Limpieza
     clean_texts = [clean_text(t) for t in raw_texts]
     for i, text in enumerate(clean_texts):
         if not text.strip():
@@ -267,7 +279,6 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
                 detail=f"'{files[i].filename}' no tiene texto extraíble (¿PDF escaneado sin OCR?).",
             )
 
-    # 4. TF-IDF — keywords LOCALES (rápido, en el event loop está bien)
     t0 = time.perf_counter()
     vectorizer = TfidfVectorizer(
         max_features=5000,
@@ -288,10 +299,8 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
             if row[j] > 0 and is_valid_keyword(feature_names[j])
         ]
         local_tfidf_keywords.append(deduplicate_keywords(candidates, top_n=30))
-    print(f"  TF-IDF: {time.perf_counter() - t0:.2f}s")
+    print(f"TF-IDF: {time.perf_counter() - t0:.2f}s")
 
-    # 5. KeyBERT — UNO POR DOCUMENTO, en paralelo en el executor
-    #    Lanzamos todos a la vez y esperamos juntos → se solapan en CPU
     t0 = time.perf_counter()
     keybert_tasks = [
         loop.run_in_executor(executor, extract_keybert_for_doc, text)
@@ -301,34 +310,30 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
     global_keywords = merge_keybert_results(per_doc_keybert, top_n=30)
     print(f"  KeyBERT ({len(files)} docs en paralelo): {time.perf_counter() - t0:.2f}s")
 
-    # 6. UMAP — euclidean es ~3x más rápido que cosine en CPU
-
     n_samples = len(files)
 
     if n_samples == 1:
-        return {
-            "global": global_keywords,
-            "locals": [],
-            "similarity": None,
-        }
+        print(f"Total 1 doc: {time.perf_counter() - t_start:.2f}s")
+        return {"global": global_keywords, "locals": [], "similarity": None}
+
     elif n_samples == 2:
         similarity = cosine_similarity_pair(tfidf_matrix)
-
         locals_response = [
             {
                 "filename": files[i].filename,
-                "x": float(i),  # 0 y 1
-                "y": float(i),  # 0 y 1
+                "x": float(i),
+                "y": float(i),
                 "keywords": local_tfidf_keywords[i],
             }
             for i in range(2)
         ]
-
+        print(f"Total 2 docs: {time.perf_counter() - t_start:.2f}s")
         return {
             "global": global_keywords,
             "locals": locals_response,
             "similarity": similarity,
         }
+
     else:
         t0 = time.perf_counter()
         tfidf_normalized = normalize(tfidf_matrix, norm="l2")
@@ -336,22 +341,24 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
         reducer = UMAP(
             n_components=2,
             n_neighbors=min(n_samples - 1, 15),
-            min_dist=0.1,
+            min_dist=0.15,
             metric="euclidean",
             random_state=42,
             low_memory=True,
         )
-        embedding = reducer.fit_transform(tfidf_normalized)
 
-        print(f"  UMAP: {time.perf_counter() - t0:.2f}s")
+        if n_samples == 3:
+            embedding = np.array([[0.1, 0.1], [0.9, 0.9], [0.5, 0.2]])
+        else:
+            embedding = reducer.fit_transform(tfidf_normalized)
 
-        # 7. Normalización 0–1
+        print(f"UMAP: {time.perf_counter() - t0:.2f}s")
+
         mins = embedding.min(axis=0)
         maxs = embedding.max(axis=0)
         ranges = np.where(maxs - mins == 0, 1, maxs - mins)
         embedding_norm = (embedding - mins) / ranges
 
-        # 8. Respuesta
         locals_response = [
             {
                 "filename": files[i].filename,
@@ -361,8 +368,7 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
             }
             for i in range(len(files))
         ]
-
-        print(f"✅ Total {len(files)} docs: {time.perf_counter() - t_start:.2f}s")
+        print(f"Total {len(files)} docs: {time.perf_counter() - t_start:.2f}s")
         return {
             "global": global_keywords,
             "locals": locals_response,
@@ -370,128 +376,49 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
         }
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Endpoint: selección de ícono por keywords
-# ──────────────────────────────────────────────────────────────────────────────
-
-
 @app.post("/select-icon/")
 async def select_icon(body: IconRequest):
-    if not icon_index:
-        raise HTTPException(status_code=503, detail="Índice de íconos no cargado.")
     if not body.keywords:
         raise HTTPException(status_code=400, detail="Se requiere al menos una keyword.")
 
-    sorted_kws = sorted(body.keywords, key=lambda x: x.score, reverse=True)
-    kw_lines = "\n".join(f'  - "{k.word}" (weight: {k.score:.2f})' for k in sorted_kws)
+    if faiss_index is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Índice FAISS no disponible. Verifica que icons_enriched.json exista.",
+        )
+
+    loop = asyncio.get_event_loop()
+    best_name, best_score, top3 = await loop.run_in_executor(
+        executor, search_local_icon, body.keywords
+    )
+
+    if best_name is None:
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "message": "Ningún ícono local supera el umbral de similitud.",
+                "threshold": FAISS_THRESHOLD,
+                "best_score": best_score,
+                "candidates": top3,
+            },
+        )
+
+    svg = load_local_svg(best_name)
+    if svg is None:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Ícono '{best_name}' encontrado en índice pero SVG no existe en '{ICONS_SVG_DIR}/'.",
+        )
+
     avg_score = round(sum(k.score for k in body.keywords) / len(body.keywords), 4)
-    available_prefixes = list(icon_index.keys())
-
-    prompt = f"""You are an icon selection expert. Given weighted concepts, choose the best icon collection and suggest 5 icon name candidates.
-
-Concepts (higher weight = more important):
-{kw_lines}
-
-Available icon collections and their styles:
-- streamline: outline/line icons, broad coverage
-- tabler: clean outline icons, technical/UI focused
-- mdi: Material Design, very broad coverage
-- solar: bold/duotone modern icons
-- lucide: minimal outline, developer-friendly
-- heroicons: simple outline/solid, UI-focused
-- carbon: IBM Carbon, enterprise/data focused
-- fluent: Microsoft Fluent, modern UI
-- material-symbols: Google Material, broad coverage
-- openmoji: colorful emoji-style icons
-
-Rules:
-- Icon names use kebab-case (e.g. "bar-chart", "user-circle", "file-search")
-- Suggest names likely to exist in the chosen collection
-- Prioritize concepts with higher weight
-- Return ONLY valid JSON, no explanation, no markdown
-
-Output format:
-{{"prefix": "<chosen_collection>", "candidates": ["name1", "name2", "name3", "name4", "name5"]}}
-"""
-
-    try:
-        response = await openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            response_format={"type": "json_object"},
-            temperature=0.3,
-            max_tokens=150,
-        )
-    except Exception as e:
-        raise HTTPException(status_code=502, detail=f"Error llamando a OpenAI: {e}")
-
-    raw = response.choices[0].message.content.strip()
-
-    try:
-        gpt_result: dict = json.loads(raw)
-        chosen_prefix: str = gpt_result.get("prefix", "").strip()
-        suggestions: list[str] = gpt_result.get("candidates", [])
-        if not chosen_prefix or not suggestions:
-            raise ValueError("Faltan campos")
-    except Exception:
-        raise HTTPException(
-            status_code=502, detail=f"OpenAI devolvió formato inesperado: {raw}"
-        )
-
-    if chosen_prefix not in icon_index:
-        chosen_prefix = available_prefixes[0]
-
-    collection_icons = icon_index[chosen_prefix]
-    matched, seen = [], set()
-
-    for candidate in suggestions:
-        match = find_best_match(candidate, collection_icons)
-        if match and match not in seen:
-            seen.add(match)
-            matched.append(match)
-        if len(matched) == 3:
-            break
-
-    if not matched:
-        for prefix, icons in icon_index.items():
-            if prefix == chosen_prefix:
-                continue
-            for candidate in suggestions:
-                match = find_best_match(candidate, icons)
-                if match and match not in seen:
-                    seen.add(match)
-                    matched.append(match)
-                    chosen_prefix = prefix
-                    break
-            if matched:
-                break
-
-    if not matched:
-        raise HTTPException(
-            status_code=404, detail=f"No se encontraron íconos para: {suggestions}"
-        )
-
-    best = matched[0]
-    svg = await fetch_svg_from_iconify(chosen_prefix, best)
-    if svg is None:
-        for fallback in matched[1:]:
-            svg = await fetch_svg_from_iconify(chosen_prefix, fallback)
-            if svg:
-                best = fallback
-                break
-
-    if svg is None:
-        raise HTTPException(
-            status_code=502,
-            detail=f"No se pudo obtener SVG para '{chosen_prefix}': {matched}",
-        )
 
     return {
-        "icon": f"{chosen_prefix}:{best}",
+        "icon": f"ph:{best_name}",
         "svg": svg,
-        "score": avg_score,
-        "candidates": [f"{chosen_prefix}:{c}" for c in matched],
-        "gpt_suggestions": suggestions,
+        "score": best_score,
+        "avg_kw_score": avg_score,
+        "source": "local",
+        "candidates": [{"icon": f"ph:{c['name']}", "score": c["score"]} for c in top3],
     }
 
 
