@@ -59,6 +59,10 @@ class IconRequest(BaseModel):
     keywords: list[KeywordItem]
 
 
+class BatchIconRequest(BaseModel):
+    groups: list[list[KeywordItem]]
+
+
 # ── Lifespan ───────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -398,6 +402,41 @@ async def select_icon(body: IconRequest):
         "source": "local",
         "candidates": [{"icon": f"ph:{c['name']}", "score": c["score"]} for c in top3],
     }
+
+
+@app.post("/select-icons-batch/")
+async def select_icons_batch(body: BatchIconRequest):
+    if not body.groups:
+        raise HTTPException(
+            status_code=400, detail="No se enviaron grupos de palabras clave."
+        )
+
+    if turbovec_index is None:
+        raise HTTPException(status_code=503, detail="Índice TurboVec no disponible.")
+
+    results = []
+
+    for keywords in body.groups:
+        if not keywords:
+            results.append({"icon": None, "svg": None, "error": "Grupo vacío"})
+            continue
+
+        best_name, best_score, _ = search_local_icon_turbovec(keywords)
+
+        if best_name is None:
+            results.append({"icon": None, "svg": None, "error": "No superó el umbral"})
+            continue
+
+        svg = load_local_svg(best_name)
+        if svg is None:
+            results.append(
+                {"icon": None, "svg": None, "error": f"SVG '{best_name}' no encontrado"}
+            )
+            continue
+
+        results.append({"icon": f"ph:{best_name}", "svg": svg, "score": best_score})
+
+    return {"icons": results}
 
 
 if __name__ == "__main__":
