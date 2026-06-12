@@ -410,32 +410,32 @@ async def select_icons_batch(body: BatchIconRequest):
         raise HTTPException(
             status_code=400, detail="No se enviaron grupos de palabras clave."
         )
-
     if turbovec_index is None:
         raise HTTPException(status_code=503, detail="Índice TurboVec no disponible.")
 
-    results = []
+    loop = asyncio.get_running_loop()
 
-    for keywords in body.groups:
+    async def process_group(keywords: list[KeywordItem]) -> dict:
         if not keywords:
-            results.append({"icon": None, "svg": None, "error": "Grupo vacío"})
-            continue
+            return {"icon": None, "svg": None, "error": "Grupo vacío"}
 
-        best_name, best_score, _ = search_local_icon_turbovec(keywords)
-
+        best_name, best_score, _ = await loop.run_in_executor(
+            executor, search_local_icon_turbovec, keywords
+        )
         if best_name is None:
-            results.append({"icon": None, "svg": None, "error": "No superó el umbral"})
-            continue
+            return {"icon": None, "svg": None, "error": "No superó el umbral"}
 
-        svg = load_local_svg(best_name)
+        svg = await loop.run_in_executor(executor, load_local_svg, best_name)
         if svg is None:
-            results.append(
-                {"icon": None, "svg": None, "error": f"SVG '{best_name}' no encontrado"}
-            )
-            continue
+            return {
+                "icon": None,
+                "svg": None,
+                "error": f"SVG '{best_name}' no encontrado",
+            }
 
-        results.append({"icon": f"ph:{best_name}", "svg": svg, "score": best_score})
+        return {"icon": f"ph:{best_name}", "svg": svg, "score": best_score}
 
+    results = await asyncio.gather(*[process_group(kws) for kws in body.groups])
     return {"icons": results}
 
 
