@@ -1,0 +1,6050 @@
+[
+  {
+    "name": "acorn",
+    "text": "acorn finances nature weather & nature savings nut vegetable veggies food groceries market"
+  },
+  {
+    "name": "address-book",
+    "text": "address-book communications communication contacts directory roledex"
+  },
+  {
+    "name": "address-book-tabs",
+    "text": "address-book-tabs communications communication contacts directory roledex"
+  },
+  {
+    "name": "air-traffic-control",
+    "text": "air-traffic-control maps & travel airport travel transportation buildings"
+  },
+  {
+    "name": "airplane",
+    "text": "airplane maps & travel objects vehicles airports flights flying planes transit transportation traveling"
+  },
+  {
+    "name": "airplane-in-flight",
+    "text": "airplane-in-flight maps & travel objects vehicles airports flights flying planes transit transportation traveling arrival"
+  },
+  {
+    "name": "airplane-landing",
+    "text": "airplane-landing maps & travel objects vehicles airports flights flying planes transit transportation traveling arrival"
+  },
+  {
+    "name": "airplane-takeoff",
+    "text": "airplane-takeoff maps & travel objects vehicles airports flights flying planes transit transportation traveling departure"
+  },
+  {
+    "name": "airplane-taxiing",
+    "text": "airplane-taxiing maps & travel objects vehicles airports flights flying planes transit transportation traveling arrival"
+  },
+  {
+    "name": "airplane-tilt",
+    "text": "airplane-tilt maps & travel objects vehicles airports flights flying planes transit transportation traveling departure"
+  },
+  {
+    "name": "airplay",
+    "text": "airplay media system apple screencasting television tv"
+  },
+  {
+    "name": "alarm",
+    "text": "alarm system time times timer clock schedule events watch"
+  },
+  {
+    "name": "alien",
+    "text": "alien games ufo space flying saucer extra terrestrial sci-fi"
+  },
+  {
+    "name": "align-bottom",
+    "text": "align-bottom design editor alignment arrangement layout flush bottom"
+  },
+  {
+    "name": "align-bottom-simple",
+    "text": "align-bottom-simple design editor alignment arrangement layout flush bottom"
+  },
+  {
+    "name": "align-center-horizontal",
+    "text": "align-center-horizontal design editor alignment arrangement layout centered middle"
+  },
+  {
+    "name": "align-center-horizontal-simple",
+    "text": "align-center-horizontal-simple design editor alignment arrangement layout centered middle"
+  },
+  {
+    "name": "align-center-vertical",
+    "text": "align-center-vertical design editor alignment arrangement layout centered middle"
+  },
+  {
+    "name": "align-center-vertical-simple",
+    "text": "align-center-vertical-simple design editor alignment arrangement layout centered middle"
+  },
+  {
+    "name": "align-left",
+    "text": "align-left design editor alignment arrangement layout flush left"
+  },
+  {
+    "name": "align-left-simple",
+    "text": "align-left-simple design editor alignment arrangement layout flush left"
+  },
+  {
+    "name": "align-right",
+    "text": "align-right design editor alignment arrangement layout flush right"
+  },
+  {
+    "name": "align-right-simple",
+    "text": "align-right-simple design editor alignment arrangement layout flush right"
+  },
+  {
+    "name": "align-top",
+    "text": "align-top design editor alignment arrangement layout flush top"
+  },
+  {
+    "name": "align-top-simple",
+    "text": "align-top-simple design editor alignment arrangement layout flush top"
+  },
+  {
+    "name": "amazon-logo",
+    "text": "amazon-logo brands ecommerce shopping logos"
+  },
+  {
+    "name": "ambulance",
+    "text": "ambulance health & wellness maps & travel objects first-aid emt medical medicine injury safety emergency doctor vehicles"
+  },
+  {
+    "name": "anchor",
+    "text": "anchor communications maps & travel objects nautical boats ships hope safety insurance"
+  },
+  {
+    "name": "anchor-simple",
+    "text": "anchor-simple communications maps & travel objects nautical boats ships hope safety insurance"
+  },
+  {
+    "name": "android-logo",
+    "text": "android-logo brands technology & development system logos google mobile phone cellular cellphone"
+  },
+  {
+    "name": "angle",
+    "text": "angle design objects geometry trigonometry degrees radians measurement protractor compass arc"
+  },
+  {
+    "name": "angular-logo",
+    "text": "angular-logo brands technology & development framework javascript google web"
+  },
+  {
+    "name": "aperture",
+    "text": "aperture design media photography cameras pictures lens"
+  },
+  {
+    "name": "app-store-logo",
+    "text": "app-store-logo brands macintosh imac iphone ipad macos ios"
+  },
+  {
+    "name": "app-window",
+    "text": "app-window communications system system & devices windows software programs applications"
+  },
+  {
+    "name": "apple-logo",
+    "text": "apple-logo brands macintosh imac iphone ipad macos ios"
+  },
+  {
+    "name": "apple-podcasts-logo",
+    "text": "apple-podcasts-logo brands media macintosh imac iphone ipad macos ios"
+  },
+  {
+    "name": "approximate-equals",
+    "text": "approximate-equals finances technology & development math & finance ≈ is approximately equal to congruent equality equivalent equivalence comparison mathematics arithmetic calculator"
+  },
+  {
+    "name": "archive",
+    "text": "archive office system office & editing saved saving archived archiving archival downloaded downloading"
+  },
+  {
+    "name": "armchair",
+    "text": "armchair objects commerce seat furniture"
+  },
+  {
+    "name": "arrow-arc-left",
+    "text": "arrow-arc-left arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-arc-right",
+    "text": "arrow-arc-right arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-double-up-left",
+    "text": "arrow-bend-double-up-left arrows directional pointer pointing arrowhead reply-all"
+  },
+  {
+    "name": "arrow-bend-double-up-right",
+    "text": "arrow-bend-double-up-right arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-down-left",
+    "text": "arrow-bend-down-left arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-down-right",
+    "text": "arrow-bend-down-right arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-left-down",
+    "text": "arrow-bend-left-down arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-left-up",
+    "text": "arrow-bend-left-up arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-right-down",
+    "text": "arrow-bend-right-down arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-right-up",
+    "text": "arrow-bend-right-up arrows directional pointer pointing arrowhead"
+  },
+  {
+    "name": "arrow-bend-up-left",
+    "text": "back arrow return navigation leftward upward"
+  },
+  {
+    "name": "arrow-bend-up-right",
+    "text": "forward arrow navigation rightward upward"
+  },
+  {
+    "name": "arrow-circle-down",
+    "text": "downward arrow circular navigation download"
+  },
+  {
+    "name": "arrow-circle-down-left",
+    "text": "downward left arrow circular navigation"
+  },
+  {
+    "name": "arrow-circle-down-right",
+    "text": "downward right arrow circular navigation"
+  },
+  {
+    "name": "arrow-circle-left",
+    "text": "leftward arrow circular navigation"
+  },
+  {
+    "name": "arrow-circle-right",
+    "text": "rightward arrow circular navigation"
+  },
+  {
+    "name": "arrow-circle-up",
+    "text": "upward arrow circular navigation upload"
+  },
+  {
+    "name": "arrow-circle-up-left",
+    "text": "upward left arrow circular navigation"
+  },
+  {
+    "name": "arrow-circle-up-right",
+    "text": "upward right arrow circular navigation"
+  },
+  {
+    "name": "arrow-clockwise",
+    "text": "rotate refresh redo update"
+  },
+  {
+    "name": "arrow-counter-clockwise",
+    "text": "undo refresh rotate"
+  },
+  {
+    "name": "arrow-down",
+    "text": "downward arrow navigation"
+  },
+  {
+    "name": "arrow-down-left",
+    "text": "downward left arrow navigation"
+  },
+  {
+    "name": "arrow-down-right",
+    "text": "downward right arrow navigation"
+  },
+  {
+    "name": "arrow-elbow-down-left",
+    "text": "elbow arrow down left navigation"
+  },
+  {
+    "name": "arrow-elbow-down-right",
+    "text": "elbow arrow down right navigation"
+  },
+  {
+    "name": "arrow-elbow-left",
+    "text": "elbow arrow left navigation"
+  },
+  {
+    "name": "arrow-elbow-left-down",
+    "text": "elbow arrow left down navigation"
+  },
+  {
+    "name": "arrow-elbow-left-up",
+    "text": "elbow arrow left up navigation"
+  },
+  {
+    "name": "arrow-elbow-right",
+    "text": "elbow arrow right navigation"
+  },
+  {
+    "name": "arrow-elbow-right-down",
+    "text": "elbow arrow right down navigation"
+  },
+  {
+    "name": "arrow-elbow-right-up",
+    "text": "elbow arrow right up navigation"
+  },
+  {
+    "name": "arrow-elbow-up-left",
+    "text": "elbow arrow up left navigation"
+  },
+  {
+    "name": "arrow-elbow-up-right",
+    "text": "elbow arrow up right navigation"
+  },
+  {
+    "name": "arrow-fat-down",
+    "text": "bold downward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-left",
+    "text": "bold leftward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-line-down",
+    "text": "bold line downward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-line-left",
+    "text": "bold line leftward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-line-right",
+    "text": "bold line rightward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-line-up",
+    "text": "bold line upward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-lines-down",
+    "text": "bold lines downward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-lines-left",
+    "text": "bold lines leftward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-lines-right",
+    "text": "bold lines rightward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-lines-up",
+    "text": "bold lines upward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-right",
+    "text": "bold rightward arrow navigation"
+  },
+  {
+    "name": "arrow-fat-up",
+    "text": "bold upward arrow navigation"
+  },
+  {
+    "name": "arrow-left",
+    "text": "leftward arrow navigation"
+  },
+  {
+    "name": "arrow-line-down",
+    "text": "line downward arrow navigation"
+  },
+  {
+    "name": "arrow-line-down-left",
+    "text": "line downward left arrow navigation"
+  },
+  {
+    "name": "arrow-line-down-right",
+    "text": "line downward right arrow navigation"
+  },
+  {
+    "name": "arrow-line-left",
+    "text": "line leftward arrow navigation"
+  },
+  {
+    "name": "arrow-line-right",
+    "text": "line rightward arrow navigation"
+  },
+  {
+    "name": "arrow-line-up",
+    "text": "line upward arrow navigation"
+  },
+  {
+    "name": "arrow-line-up-left",
+    "text": "line upward left arrow navigation"
+  },
+  {
+    "name": "arrow-line-up-right",
+    "text": "line upward right arrow navigation"
+  },
+  {
+    "name": "arrow-right",
+    "text": "rightward arrow navigation"
+  },
+  {
+    "name": "arrow-square-down",
+    "text": "square downward arrow navigation"
+  },
+  {
+    "name": "arrow-square-down-left",
+    "text": "square downward left arrow navigation"
+  },
+  {
+    "name": "arrow-square-down-right",
+    "text": "square downward right arrow navigation"
+  },
+  {
+    "name": "arrow-square-in",
+    "text": "arrow-square-in arrows import directional pointer inwards inward movement"
+  },
+  {
+    "name": "arrow-square-left",
+    "text": "arrow-square-left arrows directional pointer left navigation back"
+  },
+  {
+    "name": "arrow-square-out",
+    "text": "arrow-square-out arrows export external directional pointer outwards outward movement"
+  },
+  {
+    "name": "arrow-square-right",
+    "text": "arrow-square-right arrows directional pointer right navigation forward"
+  },
+  {
+    "name": "arrow-square-up",
+    "text": "arrow-square-up arrows directional pointer upwards navigation ascend"
+  },
+  {
+    "name": "arrow-square-up-left",
+    "text": "arrow-square-up-left arrows directional pointer diagonal navigation ascend left"
+  },
+  {
+    "name": "arrow-square-up-right",
+    "text": "arrow-square-up-right arrows directional pointer diagonal navigation ascend right"
+  },
+  {
+    "name": "arrow-u-down-left",
+    "text": "arrow-u-down-left arrows directional pointer u-turn return navigation downward left"
+  },
+  {
+    "name": "arrow-u-down-right",
+    "text": "arrow-u-down-right arrows directional pointer u-turn redo navigation downward right"
+  },
+  {
+    "name": "arrow-u-left-down",
+    "text": "arrow-u-left-down arrows directional pointer u-turn return navigation left downward"
+  },
+  {
+    "name": "arrow-u-left-up",
+    "text": "arrow-u-left-up arrows directional pointer u-turn redo navigation left upward"
+  },
+  {
+    "name": "arrow-u-right-down",
+    "text": "arrow-u-right-down arrows directional pointer u-turn return navigation right downward"
+  },
+  {
+    "name": "arrow-u-right-up",
+    "text": "arrow-u-right-up arrows directional pointer u-turn redo navigation right upward"
+  },
+  {
+    "name": "arrow-u-up-left",
+    "text": "arrow-u-up-left arrows directional pointer u-turn return navigation upward left"
+  },
+  {
+    "name": "arrow-u-up-right",
+    "text": "arrow-u-up-right arrows directional pointer u-turn redo navigation upward right"
+  },
+  {
+    "name": "arrow-up",
+    "text": "arrow-up arrows directional pointer upwards navigation ascend"
+  },
+  {
+    "name": "arrow-up-left",
+    "text": "arrow-up-left arrows directional pointer diagonal navigation ascend left"
+  },
+  {
+    "name": "arrow-up-right",
+    "text": "arrow-up-right arrows directional pointer diagonal navigation ascend right"
+  },
+  {
+    "name": "arrows-clockwise",
+    "text": "arrows-clockwise arrows updated directional pointer rotate refresh sync"
+  },
+  {
+    "name": "arrows-counter-clockwise",
+    "text": "arrows-counter-clockwise arrows updated directional pointer rotate undo refresh"
+  },
+  {
+    "name": "arrows-down-up",
+    "text": "arrows-down-up arrows updated directional pointer vertical navigation up down"
+  },
+  {
+    "name": "arrows-horizontal",
+    "text": "arrows-horizontal arrows updated directional pointer horizontal navigation resize left right"
+  },
+  {
+    "name": "arrows-in",
+    "text": "arrows-in arrows updated directional pointer collapse minimize shrink"
+  },
+  {
+    "name": "arrows-in-cardinal",
+    "text": "arrows-in-cardinal arrows updated directional pointer collapse minimize resize"
+  },
+  {
+    "name": "arrows-in-line-horizontal",
+    "text": "arrows-in-line-horizontal arrows design editor updated directional pointer align center"
+  },
+  {
+    "name": "arrows-in-line-vertical",
+    "text": "arrows-in-line-vertical arrows design editor updated directional pointer align center"
+  },
+  {
+    "name": "arrows-in-simple",
+    "text": "arrows-in-simple arrows updated directional pointer collapse minimize"
+  },
+  {
+    "name": "arrows-left-right",
+    "text": "arrows-left-right arrows updated directional pointer horizontal navigation"
+  },
+  {
+    "name": "arrows-merge",
+    "text": "arrows-merge arrows updated arrowheads join combine"
+  },
+  {
+    "name": "arrows-out",
+    "text": "arrows-out arrows updated directional pointer expand fullscreen grow"
+  },
+  {
+    "name": "arrows-out-cardinal",
+    "text": "arrows-out-cardinal arrows updated directional pointer expand fullscreen move"
+  },
+  {
+    "name": "arrows-out-line-horizontal",
+    "text": "arrows-out-line-horizontal arrows design editor updated directional pointer open split"
+  },
+  {
+    "name": "arrows-out-line-vertical",
+    "text": "arrows-out-line-vertical arrows design editor updated directional pointer open split"
+  },
+  {
+    "name": "arrows-out-simple",
+    "text": "arrows-out-simple arrows updated directional pointer expand fullscreen"
+  },
+  {
+    "name": "arrows-split",
+    "text": "arrows-split arrows updated arrowheads fork divide"
+  },
+  {
+    "name": "arrows-vertical",
+    "text": "arrows-vertical arrows updated directional pointer vertical navigation resize up down"
+  },
+  {
+    "name": "article",
+    "text": "article media objects reading writing journals text publication"
+  },
+  {
+    "name": "article-medium",
+    "text": "article-medium media objects updated reading writing journals text publication"
+  },
+  {
+    "name": "article-ny-times",
+    "text": "article-ny-times media objects updated reading writing news publication nyt"
+  },
+  {
+    "name": "caduceus",
+    "text": "caduceus symbol medicine healthcare"
+  },
+  {
+    "name": "asterisk",
+    "text": "asterisk communications communication star bullet point emergency"
+  },
+  {
+    "name": "asterisk-simple",
+    "text": "asterisk-simple communications communication updated star bullet point emergency"
+  },
+  {
+    "name": "at",
+    "text": "at communications email address symbol"
+  },
+  {
+    "name": "atom",
+    "text": "atom technology science atomic nucleus nuclear physics"
+  },
+  {
+    "name": "avocado",
+    "text": "avocado food vegetable fruit healthy nutrition"
+  },
+  {
+    "name": "axe",
+    "text": "axe tools carpentry woodworking construction"
+  },
+  {
+    "name": "baby",
+    "text": "baby health wellness infant child"
+  },
+  {
+    "name": "baby-carriage",
+    "text": "baby-carriage commerce stroller infant child transportation"
+  },
+  {
+    "name": "backpack",
+    "text": "backpack commerce bag travel school"
+  },
+  {
+    "name": "backspace",
+    "text": "backspace system keyboard delete remove"
+  },
+  {
+    "name": "bag",
+    "text": "bag commerce objects suitcase luggage travel storage organization"
+  },
+  {
+    "name": "bag-simple",
+    "text": "bag-simple commerce objects suitcase luggage travel storage organization"
+  },
+  {
+    "name": "balloon",
+    "text": "balloon celebration decoration helium party events festive"
+  },
+  {
+    "name": "bandaids",
+    "text": "bandaids health wellness bandages medical care injury treatment"
+  },
+  {
+    "name": "bank",
+    "text": "bank finances money savings investment accounts transactions"
+  },
+  {
+    "name": "barbell",
+    "text": "barbell fitness gym weights strength training exercise"
+  },
+  {
+    "name": "barcode",
+    "text": "barcode commerce scanning products inventory tracking identification"
+  },
+  {
+    "name": "barn",
+    "text": "barn agriculture farming livestock rural storage"
+  },
+  {
+    "name": "barricade",
+    "text": "barricade construction safety barriers roadblocks security"
+  },
+  {
+    "name": "baseball",
+    "text": "baseball sports game outdoor activities team play"
+  },
+  {
+    "name": "baseball-cap",
+    "text": "baseball-cap fashion clothing sports casual wear"
+  },
+  {
+    "name": "baseball-helmet",
+    "text": "baseball-helmet sports protection safety gear outdoor"
+  },
+  {
+    "name": "basket",
+    "text": "basket shopping cart groceries ecommerce market collection"
+  },
+  {
+    "name": "basketball",
+    "text": "basketball sports game team competition outdoor indoor"
+  },
+  {
+    "name": "bathtub",
+    "text": "bathtub bathroom relaxation hygiene bathing comfort"
+  },
+  {
+    "name": "battery-charging",
+    "text": "battery-charging power devices energy recharge status"
+  },
+  {
+    "name": "battery-charging-vertical",
+    "text": "battery-charging-vertical power devices energy recharge status"
+  },
+  {
+    "name": "battery-empty",
+    "text": "battery-empty power devices energy low status warning"
+  },
+  {
+    "name": "battery-full",
+    "text": "battery-full power devices energy fully charged status"
+  },
+  {
+    "name": "battery-high",
+    "text": "battery-high power devices energy status indicator"
+  },
+  {
+    "name": "battery-low",
+    "text": "battery-low power devices energy low status warning"
+  },
+  {
+    "name": "battery-medium",
+    "text": "battery-medium power devices energy status indicator"
+  },
+  {
+    "name": "battery-plus",
+    "text": "battery-plus power devices energy recharge add capacity"
+  },
+  {
+    "name": "battery-plus-vertical",
+    "text": "battery-plus-vertical power devices energy recharge add capacity"
+  },
+  {
+    "name": "battery-vertical-empty",
+    "text": "battery-vertical-empty power devices energy low status warning"
+  },
+  {
+    "name": "battery-vertical-full",
+    "text": "battery-vertical-full power devices energy fully charged status"
+  },
+  {
+    "name": "battery-vertical-high",
+    "text": "battery-vertical-high power devices energy status indicator"
+  },
+  {
+    "name": "battery-vertical-low",
+    "text": "battery-vertical-low power devices energy low status warning"
+  },
+  {
+    "name": "battery-vertical-medium",
+    "text": "battery-vertical-medium power devices energy status indicator"
+  },
+  {
+    "name": "battery-warning",
+    "text": "battery-warning power devices energy critical low status alert"
+  },
+  {
+    "name": "battery-warning-vertical",
+    "text": "battery-warning-vertical power devices energy critical low status alert"
+  },
+  {
+    "name": "beach-ball",
+    "text": "beach-ball sports games outdoor activities summer fun"
+  },
+  {
+    "name": "beanie",
+    "text": "beanie fashion clothing winter warmth casual wear"
+  },
+  {
+    "name": "bed",
+    "text": "bed accommodation sleeping comfort rest relaxation"
+  },
+  {
+    "name": "beer-bottle",
+    "text": "beer-bottle beverages drinks alcohol dining social"
+  },
+  {
+    "name": "beer-stein",
+    "text": "beer-stein beverages drinks alcohol dining social"
+  },
+  {
+    "name": "behance-logo",
+    "text": "behance-logo branding design portfolio creative showcase"
+  },
+  {
+    "name": "bell",
+    "text": "bell notifications alerts reminders sound signal"
+  },
+  {
+    "name": "bell-ringing",
+    "text": "bell-ringing notifications alerts reminders sound signal"
+  },
+  {
+    "name": "bell-simple",
+    "text": "bell-simple notifications alerts reminders sound signal"
+  },
+  {
+    "name": "bell-simple-ringing",
+    "text": "bell-simple-ringing notifications alerts reminders sound signal"
+  },
+  {
+    "name": "bell-simple-slash",
+    "text": "bell-simple-slash notifications alerts reminders silent disabled"
+  },
+  {
+    "name": "bell-simple-z",
+    "text": "bell-simple-z notifications alerts reminders snooze"
+  },
+  {
+    "name": "bell-slash",
+    "text": "bell-slash notifications alerts reminders silent disabled"
+  },
+  {
+    "name": "bell-z",
+    "text": "bell-z notifications alerts reminders snooze"
+  },
+  {
+    "name": "belt",
+    "text": "belt fashion clothing accessories style"
+  },
+  {
+    "name": "bezier-curve",
+    "text": "bezier-curve design graphics vector shapes drawing"
+  },
+  {
+    "name": "bicycle",
+    "text": "bicycle transportation fitness cycling commuting outdoor"
+  },
+  {
+    "name": "binary",
+    "text": "binary technology programming digital data coding"
+  },
+  {
+    "name": "binoculars",
+    "text": "binoculars exploration nature viewing search discover"
+  },
+  {
+    "name": "biohazard",
+    "text": "biohazard health safety warnings contamination toxic hazard risk alert"
+  },
+  {
+    "name": "bird",
+    "text": "bird nature wildlife animals avian species outdoor"
+  },
+  {
+    "name": "blueprint",
+    "text": "blueprint design architecture planning layout schematics construction"
+  },
+  {
+    "name": "bluetooth",
+    "text": "bluetooth wireless technology connectivity devices pairing"
+  },
+  {
+    "name": "bluetooth-connected",
+    "text": "bluetooth-connected wireless devices connectivity paired active"
+  },
+  {
+    "name": "bluetooth-slash",
+    "text": "bluetooth-slash wireless devices connectivity disabled disconnected"
+  },
+  {
+    "name": "bluetooth-x",
+    "text": "bluetooth-x wireless devices connectivity errors failure"
+  },
+  {
+    "name": "boat",
+    "text": "boat travel transportation maritime sailing watercraft"
+  },
+  {
+    "name": "bomb",
+    "text": "bomb explosive weapon military danger threat"
+  },
+  {
+    "name": "bone",
+    "text": "bone anatomy health pets veterinary dog"
+  },
+  {
+    "name": "book",
+    "text": "book reading literature education knowledge library"
+  },
+  {
+    "name": "book-bookmark",
+    "text": "book-bookmark reading favorites saved education library"
+  },
+  {
+    "name": "book-open",
+    "text": "book-open reading education literature open library"
+  },
+  {
+    "name": "book-open-text",
+    "text": "book-open-text reading education text documents library"
+  },
+  {
+    "name": "book-open-user",
+    "text": "book-open-user reading education personalized library"
+  },
+  {
+    "name": "bookmark",
+    "text": "bookmark reading favorites saved education library"
+  },
+  {
+    "name": "bookmark-simple",
+    "text": "bookmark-simple reading favorites saved education library"
+  },
+  {
+    "name": "bookmarks",
+    "text": "bookmarks reading favorites saved education library"
+  },
+  {
+    "name": "bookmarks-simple",
+    "text": "bookmarks-simple reading favorites saved education library"
+  },
+  {
+    "name": "books",
+    "text": "books reading literature education library collection"
+  },
+  {
+    "name": "boot",
+    "text": "boot footwear outdoor hiking sports"
+  },
+  {
+    "name": "boules",
+    "text": "boules games sports outdoor pétanque leisure"
+  },
+  {
+    "name": "bounding-box",
+    "text": "bounding-box design layout graphics dimensions"
+  },
+  {
+    "name": "bowl-food",
+    "text": "bowl-food dining meal restaurants cuisine food"
+  },
+  {
+    "name": "bowl-steam",
+    "text": "bowl-steam dining meal hot food restaurants"
+  },
+  {
+    "name": "bowling-ball",
+    "text": "bowling-ball sports games leisure alley"
+  },
+  {
+    "name": "archive-box",
+    "text": "archive-box storage organization documents files"
+  },
+  {
+    "name": "box-arrow-up",
+    "text": "box-arrow-up upload data transfer archival"
+  },
+  {
+    "name": "boxing-glove",
+    "text": "boxing-glove sports fitness combat training"
+  },
+  {
+    "name": "brackets-angle",
+    "text": "brackets-angle programming code syntax markup"
+  },
+  {
+    "name": "brackets-curly",
+    "text": "brackets-curly programming code syntax curly braces"
+  },
+  {
+    "name": "brackets-round",
+    "text": "brackets-round programming code syntax parentheses"
+  },
+  {
+    "name": "brackets-square",
+    "text": "brackets-square programming code syntax arrays"
+  },
+  {
+    "name": "brain",
+    "text": "brain health wellness cognition intelligence mental neural network model reasoning thinking"
+  },
+  {
+    "name": "brandy",
+    "text": "brandy beverage alcohol drinks cocktail bars"
+  },
+  {
+    "name": "bread",
+    "text": "bread food bakery meal sandwich slice"
+  },
+  {
+    "name": "bridge",
+    "text": "bridge infrastructure travel transportation connection"
+  },
+  {
+    "name": "briefcase",
+    "text": "briefcase business office work portfolio"
+  },
+  {
+    "name": "briefcase-metal",
+    "text": "briefcase-metal business office work portfolio"
+  },
+  {
+    "name": "broadcast",
+    "text": "broadcast media communication transmission radio"
+  },
+  {
+    "name": "broom",
+    "text": "broom cleaning maintenance household chores"
+  },
+  {
+    "name": "browser",
+    "text": "browser internet web navigation online"
+  },
+  {
+    "name": "browsers",
+    "text": "browsers internet web navigation online"
+  },
+  {
+    "name": "bug",
+    "text": "bug technology error debugging issues"
+  },
+  {
+    "name": "bug-beetle",
+    "text": "bug-beetle technology error debugging insects"
+  },
+  {
+    "name": "bug-droid",
+    "text": "bug-droid technology error debugging android"
+  },
+  {
+    "name": "building",
+    "text": "building architecture structure construction real estate"
+  },
+  {
+    "name": "building-apartment",
+    "text": "building-apartment residential living housing real estate"
+  },
+  {
+    "name": "building-office",
+    "text": "building-office commercial workspace business real estate"
+  },
+  {
+    "name": "buildings",
+    "text": "buildings architecture structures urban real estate"
+  },
+  {
+    "name": "bulldozer",
+    "text": "bulldozer construction machinery earth mover heavy equipment site preparation"
+  },
+  {
+    "name": "bus",
+    "text": "bus public transport travel commuting city transit routes"
+  },
+  {
+    "name": "butterfly",
+    "text": "butterfly nature insects beauty metamorphosis pollination"
+  },
+  {
+    "name": "cable-car",
+    "text": "cable-car transportation skiing scenic views mountain travel"
+  },
+  {
+    "name": "cactus",
+    "text": "cactus desert plant drought-resistant flora southwestern"
+  },
+  {
+    "name": "cake",
+    "text": "cake dessert celebration birthday event pastry"
+  },
+  {
+    "name": "calculator",
+    "text": "calculator math finance office tools computation budgeting"
+  },
+  {
+    "name": "calendar",
+    "text": "calendar scheduling events time management planning"
+  },
+  {
+    "name": "calendar-blank",
+    "text": "calendar blank scheduling events empty planner"
+  },
+  {
+    "name": "calendar-check",
+    "text": "calendar check events scheduling to-do list"
+  },
+  {
+    "name": "calendar-dot",
+    "text": "calendar dot today events scheduling highlight"
+  },
+  {
+    "name": "calendar-dots",
+    "text": "calendar dots events scheduling multiple dates"
+  },
+  {
+    "name": "calendar-heart",
+    "text": "calendar heart favorite events scheduling love"
+  },
+  {
+    "name": "calendar-minus",
+    "text": "calendar minus remove events scheduling deletion"
+  },
+  {
+    "name": "calendar-plus",
+    "text": "calendar plus add events scheduling new entry"
+  },
+  {
+    "name": "calendar-slash",
+    "text": "calendar slash unavailable events scheduling cancellation"
+  },
+  {
+    "name": "calendar-star",
+    "text": "calendar star favorite events scheduling highlight"
+  },
+  {
+    "name": "calendar-x",
+    "text": "calendar x closed events scheduling cancellation"
+  },
+  {
+    "name": "call-bell",
+    "text": "call bell service reception notification alert"
+  },
+  {
+    "name": "camera",
+    "text": "camera photography media capturing images"
+  },
+  {
+    "name": "camera-plus",
+    "text": "camera plus add photos media album"
+  },
+  {
+    "name": "camera-rotate",
+    "text": "camera rotate orientation photography adjustment"
+  },
+  {
+    "name": "camera-slash",
+    "text": "camera slash disabled photography lens off"
+  },
+  {
+    "name": "campfire",
+    "text": "campfire outdoor cooking warmth gathering"
+  },
+  {
+    "name": "car",
+    "text": "car vehicle transportation travel commuting"
+  },
+  {
+    "name": "car-battery",
+    "text": "car battery power charging electricity automotive"
+  },
+  {
+    "name": "car-profile",
+    "text": "car profile vehicle transportation travel details"
+  },
+  {
+    "name": "car-simple",
+    "text": "car simple vehicle transportation travel basic"
+  },
+  {
+    "name": "cardholder",
+    "text": "cardholder wallet payment finances money management"
+  },
+  {
+    "name": "cards",
+    "text": "cards design layout presentation slides information"
+  },
+  {
+    "name": "cards-three",
+    "text": "cards three layout presentation slides stack"
+  },
+  {
+    "name": "caret-circle-double-down",
+    "text": "caret double down navigation dropdown expand"
+  },
+  {
+    "name": "caret-circle-double-left",
+    "text": "caret double left navigation backward move"
+  },
+  {
+    "name": "caret-circle-double-right",
+    "text": "caret double right navigation forward move"
+  },
+  {
+    "name": "caret-circle-double-up",
+    "text": "caret double up navigation scroll expand"
+  },
+  {
+    "name": "caret-circle-down",
+    "text": "caret down navigation dropdown open"
+  },
+  {
+    "name": "caret-circle-left",
+    "text": "caret left navigation backward move"
+  },
+  {
+    "name": "caret-circle-right",
+    "text": "caret right navigation forward move"
+  },
+  {
+    "name": "caret-circle-up",
+    "text": "caret up navigation scroll expand"
+  },
+  {
+    "name": "caret-circle-up-down",
+    "text": "caret up down navigation toggle"
+  },
+  {
+    "name": "caret-double-down",
+    "text": "caret double down navigation dropdown expand"
+  },
+  {
+    "name": "caret-double-left",
+    "text": "caret double left navigation backward move"
+  },
+  {
+    "name": "caret-double-right",
+    "text": "caret double right navigation forward move"
+  },
+  {
+    "name": "caret-double-up",
+    "text": "caret double up navigation scroll expand"
+  },
+  {
+    "name": "caret-down",
+    "text": "caret down navigation dropdown open"
+  },
+  {
+    "name": "caret-left",
+    "text": "caret left navigation backward move"
+  },
+  {
+    "name": "caret-line-down",
+    "text": "caret line down navigation scroll"
+  },
+  {
+    "name": "caret-line-left",
+    "text": "caret line left navigation backward move"
+  },
+  {
+    "name": "caret-line-right",
+    "text": "caret line right navigation forward move"
+  },
+  {
+    "name": "caret-line-up",
+    "text": "caret line up navigation scroll"
+  },
+  {
+    "name": "caret-right",
+    "text": "caret-right arrows chevron directional pointer navigation expand"
+  },
+  {
+    "name": "caret-up",
+    "text": "caret-up arrows chevron directional pointer navigation expand"
+  },
+  {
+    "name": "caret-up-down",
+    "text": "caret-up-down arrows chevron directional pointer navigation toggle"
+  },
+  {
+    "name": "carrot",
+    "text": "carrot commerce nature food vegetable healthy organic"
+  },
+  {
+    "name": "cash-register",
+    "text": "cash-register commerce retail point-of-sale transaction sales checkout"
+  },
+  {
+    "name": "cassette-tape",
+    "text": "cassette-tape media recording audio vintage music"
+  },
+  {
+    "name": "castle-turret",
+    "text": "castle-turret maps & travel gaming strategy chess"
+  },
+  {
+    "name": "cat",
+    "text": "cat nature pets animals furry companion"
+  },
+  {
+    "name": "cell-signal-full",
+    "text": "cell-signal-full system wireless cellular phone connectivity strong"
+  },
+  {
+    "name": "cell-signal-high",
+    "text": "cell-signal-high system wireless cellular phone connectivity good"
+  },
+  {
+    "name": "cell-signal-low",
+    "text": "cell-signal-low system wireless cellular phone connectivity weak"
+  },
+  {
+    "name": "cell-signal-medium",
+    "text": "cell-signal-medium system wireless cellular phone connectivity moderate"
+  },
+  {
+    "name": "cell-signal-none",
+    "text": "cell-signal-none system wireless cellular phone no connectivity"
+  },
+  {
+    "name": "cell-signal-slash",
+    "text": "cell-signal-slash system wireless cellular phone disabled connectivity"
+  },
+  {
+    "name": "cell-signal-x",
+    "text": "cell-signal-x system wireless cellular phone connectivity errors"
+  },
+  {
+    "name": "cell-tower",
+    "text": "cell-tower system communication wireless cellular network"
+  },
+  {
+    "name": "certificate",
+    "text": "certificate objects education awards achievement diploma"
+  },
+  {
+    "name": "chair",
+    "text": "chair objects furniture seating office"
+  },
+  {
+    "name": "chalkboard",
+    "text": "chalkboard maps & travel education classroom teaching learning"
+  },
+  {
+    "name": "chalkboard-simple",
+    "text": "chalkboard-simple maps & travel education classroom teaching learning"
+  },
+  {
+    "name": "chalkboard-teacher",
+    "text": "chalkboard-teacher maps & travel education classroom instructor teaching"
+  },
+  {
+    "name": "champagne",
+    "text": "champagne maps & travel beverages celebration toast"
+  },
+  {
+    "name": "charging-station",
+    "text": "charging-station maps & travel electric vehicle charging"
+  },
+  {
+    "name": "chart-bar",
+    "text": "chart-bar finances office graphs statistics data"
+  },
+  {
+    "name": "chart-bar-horizontal",
+    "text": "chart-bar-horizontal finances office graphs statistics data"
+  },
+  {
+    "name": "chart-donut",
+    "text": "chart-donut finances office graphs statistics circular data"
+  },
+  {
+    "name": "chart-line",
+    "text": "chart-line finances office graphs statistics trends"
+  },
+  {
+    "name": "chart-line-down",
+    "text": "chart-line-down finances office graphs statistics decline"
+  },
+  {
+    "name": "chart-line-up",
+    "text": "chart-line-up finances office graphs statistics increase"
+  },
+  {
+    "name": "chart-pie",
+    "text": "chart-pie finances office graphs statistics circular data"
+  },
+  {
+    "name": "chart-pie-slice",
+    "text": "chart-pie-slice finances office graphs statistics circular data"
+  },
+  {
+    "name": "chart-polar",
+    "text": "chart-polar finances office graphs statistics circular data"
+  },
+  {
+    "name": "chart-scatter",
+    "text": "chart-scatter finances office graphs statistics data points"
+  },
+  {
+    "name": "chat",
+    "text": "chat communications messaging conversation text"
+  },
+  {
+    "name": "chat-centered",
+    "text": "chat-centered communications messaging conversation text"
+  },
+  {
+    "name": "chat-centered-dots",
+    "text": "chat-centered-dots communications messaging conversation text"
+  },
+  {
+    "name": "chat-centered-slash",
+    "text": "chat-centered-slash communications messaging conversation text"
+  },
+  {
+    "name": "chat-centered-text",
+    "text": "chat-centered-text communications messaging conversation text"
+  },
+  {
+    "name": "chat-circle",
+    "text": "chat-circle communications messaging conversation round text"
+  },
+  {
+    "name": "chat-circle-dots",
+    "text": "chat-circle-dots communications messaging conversation round text"
+  },
+  {
+    "name": "chat-circle-slash",
+    "text": "chat-circle-slash communications messaging conversation round text"
+  },
+  {
+    "name": "chat-circle-text",
+    "text": "chat-circle-text communications messaging conversation round text"
+  },
+  {
+    "name": "chat-dots",
+    "text": "chat-dots communications messaging conversation text"
+  },
+  {
+    "name": "chat-slash",
+    "text": "chat-slash communications messaging conversation text"
+  },
+  {
+    "name": "chat-teardrop",
+    "text": "chat-teardrop communications messaging conversation text"
+  },
+  {
+    "name": "chat-teardrop-dots",
+    "text": "chat-teardrop-dots communications messaging conversation text"
+  },
+  {
+    "name": "chat-teardrop-slash",
+    "text": "chat-teardrop-slash communications messaging conversation text"
+  },
+  {
+    "name": "chat-teardrop-text",
+    "text": "chat-teardrop-text communications messaging conversation text"
+  },
+  {
+    "name": "chat-text",
+    "text": "chat-text communications messaging conversation text"
+  },
+  {
+    "name": "chats",
+    "text": "chats communications messaging conversation text"
+  },
+  {
+    "name": "chats-circle",
+    "text": "chats-circle communications messaging social interaction group chat conversation bubble"
+  },
+  {
+    "name": "chats-teardrop",
+    "text": "chats-teardrop messaging communication feedback comment chat bubble"
+  },
+  {
+    "name": "check",
+    "text": "check verification completion approval task done"
+  },
+  {
+    "name": "check-circle",
+    "text": "check-circle verification completion approval round task done"
+  },
+  {
+    "name": "check-fat",
+    "text": "check-fat verification completion approval bold task done"
+  },
+  {
+    "name": "check-square",
+    "text": "check-square verification completion approval square task done"
+  },
+  {
+    "name": "check-square-offset",
+    "text": "check-square-offset verification completion approval updated task done"
+  },
+  {
+    "name": "checkerboard",
+    "text": "checkerboard games puzzle strategy board game"
+  },
+  {
+    "name": "checks",
+    "text": "checks verification completion approval updated task list"
+  },
+  {
+    "name": "cheers",
+    "text": "cheers celebration drinks toast social gathering"
+  },
+  {
+    "name": "cheese",
+    "text": "cheese dairy food snack gourmet"
+  },
+  {
+    "name": "chef-hat",
+    "text": "chef-hat cooking culinary profession kitchen attire"
+  },
+  {
+    "name": "cherries",
+    "text": "cherries fruit food dessert fresh produce"
+  },
+  {
+    "name": "church",
+    "text": "church worship religion community spirituality"
+  },
+  {
+    "name": "cigarette",
+    "text": "cigarette smoking tobacco health risk"
+  },
+  {
+    "name": "cigarette-slash",
+    "text": "cigarette-slash non-smoking tobacco health wellness"
+  },
+  {
+    "name": "circle",
+    "text": "circle shape design geometry round"
+  },
+  {
+    "name": "circle-dashed",
+    "text": "circle-dashed design incomplete round shape"
+  },
+  {
+    "name": "circle-half",
+    "text": "circle-half design contrast brightness half filled"
+  },
+  {
+    "name": "circle-half-tilt",
+    "text": "circle-half-tilt design contrast brightness tilted half filled"
+  },
+  {
+    "name": "circle-notch",
+    "text": "circle-notch loading progress spinner waiting"
+  },
+  {
+    "name": "circles-four",
+    "text": "circles-four design group four round shapes"
+  },
+  {
+    "name": "circles-three",
+    "text": "circles-three design group three round shapes"
+  },
+  {
+    "name": "circles-three-plus",
+    "text": "circles-three-plus design group three plus round shapes"
+  },
+  {
+    "name": "circuitry",
+    "text": "circuitry technology electronics microchip hardware"
+  },
+  {
+    "name": "city",
+    "text": "city urban skyline architecture buildings location"
+  },
+  {
+    "name": "clipboard",
+    "text": "clipboard office document organization checklist"
+  },
+  {
+    "name": "clipboard-text",
+    "text": "clipboard-text office document notes checklist"
+  },
+  {
+    "name": "clock",
+    "text": "clock time schedule alarm reminder"
+  },
+  {
+    "name": "clock-afternoon",
+    "text": "clock-afternoon time afternoon schedule alarm"
+  },
+  {
+    "name": "clock-clockwise",
+    "text": "clock-clockwise time timer fast forward restore"
+  },
+  {
+    "name": "clock-countdown",
+    "text": "clock-countdown timer countdown events reminder"
+  },
+  {
+    "name": "clock-counter-clockwise",
+    "text": "clock-counter-clockwise time timer rewind history"
+  },
+  {
+    "name": "clock-user",
+    "text": "clock-user time schedule user shift events"
+  },
+  {
+    "name": "closed-captioning",
+    "text": "closed-captioning media subtitles accessibility transcription"
+  },
+  {
+    "name": "cloud",
+    "text": "cloud weather storage server backup"
+  },
+  {
+    "name": "cloud-arrow-down",
+    "text": "cloud-arrow-down download storage data retrieval"
+  },
+  {
+    "name": "cloud-arrow-up",
+    "text": "cloud-arrow-up upload storage data transfer"
+  },
+  {
+    "name": "cloud-check",
+    "text": "cloud-check sync storage backup verification"
+  },
+  {
+    "name": "cloud-fog",
+    "text": "cloud-fog weather foggy mist overcast"
+  },
+  {
+    "name": "cloud-lightning",
+    "text": "cloud-lightning storm weather thunderstorm alert"
+  },
+  {
+    "name": "cloud-moon",
+    "text": "cloud-moon night weather partly cloudy evening"
+  },
+  {
+    "name": "cloud-rain",
+    "text": "cloud-rain rainy weather storm precipitation"
+  },
+  {
+    "name": "cloud-slash",
+    "text": "cloud-slash disabled storage sync error"
+  },
+  {
+    "name": "cloud-snow",
+    "text": "cloud-snow snowy weather winter precipitation"
+  },
+  {
+    "name": "cloud-sun",
+    "text": "cloud-sun partly sunny weather daytime"
+  },
+  {
+    "name": "cloud-warning",
+    "text": "cloud-warning error storage alert notification"
+  },
+  {
+    "name": "cloud-x",
+    "text": "cloud-x error storage failure alert"
+  },
+  {
+    "name": "clover",
+    "text": "clover nature luck plant symbol irish"
+  },
+  {
+    "name": "club",
+    "text": "club games gambling cards casino entertainment"
+  },
+  {
+    "name": "coat-hanger",
+    "text": "coat-hanger clothing apparel wardrobe organization storage"
+  },
+  {
+    "name": "coda-logo",
+    "text": "coda-logo brands collaboration software productivity tools"
+  },
+  {
+    "name": "code",
+    "text": "code programming development software syntax"
+  },
+  {
+    "name": "code-block",
+    "text": "code-block programming snippets formatting code display"
+  },
+  {
+    "name": "code-simple",
+    "text": "code-simple programming snippets minimal code display"
+  },
+  {
+    "name": "codepen-logo",
+    "text": "codepen-logo brands web development online editor"
+  },
+  {
+    "name": "codesandbox-logo",
+    "text": "codesandbox-logo brands web development online sandbox"
+  },
+  {
+    "name": "coffee",
+    "text": "coffee beverage drinks cafe relaxation morning"
+  },
+  {
+    "name": "coffee-bean",
+    "text": "coffee-bean beverage ingredients brewing roasting"
+  },
+  {
+    "name": "coin",
+    "text": "coin currency money transaction finance"
+  },
+  {
+    "name": "coin-vertical",
+    "text": "coin-vertical currency money finance vertical stack"
+  },
+  {
+    "name": "coins",
+    "text": "coins currency money finance collection"
+  },
+  {
+    "name": "columns",
+    "text": "columns layout design organization structure"
+  },
+  {
+    "name": "columns-plus-left",
+    "text": "columns-plus-left layout design add insert left"
+  },
+  {
+    "name": "columns-plus-right",
+    "text": "columns-plus-right layout design add insert right"
+  },
+  {
+    "name": "command",
+    "text": "command keyboard shortcut mac os modifier"
+  },
+  {
+    "name": "compass",
+    "text": "compass navigation direction travel exploration"
+  },
+  {
+    "name": "compass-rose",
+    "text": "compass-rose navigation cardinal directions cartography"
+  },
+  {
+    "name": "compass-tool",
+    "text": "compass-tool drawing geometry measurement design"
+  },
+  {
+    "name": "computer-tower",
+    "text": "computer-tower desktop pc hardware technology"
+  },
+  {
+    "name": "confetti",
+    "text": "confetti celebration party festive events"
+  },
+  {
+    "name": "contactless-payment",
+    "text": "contactless-payment mobile payment nfc transactions"
+  },
+  {
+    "name": "control",
+    "text": "control system devices keyboard shortcuts navigation"
+  },
+  {
+    "name": "cookie",
+    "text": "cookie dessert snack sweet treat"
+  },
+  {
+    "name": "cooking-pot",
+    "text": "cooking-pot kitchen cooking food preparation"
+  },
+  {
+    "name": "copy",
+    "text": "copy clipboard duplication text editing"
+  },
+  {
+    "name": "copy-simple",
+    "text": "copy-simple clipboard duplication minimal text"
+  },
+  {
+    "name": "copyleft",
+    "text": "copyleft intellectual property licensing open source"
+  },
+  {
+    "name": "copyright",
+    "text": "copyright intellectual property protection ownership"
+  },
+  {
+    "name": "corners-in",
+    "text": "corners-in window management minimize collapse"
+  },
+  {
+    "name": "corners-out",
+    "text": "corners-out window management maximize fullscreen"
+  },
+  {
+    "name": "couch",
+    "text": "couch furniture seating comfort living room"
+  },
+  {
+    "name": "court-basketball",
+    "text": "court-basketball sports basketball game arena"
+  },
+  {
+    "name": "cow",
+    "text": "cow livestock agriculture dairy farming"
+  },
+  {
+    "name": "cowboy-hat",
+    "text": "cowboy-hat fashion western style attire"
+  },
+  {
+    "name": "cpu",
+    "text": "cpu processor computing hardware technology"
+  },
+  {
+    "name": "crane",
+    "text": "crane construction machinery lifting equipment"
+  },
+  {
+    "name": "crane-tower",
+    "text": "crane-tower construction machinery building projects"
+  },
+  {
+    "name": "credit-card",
+    "text": "credit-card payment finance transactions shopping"
+  },
+  {
+    "name": "cricket",
+    "text": "cricket sports game bat ball"
+  },
+  {
+    "name": "crop",
+    "text": "crop photography editing image adjustment"
+  },
+  {
+    "name": "cross",
+    "text": "cross symbol religion faith spirituality"
+  },
+  {
+    "name": "crosshair",
+    "text": "crosshair targeting precision aiming navigation"
+  },
+  {
+    "name": "crosshair-simple",
+    "text": "crosshair-simple targeting precision aiming minimal"
+  },
+  {
+    "name": "crown",
+    "text": "crown royalty leadership power monarchy"
+  },
+  {
+    "name": "crown-cross",
+    "text": "crown-cross royalty faith leadership symbol"
+  },
+  {
+    "name": "crown-simple",
+    "text": "crown-simple royalty minimal leadership symbol"
+  },
+  {
+    "name": "cube",
+    "text": "cube 3d shape geometry design"
+  },
+  {
+    "name": "cube-focus",
+    "text": "cube-focus augmented reality 3d visualization"
+  },
+  {
+    "name": "cube-transparent",
+    "text": "cube-transparent design 3d visualization clarity"
+  },
+  {
+    "name": "currency-btc",
+    "text": "currency-btc commerce finances money btc bitcoin crypto cryptocurrency payment paying purchase digital currency"
+  },
+  {
+    "name": "currency-circle-dollar",
+    "text": "currency-circle-dollar commerce finances money usd payment paying purchase circular currency symbol"
+  },
+  {
+    "name": "currency-cny",
+    "text": "currency-cny commerce finances money yuan payment paying purchase chinese currency"
+  },
+  {
+    "name": "currency-dollar",
+    "text": "currency-dollar commerce finances money usd payment paying purchase dollar symbol"
+  },
+  {
+    "name": "currency-dollar-simple",
+    "text": "currency-dollar-simple commerce finances money usd payment paying purchase simplified dollar symbol"
+  },
+  {
+    "name": "currency-eth",
+    "text": "currency-eth commerce finances money ethereum crypto cryptocurrency payment paying purchase digital asset"
+  },
+  {
+    "name": "currency-eur",
+    "text": "currency-eur commerce finances money euros payment paying purchase european currency"
+  },
+  {
+    "name": "currency-gbp",
+    "text": "currency-gbp commerce finances money pounds sterling payment paying purchase british currency"
+  },
+  {
+    "name": "currency-inr",
+    "text": "currency-inr commerce finances money rupees payment paying purchase indian currency"
+  },
+  {
+    "name": "currency-jpy",
+    "text": "currency-jpy commerce finances money yen payment paying purchase japanese currency"
+  },
+  {
+    "name": "currency-krw",
+    "text": "currency-krw commerce finances money won payment paying purchase south korean currency"
+  },
+  {
+    "name": "currency-kzt",
+    "text": "currency-kzt commerce finances money kazakhstan tenge payment paying purchase kazakh currency"
+  },
+  {
+    "name": "currency-ngn",
+    "text": "currency-ngn commerce finances money nigeria naira payment paying purchase nigerian currency"
+  },
+  {
+    "name": "currency-rub",
+    "text": "currency-rub commerce finances money rubles payment paying purchase russian currency"
+  },
+  {
+    "name": "cursor",
+    "text": "cursor design system system & devices pointer arrowhead mouse click navigation"
+  },
+  {
+    "name": "cursor-click",
+    "text": "cursor-click design system system & devices pointer arrowhead mouse click interaction"
+  },
+  {
+    "name": "cursor-text",
+    "text": "cursor-text editor system office & editing i-beam input select text editing"
+  },
+  {
+    "name": "cylinder",
+    "text": "cylinder design shapes tube 3d object geometric form"
+  },
+  {
+    "name": "database",
+    "text": "database technology & development system saved saving archived archiving data storage management"
+  },
+  {
+    "name": "desk",
+    "text": "desk commerce objects office furniture workspace table work area"
+  },
+  {
+    "name": "desktop",
+    "text": "desktop technology & development objects system & devices computer pc workstation"
+  },
+  {
+    "name": "desktop-tower",
+    "text": "desktop-tower technology & development objects system & devices computer pc tower unit"
+  },
+  {
+    "name": "detective",
+    "text": "detective people system security & warnings incognito police law enforcement investigation"
+  },
+  {
+    "name": "dev-to-logo",
+    "text": "dev-to-logo brands technology & development reading writing social media developer platform"
+  },
+  {
+    "name": "device-mobile",
+    "text": "device-mobile objects system & devices cellphone cellular smartphone portable device"
+  },
+  {
+    "name": "device-mobile-camera",
+    "text": "device-mobile-camera objects system & devices cellphone cellular smartphone photography"
+  },
+  {
+    "name": "device-mobile-slash",
+    "text": "device-mobile-slash objects system system & devices cellphone cellular mobile disabled"
+  },
+  {
+    "name": "device-mobile-speaker",
+    "text": "device-mobile-speaker objects system & devices cellphone cellular audio sound"
+  },
+  {
+    "name": "device-rotate",
+    "text": "device-rotate objects system system & devices orientation landscape portrait adjustment"
+  },
+  {
+    "name": "device-tablet",
+    "text": "device-tablet objects system & devices cellphone cellular ipad phablet touchscreen device"
+  },
+  {
+    "name": "device-tablet-camera",
+    "text": "device-tablet-camera objects system & devices cellphone cellular ipad phablet photography"
+  },
+  {
+    "name": "device-tablet-speaker",
+    "text": "device-tablet-speaker objects system & devices cellphone cellular ipad phablet audio"
+  },
+  {
+    "name": "devices",
+    "text": "devices objects system & devices responsive cellphone cellular tablet desktop multi-device"
+  },
+  {
+    "name": "diamond",
+    "text": "diamond design games rectangle shapes polygons diamonds suits cards luxury"
+  },
+  {
+    "name": "diamonds-four",
+    "text": "diamonds-four design shapes grid component four diamond shapes"
+  },
+  {
+    "name": "dice-five",
+    "text": "dice-five games objects die rolling gamble gambling casino gaming five"
+  },
+  {
+    "name": "dice-four",
+    "text": "dice-four games objects die rolling gamble gambling casino gaming four"
+  },
+  {
+    "name": "dice-one",
+    "text": "dice-one games objects die rolling gamble gambling casino gaming one"
+  },
+  {
+    "name": "dice-six",
+    "text": "dice-six games objects die rolling gamble gambling casino gaming six"
+  },
+  {
+    "name": "dice-three",
+    "text": "dice-three games objects die rolling gamble gambling casino gaming three"
+  },
+  {
+    "name": "dice-two",
+    "text": "dice-two games objects die rolling gamble gambling casino gaming two"
+  },
+  {
+    "name": "disc",
+    "text": "disc technology & development media objects cd-rom compact disk storage media"
+  },
+  {
+    "name": "disco-ball",
+    "text": "disco-ball games maps & travel objects dancing club nightlife party"
+  },
+  {
+    "name": "discord-logo",
+    "text": "discord-logo brands communications logos messages messaging chat platform"
+  },
+  {
+    "name": "divide",
+    "text": "divide technology & development finances math & finance division arithmetic calculation"
+  },
+  {
+    "name": "dna",
+    "text": "dna health & wellness nature double helix gene genetics biology"
+  },
+  {
+    "name": "dog",
+    "text": "dog nature weather & nature pets animals puppy canine companion"
+  },
+  {
+    "name": "door",
+    "text": "door objects commerce entrance exit access entry point"
+  },
+  {
+    "name": "door-open",
+    "text": "door-open objects commerce entrance exit accessibility opening entry"
+  },
+  {
+    "name": "dot",
+    "text": "dot system system & devices dots circles shapes points markers"
+  },
+  {
+    "name": "dot-outline",
+    "text": "dot outline system devices dots circles shapes polygons"
+  },
+  {
+    "name": "dots-nine",
+    "text": "nine dots design grid circles shapes polygons"
+  },
+  {
+    "name": "dots-six",
+    "text": "six dots drag handle knurling circles shapes polygons"
+  },
+  {
+    "name": "dots-six-vertical",
+    "text": "six dots vertical drag handle knurling circles shapes polygons"
+  },
+  {
+    "name": "dots-three",
+    "text": "three dots menu overflow ellipsis more"
+  },
+  {
+    "name": "dots-three-circle",
+    "text": "three dots circle menu overflow ellipsis more"
+  },
+  {
+    "name": "dots-three-circle-vertical",
+    "text": "three dots circle vertical menu overflow ellipsis more"
+  },
+  {
+    "name": "dots-three-outline",
+    "text": "three dots outline menu overflow ellipsis more"
+  },
+  {
+    "name": "dots-three-outline-vertical",
+    "text": "three dots outline vertical menu overflow ellipsis more"
+  },
+  {
+    "name": "dots-three-vertical",
+    "text": "three dots vertical menu overflow ellipsis more"
+  },
+  {
+    "name": "download",
+    "text": "download save archive hard drive"
+  },
+  {
+    "name": "download-simple",
+    "text": "simple download save archive import"
+  },
+  {
+    "name": "dress",
+    "text": "dress clothing fashion apparel"
+  },
+  {
+    "name": "dresser",
+    "text": "dresser furniture storage drawers wardrobe"
+  },
+  {
+    "name": "dribbble-logo",
+    "text": "dribbble logo design branding sports"
+  },
+  {
+    "name": "drone",
+    "text": "drone technology aerial photography remote control"
+  },
+  {
+    "name": "drop",
+    "text": "drop nature weather droplet raindrop"
+  },
+  {
+    "name": "drop-half",
+    "text": "half drop humidity contrast brightness"
+  },
+  {
+    "name": "drop-half-bottom",
+    "text": "half drop bottom humidity contrast brightness"
+  },
+  {
+    "name": "drop-simple",
+    "text": "simple drop weather humidity raindrop"
+  },
+  {
+    "name": "drop-slash",
+    "text": "drop slash disabled weather humidity"
+  },
+  {
+    "name": "dropbox-logo",
+    "text": "dropbox logo cloud storage backup"
+  },
+  {
+    "name": "ear",
+    "text": "ear hearing audio sound"
+  },
+  {
+    "name": "ear-slash",
+    "text": "ear slash mute accessible audio"
+  },
+  {
+    "name": "egg",
+    "text": "egg food meal hatch"
+  },
+  {
+    "name": "egg-crack",
+    "text": "cracked egg break food meal"
+  },
+  {
+    "name": "eject",
+    "text": "eject disconnect media"
+  },
+  {
+    "name": "eject-simple",
+    "text": "simple eject disconnect media"
+  },
+  {
+    "name": "elevator",
+    "text": "elevator lift travel"
+  },
+  {
+    "name": "empty",
+    "text": "empty finances mathematics null set"
+  },
+  {
+    "name": "engine",
+    "text": "engine motor repair vehicles"
+  },
+  {
+    "name": "envelope",
+    "text": "envelope mail email message"
+  },
+  {
+    "name": "envelope-open",
+    "text": "open envelope read message"
+  },
+  {
+    "name": "envelope-simple",
+    "text": "simple envelope mail message"
+  },
+  {
+    "name": "envelope-simple-open",
+    "text": "simple open envelope read message"
+  },
+  {
+    "name": "equalizer",
+    "text": "equalizer audio music volume meter"
+  },
+  {
+    "name": "equals",
+    "text": "equals mathematics equality equivalent"
+  },
+  {
+    "name": "eraser",
+    "text": "eraser editing write delete"
+  },
+  {
+    "name": "escalator-down",
+    "text": "escalator down travel stairs"
+  },
+  {
+    "name": "escalator-up",
+    "text": "escalator up travel stairs"
+  },
+  {
+    "name": "exam",
+    "text": "exam education assessment school"
+  },
+  {
+    "name": "exclamation-mark",
+    "text": "exclamation mark alert warning caution"
+  },
+  {
+    "name": "exclude",
+    "text": "exclude design venn diagram intersection"
+  },
+  {
+    "name": "exclude-square",
+    "text": "exclude square design venn diagram"
+  },
+  {
+    "name": "export",
+    "text": "export share communication arrows"
+  },
+  {
+    "name": "eye",
+    "text": "eye visibility show hide"
+  },
+  {
+    "name": "eye-closed",
+    "text": "closed eye visibility hide private"
+  },
+  {
+    "name": "eye-slash",
+    "text": "eye slash visibility hide disabled"
+  },
+  {
+    "name": "eyedropper",
+    "text": "eyedropper color picker sample"
+  },
+  {
+    "name": "eyedropper-sample",
+    "text": "eyedropper sample color picker"
+  },
+  {
+    "name": "eyeglasses",
+    "text": "eyewear vision correction sight reading fashion accessory"
+  },
+  {
+    "name": "eyes",
+    "text": "vision gaze observation perception"
+  },
+  {
+    "name": "face-mask",
+    "text": "protection health safety hygiene respiratory illness"
+  },
+  {
+    "name": "facebook-logo",
+    "text": "social networking platform online community engagement"
+  },
+  {
+    "name": "factory",
+    "text": "manufacturing production industry assembly line"
+  },
+  {
+    "name": "faders",
+    "text": "audio control volume adjustment mixing settings"
+  },
+  {
+    "name": "faders-horizontal",
+    "text": "horizontal audio control volume adjustment mixing settings"
+  },
+  {
+    "name": "fallout-shelter",
+    "text": "nuclear safety emergency preparedness shelter protection"
+  },
+  {
+    "name": "fan",
+    "text": "cooling device air circulation comfort"
+  },
+  {
+    "name": "farm",
+    "text": "agriculture cultivation crops livestock rural"
+  },
+  {
+    "name": "fast-forward",
+    "text": "media playback navigation speed up"
+  },
+  {
+    "name": "fast-forward-circle",
+    "text": "media playback navigation speed up circular"
+  },
+  {
+    "name": "feather",
+    "text": "lightness nature bird decoration softness"
+  },
+  {
+    "name": "fediverse-logo",
+    "text": "decentralized social networks online communities"
+  },
+  {
+    "name": "figma-logo",
+    "text": "design collaboration prototyping interface development"
+  },
+  {
+    "name": "file",
+    "text": "document storage data management organization"
+  },
+  {
+    "name": "file-archive",
+    "text": "data compression storage organization archives"
+  },
+  {
+    "name": "file-arrow-down",
+    "text": "download action file retrieval save"
+  },
+  {
+    "name": "file-arrow-up",
+    "text": "upload action file transfer send"
+  },
+  {
+    "name": "file-audio",
+    "text": "audio file sound music media"
+  },
+  {
+    "name": "file-c",
+    "text": "programming code development software"
+  },
+  {
+    "name": "file-c-sharp",
+    "text": "c# programming code development software"
+  },
+  {
+    "name": "file-cloud",
+    "text": "cloud storage synchronization backup"
+  },
+  {
+    "name": "file-code",
+    "text": "programming file development software coding"
+  },
+  {
+    "name": "file-cpp",
+    "text": "c++ programming code development software"
+  },
+  {
+    "name": "file-css",
+    "text": "css programming style sheets web development"
+  },
+  {
+    "name": "file-csv",
+    "text": "data file spreadsheet organization"
+  },
+  {
+    "name": "file-dotted",
+    "text": "dotted file representation document"
+  },
+  {
+    "name": "file-doc",
+    "text": "word processing document text editing"
+  },
+  {
+    "name": "file-html",
+    "text": "html programming web development markup"
+  },
+  {
+    "name": "file-image",
+    "text": "image file photography graphics media"
+  },
+  {
+    "name": "file-ini",
+    "text": "configuration file settings programming"
+  },
+  {
+    "name": "file-jpg",
+    "text": "jpeg image file photography graphics"
+  },
+  {
+    "name": "file-js",
+    "text": "javascript programming code web development"
+  },
+  {
+    "name": "file-jsx",
+    "text": "jsx programming code web development"
+  },
+  {
+    "name": "file-lock",
+    "text": "secure file protection privacy confidentiality"
+  },
+  {
+    "name": "file-search",
+    "text": "search action document retrieval"
+  },
+  {
+    "name": "file-md",
+    "text": "markdown file documentation notes formatting"
+  },
+  {
+    "name": "file-minus",
+    "text": "delete action file removal"
+  },
+  {
+    "name": "file-pdf",
+    "text": "pdf document format reading sharing"
+  },
+  {
+    "name": "file-plus",
+    "text": "create new file addition"
+  },
+  {
+    "name": "file-png",
+    "text": "png image file graphics transparency"
+  },
+  {
+    "name": "file-ppt",
+    "text": "presentation file slideshows microsoft"
+  },
+  {
+    "name": "file-py",
+    "text": "python programming code development software"
+  },
+  {
+    "name": "file-rs",
+    "text": "rust programming code development software"
+  },
+  {
+    "name": "file-sql",
+    "text": "database file query management"
+  },
+  {
+    "name": "file-svg",
+    "text": "vector graphics file scalable images"
+  },
+  {
+    "name": "file-text",
+    "text": "text document writing editing"
+  },
+  {
+    "name": "file-ts",
+    "text": "typescript programming code development software"
+  },
+  {
+    "name": "file-tsx",
+    "text": "tsx programming code development software"
+  },
+  {
+    "name": "file-txt",
+    "text": "text document notes writing editor plain text"
+  },
+  {
+    "name": "file-video",
+    "text": "video file media playback streaming editing"
+  },
+  {
+    "name": "file-vue",
+    "text": "vue file code framework development programming"
+  },
+  {
+    "name": "file-x",
+    "text": "error file deleted removed issues problems"
+  },
+  {
+    "name": "file-xls",
+    "text": "excel spreadsheet data analysis calculations finance"
+  },
+  {
+    "name": "file-zip",
+    "text": "compressed file archive storage transfer"
+  },
+  {
+    "name": "files",
+    "text": "multiple files document management organization"
+  },
+  {
+    "name": "film-reel",
+    "text": "film media cinema movies recording entertainment"
+  },
+  {
+    "name": "film-script",
+    "text": "screenplay writing movie production script"
+  },
+  {
+    "name": "film-slate",
+    "text": "clapperboard filming production movie take"
+  },
+  {
+    "name": "film-strip",
+    "text": "photography cinema analog film reel"
+  },
+  {
+    "name": "fingerprint",
+    "text": "biometrics security authentication identity verification"
+  },
+  {
+    "name": "fingerprint-simple",
+    "text": "biometric security authentication identity verification"
+  },
+  {
+    "name": "finn-the-human",
+    "text": "cartoon character adventure time television animation"
+  },
+  {
+    "name": "fire",
+    "text": "flame heat combustion nature outdoor"
+  },
+  {
+    "name": "fire-extinguisher",
+    "text": "safety emergency hazard prevention fire"
+  },
+  {
+    "name": "fire-simple",
+    "text": "flame heat combustion nature outdoor"
+  },
+  {
+    "name": "fire-truck",
+    "text": "emergency vehicle firefighting rescue safety"
+  },
+  {
+    "name": "first-aid",
+    "text": "medical assistance health emergency treatment"
+  },
+  {
+    "name": "first-aid-kit",
+    "text": "medical supplies emergency health treatment"
+  },
+  {
+    "name": "fish",
+    "text": "seafood dining nature pets aquarium"
+  },
+  {
+    "name": "fish-simple",
+    "text": "seafood dining nature pets aquarium"
+  },
+  {
+    "name": "flag",
+    "text": "country symbol representation completion status"
+  },
+  {
+    "name": "flag-banner",
+    "text": "decorative flag country symbol celebration"
+  },
+  {
+    "name": "flag-banner-fold",
+    "text": "folded decorative flag country symbol celebration"
+  },
+  {
+    "name": "flag-checkered",
+    "text": "race finish line competition sports event"
+  },
+  {
+    "name": "flag-pennant",
+    "text": "sports team flag decoration celebration"
+  },
+  {
+    "name": "flame",
+    "text": "fire heat combustion nature outdoor"
+  },
+  {
+    "name": "flashlight",
+    "text": "light source search locate illumination"
+  },
+  {
+    "name": "flask",
+    "text": "laboratory glassware chemistry science experiments"
+  },
+  {
+    "name": "flip-horizontal",
+    "text": "mirror reflection design editing orientation"
+  },
+  {
+    "name": "flip-vertical",
+    "text": "mirror reflection design editing orientation"
+  },
+  {
+    "name": "floppy-disk",
+    "text": "data storage save file computer"
+  },
+  {
+    "name": "floppy-disk-back",
+    "text": "data storage save file computer"
+  },
+  {
+    "name": "flow-arrow",
+    "text": "directional flowchart process diagram navigation"
+  },
+  {
+    "name": "flower",
+    "text": "botanical nature beauty environment decoration"
+  },
+  {
+    "name": "flower-lotus",
+    "text": "spirituality beauty nature meditation environmental"
+  },
+  {
+    "name": "flower-tulip",
+    "text": "botanical nature beauty environment decoration"
+  },
+  {
+    "name": "flying-saucer",
+    "text": "ufo aliens sci-fi extraterrestrial space"
+  },
+  {
+    "name": "folder-notch",
+    "text": "file organization directory management storage"
+  },
+  {
+    "name": "folder-dotted",
+    "text": "file organization directory management storage"
+  },
+  {
+    "name": "folder-lock",
+    "text": "secure storage private files directory protection"
+  },
+  {
+    "name": "folder-notch-minus",
+    "text": "file organization directory management storage"
+  },
+  {
+    "name": "folder-notch-open",
+    "text": "open directory file access management"
+  },
+  {
+    "name": "folder-notch-plus",
+    "text": "add new directory file organization management"
+  },
+  {
+    "name": "folder-simple",
+    "text": "file organization directory management storage"
+  },
+  {
+    "name": "folder-simple-dotted",
+    "text": "file organization directory management storage"
+  },
+  {
+    "name": "folder-simple-lock",
+    "text": "secure storage private files directory protection"
+  },
+  {
+    "name": "folder-simple-minus",
+    "text": "remove delete directory file organization"
+  },
+  {
+    "name": "folder-simple-plus",
+    "text": "add new directory file organization"
+  },
+  {
+    "name": "folder-simple-star",
+    "text": "folder-simple-star office editor system office & editing directory directories files folders favorite starred"
+  },
+  {
+    "name": "folder-simple-user",
+    "text": "folder-simple-user office editor system office & editing directory directories files folders personal"
+  },
+  {
+    "name": "folder-star",
+    "text": "folder-star office editor system office & editing directory directories files folders favorite starred"
+  },
+  {
+    "name": "folder-user",
+    "text": "folder-user office editor system office & editing directory directories files folders personal"
+  },
+  {
+    "name": "folders",
+    "text": "folders office editor system office & editing directory directories files copy copied duplicated"
+  },
+  {
+    "name": "football",
+    "text": "football games health & wellness objects sports american football nfl"
+  },
+  {
+    "name": "football-helmet",
+    "text": "football-helmet games health & wellness objects sports american football nfl"
+  },
+  {
+    "name": "footprints",
+    "text": "footprints health & wellness maps & travel people path trail walk route hike hiking"
+  },
+  {
+    "name": "fork-knife",
+    "text": "fork-knife commerce maps & travel objects food meal eating restaurants dining utensils"
+  },
+  {
+    "name": "four-k",
+    "text": "four-k media uhd resolution video"
+  },
+  {
+    "name": "frame-corners",
+    "text": "frame-corners system media expand fullscreen maximized resize windowed capture"
+  },
+  {
+    "name": "framer-logo",
+    "text": "framer-logo brands design logos interface ui motion prototype prototyping"
+  },
+  {
+    "name": "function",
+    "text": "function technology & development math & finance mathematics arithmetic f-stop"
+  },
+  {
+    "name": "funnel",
+    "text": "funnel editor objects office & editing filters refine sorting"
+  },
+  {
+    "name": "funnel-simple",
+    "text": "funnel-simple editor objects office & editing filters refine sorting"
+  },
+  {
+    "name": "funnel-simple-x",
+    "text": "funnel-simple-x editor objects office & editing filters refine sorting"
+  },
+  {
+    "name": "funnel-x",
+    "text": "funnel-x editor objects office & editing filters refine sorting"
+  },
+  {
+    "name": "game-controller",
+    "text": "game-controller games media objects gaming video games nintendo switch sony playstation microsoft xbox"
+  },
+  {
+    "name": "garage",
+    "text": "garage commerce maps & travel vehicles automobile buildings transportation"
+  },
+  {
+    "name": "gas-can",
+    "text": "gas-can maps & travel objects jerrycan petrol fuel gasoline"
+  },
+  {
+    "name": "gas-pump",
+    "text": "gas-pump maps & travel objects gas station petrol fuel gasoline"
+  },
+  {
+    "name": "gauge",
+    "text": "gauge technology & development objects system system & devices dashboard meter speed speedometer odometer performance"
+  },
+  {
+    "name": "gavel",
+    "text": "gavel commerce objects judge justice legal law court hammer government"
+  },
+  {
+    "name": "gear",
+    "text": "gear system system & devices 8 settings setup preferences cogs gears machinery mechanical"
+  },
+  {
+    "name": "gear-fine",
+    "text": "gear-fine system design setup preferences cogs gears machinery mechanical"
+  },
+  {
+    "name": "gear-six",
+    "text": "gear-six system system & devices 6 settings setup preferences cogs gears machinery mechanical"
+  },
+  {
+    "name": "gender-female",
+    "text": "gender-female people woman feminine venus"
+  },
+  {
+    "name": "gender-intersex",
+    "text": "gender-intersex people transgender non-binary"
+  },
+  {
+    "name": "gender-male",
+    "text": "gender-male people man masculine mars"
+  },
+  {
+    "name": "gender-neuter",
+    "text": "gender-neuter people agender non-binary asexual"
+  },
+  {
+    "name": "gender-nonbinary",
+    "text": "gender-nonbinary people intersex non-binary"
+  },
+  {
+    "name": "gender-transgender",
+    "text": "gender-transgender people intersex non-binary"
+  },
+  {
+    "name": "ghost",
+    "text": "ghost games objects pac-man spirit scary halloween"
+  },
+  {
+    "name": "gif",
+    "text": "gif media gifs .gif giphy"
+  },
+  {
+    "name": "gift",
+    "text": "gift commerce objects presents holiday birthday"
+  },
+  {
+    "name": "git-branch",
+    "text": "git-branch technology & development *updated* github vcs source control version control versioning branches"
+  },
+  {
+    "name": "git-commit",
+    "text": "git-commit technology & development github vcs source control version control versioning commits"
+  },
+  {
+    "name": "git-diff",
+    "text": "git-diff technology & development *updated* github vcs source control version control versioning difference compare"
+  },
+  {
+    "name": "git-fork",
+    "text": "git-fork technology & development *updated* github vcs source control version control versioning split"
+  },
+  {
+    "name": "git-merge",
+    "text": "git-merge technology & development *updated* github vcs source control version control versioning split"
+  },
+  {
+    "name": "git-pull-request",
+    "text": "git-pull-request technology & development *updated* github vcs source control version control versioning merge request"
+  },
+  {
+    "name": "github-logo",
+    "text": "github-logo technology & development brands octocat vcs source control version control versioning branches"
+  },
+  {
+    "name": "gitlab-logo",
+    "text": "gitlab-logo brands technology & development vcs source control version control versioning branches"
+  },
+  {
+    "name": "gitlab-logo-simple",
+    "text": "gitlab-logo-simple brands technology & development vcs source control version control versioning branches"
+  },
+  {
+    "name": "globe",
+    "text": "globe maps & travel world earth global planet circle round internationalization i18n languages country countries geography internet"
+  },
+  {
+    "name": "globe-hemisphere-east",
+    "text": "globe-hemisphere-east maps & travel world earth global planet circle round internationalization i18n languages country countries geography europe africa asia australia"
+  },
+  {
+    "name": "globe-hemisphere-west",
+    "text": "globe-hemisphere-west maps & travel world earth global planet circle round internationalization i18n languages country countries geography north america south america"
+  },
+  {
+    "name": "globe-simple",
+    "text": "globe-simple maps & travel world earth global planet circle round internationalization i18n languages country countries geography"
+  },
+  {
+    "name": "globe-simple-x",
+    "text": "globe-simple-x maps & travel world earth global planet circle round internationalization i18n languages country countries geography internet"
+  },
+  {
+    "name": "globe-stand",
+    "text": "globe-stand maps & travel world global planet circle round internationalization i18n languages country countries geography"
+  },
+  {
+    "name": "globe-x",
+    "text": "globe-x maps & travel world earth global planet circle round internationalization i18n languages country countries geography internet"
+  },
+  {
+    "name": "goggles",
+    "text": "goggles health & wellness objects maps & travel swim swimming sports exercise olympics aquatics"
+  },
+  {
+    "name": "golf",
+    "text": "golf games health & wellness objects sports pga tee ball"
+  },
+  {
+    "name": "goodreads-logo",
+    "text": "goodreads-logo brands *updated* reading books social media logos"
+  },
+  {
+    "name": "google-cardboard-logo",
+    "text": "google-cardboard-logo brands games virtual reality vr logos"
+  },
+  {
+    "name": "google-chrome-logo",
+    "text": "google-chrome-logo brands web browsers internet"
+  },
+  {
+    "name": "google-drive-logo",
+    "text": "google-drive-logo brands cloud storage backup logos"
+  },
+  {
+    "name": "google-logo",
+    "text": "google-logo brands logos search engine phone mobile android"
+  },
+  {
+    "name": "google-photos-logo",
+    "text": "google-photos-logo brands media album pictures photography"
+  },
+  {
+    "name": "google-play-logo",
+    "text": "google-play-logo brands system media logos games apps applications play store app store phone mobile android"
+  },
+  {
+    "name": "google-podcasts-logo",
+    "text": "google-podcasts-logo brands media audio"
+  },
+  {
+    "name": "gps",
+    "text": "gps maps & travel system geolocation location navigation"
+  },
+  {
+    "name": "gps-fix",
+    "text": "gps-fix maps & travel system geolocation location navigation"
+  },
+  {
+    "name": "gps-slash",
+    "text": "gps-slash maps & travel system geolocation location navigation disabled"
+  },
+  {
+    "name": "gradient",
+    "text": "gradient design fade ombre opacity"
+  },
+  {
+    "name": "graduation-cap",
+    "text": "graduation-cap maps & travel objects education classroom teacher school college university degree graduate hat"
+  },
+  {
+    "name": "grains",
+    "text": "grains commerce nature wheat gluten farm farming agriculture"
+  },
+  {
+    "name": "grains-slash",
+    "text": "grains-slash commerce gluten-free wheat gluten farm farming agriculture"
+  },
+  {
+    "name": "graph",
+    "text": "graph office technology & development math & finance nodes tree"
+  },
+  {
+    "name": "graphics-card",
+    "text": "graphics-card technology & development graphics card microchip computer circuit"
+  },
+  {
+    "name": "greater-than",
+    "text": "greater-than finances technology & development math & finance > greater than gt comparison mathematics arithmetic calculator"
+  },
+  {
+    "name": "greater-than-or-equal",
+    "text": "greater-than-or-equal finances technology & development math & finance ≥ greater than or equal gte comparison mathematics arithmetic calculator"
+  },
+  {
+    "name": "grid-four",
+    "text": "grid-four design system 4 apps applications squares tiles cells tables tabular spreadsheets excel"
+  },
+  {
+    "name": "grid-nine",
+    "text": "grid-nine design system 9 apps applications squares tiles cells tables tabular spreadsheets excel"
+  },
+  {
+    "name": "guitar",
+    "text": "guitar media objects music instrument"
+  },
+  {
+    "name": "hair-dryer",
+    "text": "hair-dryer commerce objects blow dryer beauty grooming salon"
+  },
+  {
+    "name": "hamburger",
+    "text": "hamburger commerce maps & travel fast food party places locations restaurants food dining"
+  },
+  {
+    "name": "hammer",
+    "text": "hammer objects system commerce tools carpentry construction"
+  },
+  {
+    "name": "hand",
+    "text": "hand system people pointers cursors emoji backhand"
+  },
+  {
+    "name": "hand-arrow-down",
+    "text": "hand-arrow-down people commerce finances take receive remove withdraw emoji"
+  },
+  {
+    "name": "hand-arrow-up",
+    "text": "hand-arrow-up people commerce finances give insert deposit donation emoji"
+  },
+  {
+    "name": "hand-coins",
+    "text": "hand-coins people commerce finances donation payment money paying purchase"
+  },
+  {
+    "name": "hand-deposit",
+    "text": "hand-deposit people commerce finances give insert donation atm emoji"
+  },
+  {
+    "name": "hand-eye",
+    "text": "hand-eye people *updated* emoji hamsa evil eye"
+  },
+  {
+    "name": "hand-fist",
+    "text": "hand-fist people emoji power protest blm"
+  },
+  {
+    "name": "hand-grabbing",
+    "text": "hand-grabbing system people pointers cursors emoji drag hold"
+  },
+  {
+    "name": "hand-heart",
+    "text": "hand-heart people health & wellness donation care emoji"
+  },
+  {
+    "name": "hand-palm",
+    "text": "hand-palm system people pointers cursors emoji palm stop wait hamsa 5"
+  },
+  {
+    "name": "hand-peace",
+    "text": "hand-peace people communications emoji victory"
+  },
+  {
+    "name": "hand-pointing",
+    "text": "hand-pointing system people pointers cursors emoji fingers clicks mouse"
+  },
+  {
+    "name": "hand-soap",
+    "text": "hand-soap health & wellness objects dispenser pump sanitizer disinfectant lotion bottle"
+  },
+  {
+    "name": "hand-swipe-left",
+    "text": "hand-swipe-left people system system & devices pointers cursors gesture"
+  },
+  {
+    "name": "hand-swipe-right",
+    "text": "hand-swipe-right people system system & devices pointers cursors gesture"
+  },
+  {
+    "name": "hand-tap",
+    "text": "hand-tap people system system & devices pointers cursors gesture"
+  },
+  {
+    "name": "hand-waving",
+    "text": "hand-waving system people emoji palm wave hello goodbye"
+  },
+  {
+    "name": "hand-withdraw",
+    "text": "hand-withdraw people commerce finances take remove withdrawal atm emoji"
+  },
+  {
+    "name": "handbag",
+    "text": "handbag commerce objects suitcases valises baggage purses"
+  },
+  {
+    "name": "handbag-simple",
+    "text": "handbag-simple commerce objects suitcases valises baggage purses"
+  },
+  {
+    "name": "hands-clapping",
+    "text": "hands-clapping system people emoji clap applause"
+  },
+  {
+    "name": "hands-praying",
+    "text": "hands-praying people emoji religion worship prayer thanks thank you"
+  },
+  {
+    "name": "handshake",
+    "text": "handshake agreement partnership collaboration business negotiation trust"
+  },
+  {
+    "name": "hard-drive",
+    "text": "hard-drive storage data devices backup retrieval computing"
+  },
+  {
+    "name": "hard-drives",
+    "text": "hard-drives storage data devices backup retrieval computing"
+  },
+  {
+    "name": "hard-hat",
+    "text": "hard-hat safety construction helmet protection site work"
+  },
+  {
+    "name": "hash",
+    "text": "hash symbol tagging social media categorization trending"
+  },
+  {
+    "name": "hash-straight",
+    "text": "hash-straight symbol tagging social media categorization trending"
+  },
+  {
+    "name": "head-circuit",
+    "text": "head-circuit ai technology automation robotics neural networks"
+  },
+  {
+    "name": "headlights",
+    "text": "headlights illumination vehicles driving night visibility"
+  },
+  {
+    "name": "headphones",
+    "text": "headphones audio music listening entertainment sound"
+  },
+  {
+    "name": "headset",
+    "text": "headset audio communication gaming voice chat virtual reality"
+  },
+  {
+    "name": "heart",
+    "text": "heart love affection emotions favorites relationships"
+  },
+  {
+    "name": "heart-break",
+    "text": "heart-break sorrow loss emotions sadness relationships"
+  },
+  {
+    "name": "heart-half",
+    "text": "heart-half love emotions favorites relationships balance"
+  },
+  {
+    "name": "heart-straight",
+    "text": "heart-straight love emotions favorites relationships cards"
+  },
+  {
+    "name": "heart-straight-break",
+    "text": "heart-straight-break sorrow loss emotions sadness relationships"
+  },
+  {
+    "name": "heartbeat",
+    "text": "heartbeat health monitoring wellness vital signs medical"
+  },
+  {
+    "name": "hexagon",
+    "text": "hexagon geometry shapes design architecture polygons"
+  },
+  {
+    "name": "high-definition",
+    "text": "high-definition clarity video quality resolution display"
+  },
+  {
+    "name": "high-heel",
+    "text": "high-heel fashion footwear style elegance"
+  },
+  {
+    "name": "highlighter",
+    "text": "highlighter marking editing writing notes emphasis"
+  },
+  {
+    "name": "highlighter-circle",
+    "text": "highlighter-circle marking drawing editing emphasis creativity"
+  },
+  {
+    "name": "hockey",
+    "text": "hockey sports competition team ice skating"
+  },
+  {
+    "name": "hoodie",
+    "text": "hoodie casual clothing fashion comfort style"
+  },
+  {
+    "name": "horse",
+    "text": "horse equestrian sports nature animals riding"
+  },
+  {
+    "name": "hospital",
+    "text": "hospital healthcare emergency medical treatment facilities"
+  },
+  {
+    "name": "hourglass",
+    "text": "hourglass time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-high",
+    "text": "hourglass-high time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-low",
+    "text": "hourglass-low time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-medium",
+    "text": "hourglass-medium time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-simple",
+    "text": "hourglass-simple time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-simple-high",
+    "text": "hourglass-simple-high time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-simple-low",
+    "text": "hourglass-simple-low time management waiting progress countdown"
+  },
+  {
+    "name": "hourglass-simple-medium",
+    "text": "hourglass-simple-medium time management waiting progress countdown"
+  },
+  {
+    "name": "house",
+    "text": "house home residence shelter living"
+  },
+  {
+    "name": "house-line",
+    "text": "house-line home residence shelter outline structure"
+  },
+  {
+    "name": "house-simple",
+    "text": "house-simple home residence shelter basic design"
+  },
+  {
+    "name": "hurricane",
+    "text": "hurricane storm weather disaster natural events"
+  },
+  {
+    "name": "ice-cream",
+    "text": "ice-cream dessert food treat summer enjoyment"
+  },
+  {
+    "name": "identification-badge",
+    "text": "identification-badge credentials identification security access"
+  },
+  {
+    "name": "identification-card",
+    "text": "identification-card credentials identification security access"
+  },
+  {
+    "name": "image",
+    "text": "image visual media photography representation graphics"
+  },
+  {
+    "name": "image-broken",
+    "text": "image-broken error missing media broken link"
+  },
+  {
+    "name": "image-square",
+    "text": "image-square visual media photography representation graphics"
+  },
+  {
+    "name": "images",
+    "text": "images collection media photography gallery album"
+  },
+  {
+    "name": "images-square",
+    "text": "images-square collection media photography gallery album"
+  },
+  {
+    "name": "lemniscate",
+    "text": "lemniscate infinity symbol mathematics continuity"
+  },
+  {
+    "name": "info",
+    "text": "info information help support guidance"
+  },
+  {
+    "name": "instagram-logo",
+    "text": "instagram-logo social media photography sharing branding"
+  },
+  {
+    "name": "intersect",
+    "text": "intersect design merging combining elements overlap"
+  },
+  {
+    "name": "intersect-square",
+    "text": "intersect-square design merging combining elements overlap"
+  },
+  {
+    "name": "intersect-three",
+    "text": "intersection three-way venn diagram collaboration diversity inclusion"
+  },
+  {
+    "name": "intersection",
+    "text": "set theory overlap finances data analysis"
+  },
+  {
+    "name": "invoice",
+    "text": "billing payment receipt transaction accounting"
+  },
+  {
+    "name": "island",
+    "text": "tropical vacation getaway paradise remote travel"
+  },
+  {
+    "name": "jar",
+    "text": "storage container food preservation kitchen organization"
+  },
+  {
+    "name": "jar-label",
+    "text": "labeling organization food storage kitchen pantry"
+  },
+  {
+    "name": "jeep",
+    "text": "off-road adventure vehicle transportation rugged travel"
+  },
+  {
+    "name": "joystick",
+    "text": "gaming control arcade entertainment interactive"
+  },
+  {
+    "name": "kanban",
+    "text": "workflow management task organization agile project"
+  },
+  {
+    "name": "key",
+    "text": "security access authentication lock unlock"
+  },
+  {
+    "name": "key-return",
+    "text": "keyboard input system enter command"
+  },
+  {
+    "name": "keyboard",
+    "text": "typing input device computer interface"
+  },
+  {
+    "name": "keyhole",
+    "text": "security privacy access authentication hidden"
+  },
+  {
+    "name": "knife",
+    "text": "cutting utensil kitchen cooking food preparation"
+  },
+  {
+    "name": "ladder",
+    "text": "climbing tool height access construction"
+  },
+  {
+    "name": "ladder-simple",
+    "text": "basic climbing tool height access construction"
+  },
+  {
+    "name": "lamp",
+    "text": "lighting home decor illumination furniture"
+  },
+  {
+    "name": "lamp-pendant",
+    "text": "hanging light fixture home decor illumination"
+  },
+  {
+    "name": "laptop",
+    "text": "portable computer technology work study"
+  },
+  {
+    "name": "lasso",
+    "text": "selection tool design graphics creative"
+  },
+  {
+    "name": "lastfm-logo",
+    "text": "music streaming social media branding"
+  },
+  {
+    "name": "layout",
+    "text": "design structure interface organization wireframe"
+  },
+  {
+    "name": "leaf",
+    "text": "nature greenery environment sustainability plants"
+  },
+  {
+    "name": "lectern",
+    "text": "presentation stand education public speaking"
+  },
+  {
+    "name": "lego",
+    "text": "building blocks creativity play toys"
+  },
+  {
+    "name": "lego-smiley",
+    "text": "playful expression creativity fun toys"
+  },
+  {
+    "name": "less-than",
+    "text": "comparison mathematical symbol inequality analysis"
+  },
+  {
+    "name": "less-than-or-equal",
+    "text": "mathematical comparison symbol inequality analysis"
+  },
+  {
+    "name": "letter-circle-h",
+    "text": "hospital communication symbol mapping identification"
+  },
+  {
+    "name": "letter-circle-p",
+    "text": "parking communication symbol mapping identification"
+  },
+  {
+    "name": "letter-circle-v",
+    "text": "vegan communication symbol mapping identification"
+  },
+  {
+    "name": "lifebuoy",
+    "text": "safety rescue support help nautical"
+  },
+  {
+    "name": "lightbulb",
+    "text": "idea innovation illumination energy creativity"
+  },
+  {
+    "name": "lightbulb-filament",
+    "text": "vintage lighting idea innovation energy"
+  },
+  {
+    "name": "lighthouse",
+    "text": "navigation safety maritime guidance coastal"
+  },
+  {
+    "name": "lightning",
+    "text": "storm electricity power energy weather"
+  },
+  {
+    "name": "lightning-a",
+    "text": "automated flash electricity power energy"
+  },
+  {
+    "name": "lightning-slash",
+    "text": "disabled power electricity energy storm"
+  },
+  {
+    "name": "line-segment",
+    "text": "graphic design drawing vector representation"
+  },
+  {
+    "name": "line-segments",
+    "text": "graphic design drawing vector representation"
+  },
+  {
+    "name": "line-vertical",
+    "text": "divider graphic design interface layout"
+  },
+  {
+    "name": "link",
+    "text": "connection hyperlink navigation web communication"
+  },
+  {
+    "name": "link-break",
+    "text": "broken connection hyperlink error navigation"
+  },
+  {
+    "name": "link-simple",
+    "text": "basic connection hyperlink navigation web"
+  },
+  {
+    "name": "link-simple-break",
+    "text": "broken basic connection hyperlink error navigation"
+  },
+  {
+    "name": "link-simple-horizontal",
+    "text": "horizontal connection hyperlink navigation web"
+  },
+  {
+    "name": "link-simple-horizontal-break",
+    "text": "broken horizontal connection hyperlink error navigation"
+  },
+  {
+    "name": "linkedin-logo",
+    "text": "professional networking social media branding"
+  },
+  {
+    "name": "linktree-logo",
+    "text": "social media links branding connection"
+  },
+  {
+    "name": "linux-logo",
+    "text": "open source operating system technology branding"
+  },
+  {
+    "name": "list",
+    "text": "list system editor office & editing menu sidebar organization structure hierarchy"
+  },
+  {
+    "name": "list-bullets",
+    "text": "list-bullets editor office & editing unordered list bullet points checklist organization"
+  },
+  {
+    "name": "list-checks",
+    "text": "list-checks office editor checklist todo task management completion"
+  },
+  {
+    "name": "list-dashes",
+    "text": "list-dashes editor office & editing unordered list dashed points checklist organization"
+  },
+  {
+    "name": "list-heart",
+    "text": "list-heart editor system favorites wishlist liked items preferences"
+  },
+  {
+    "name": "list-magnifying-glass",
+    "text": "list-magnifying-glass editor system search query inspect find locate"
+  },
+  {
+    "name": "list-numbers",
+    "text": "list-numbers editor office & editing ordered list numbered points checklist organization"
+  },
+  {
+    "name": "list-plus",
+    "text": "list-plus editor office & editing add item checklist unordered ordered"
+  },
+  {
+    "name": "list-star",
+    "text": "list-star editor system favorites wishlist liked items preferences"
+  },
+  {
+    "name": "lock",
+    "text": "lock objects system security padlock authentication privacy secured"
+  },
+  {
+    "name": "lock-key",
+    "text": "lock-key objects system security padlock authentication access secured"
+  },
+  {
+    "name": "lock-key-open",
+    "text": "lock-key-open objects system security padlock authentication access unsecured"
+  },
+  {
+    "name": "lock-laminated",
+    "text": "lock-laminated objects system security padlock authentication privacy secured"
+  },
+  {
+    "name": "lock-laminated-open",
+    "text": "lock-laminated-open objects system security padlock authentication access unsecured"
+  },
+  {
+    "name": "lock-open",
+    "text": "lock-open objects system security padlock authentication access unsecured"
+  },
+  {
+    "name": "lock-simple",
+    "text": "lock-simple objects system security padlock authentication privacy secured"
+  },
+  {
+    "name": "lock-simple-open",
+    "text": "lock-simple-open objects system security padlock authentication access unsecured"
+  },
+  {
+    "name": "lockers",
+    "text": "lockers maps & travel storage gym locker room personal space"
+  },
+  {
+    "name": "log",
+    "text": "log nature weather & nature tree stump branch wood"
+  },
+  {
+    "name": "magic-wand",
+    "text": "magic-wand design games selection wizard creativity tools"
+  },
+  {
+    "name": "magnet",
+    "text": "magnet technology & development magnetism science attraction physics"
+  },
+  {
+    "name": "magnet-straight",
+    "text": "magnet-straight technology & development magnetism science attraction physics"
+  },
+  {
+    "name": "magnifying-glass",
+    "text": "magnifying-glass editor system search inspect find locate query"
+  },
+  {
+    "name": "magnifying-glass-minus",
+    "text": "magnifying-glass-minus editor system search zoom out find locate"
+  },
+  {
+    "name": "magnifying-glass-plus",
+    "text": "magnifying-glass-plus editor system search zoom in find locate"
+  },
+  {
+    "name": "mailbox",
+    "text": "mailbox communications objects email letters messaging post"
+  },
+  {
+    "name": "map-pin",
+    "text": "map-pin maps & travel markers locations poi navigation"
+  },
+  {
+    "name": "map-pin-area",
+    "text": "map-pin-area maps & travel markers locations area poi navigation"
+  },
+  {
+    "name": "map-pin-line",
+    "text": "map-pin-line maps & travel markers locations line poi navigation"
+  },
+  {
+    "name": "map-pin-plus",
+    "text": "map-pin-plus maps & travel markers locations add poi navigation"
+  },
+  {
+    "name": "map-pin-simple",
+    "text": "map-pin-simple maps & travel markers locations poi navigation"
+  },
+  {
+    "name": "map-pin-simple-area",
+    "text": "map-pin-simple-area maps & travel markers locations area poi navigation"
+  },
+  {
+    "name": "map-pin-simple-line",
+    "text": "map-pin-simple-line maps & travel markers locations line poi navigation"
+  },
+  {
+    "name": "map-trifold",
+    "text": "map-trifold maps & travel cartography geography navigation layout"
+  },
+  {
+    "name": "markdown-logo",
+    "text": "markdown-logo technology & development media markup editor .md syntax"
+  },
+  {
+    "name": "marker-circle",
+    "text": "marker-circle design editor writing drawing creativity tools"
+  },
+  {
+    "name": "martini",
+    "text": "martini commerce drinks cocktails beverages dining bars restaurants"
+  },
+  {
+    "name": "mask-happy",
+    "text": "mask-happy communications games theater costume smile joy performance"
+  },
+  {
+    "name": "mask-sad",
+    "text": "mask-sad communications games theater costume cry sorrow performance"
+  },
+  {
+    "name": "mastodon-logo",
+    "text": "mastodon-logo brands communications fediverse social media decentralized network"
+  },
+  {
+    "name": "math-operations",
+    "text": "math-operations technology & development finances arithmetic calculations addition subtraction"
+  },
+  {
+    "name": "matrix-logo",
+    "text": "matrix-logo brands communications protocol logos technology"
+  },
+  {
+    "name": "medal",
+    "text": "medal objects games awards victory ribbons achievement"
+  },
+  {
+    "name": "medal-military",
+    "text": "medal-military objects games military awards victory ribbons honor"
+  },
+  {
+    "name": "medium-logo",
+    "text": "medium-logo brands logos reading writing news social media"
+  },
+  {
+    "name": "megaphone",
+    "text": "megaphone communications objects announcements loudspeaker broadcasting messages"
+  },
+  {
+    "name": "megaphone-simple",
+    "text": "megaphone-simple communications objects announcements loudspeaker broadcasting messages"
+  },
+  {
+    "name": "member-of",
+    "text": "member-of finances technology mathematics set membership element"
+  },
+  {
+    "name": "memory",
+    "text": "memory technology system ram microchip electronics storage"
+  },
+  {
+    "name": "messenger-logo",
+    "text": "messenger-logo brands communications logos social media messaging"
+  },
+  {
+    "name": "meta-logo",
+    "text": "meta-logo brands social media digital identity online presence"
+  },
+  {
+    "name": "meteor",
+    "text": "meteor weather nature astronomy celestial event shooting star"
+  },
+  {
+    "name": "metronome",
+    "text": "metronome music rhythm timing practice tool"
+  },
+  {
+    "name": "microphone",
+    "text": "microphone audio recording sound amplification voice communication"
+  },
+  {
+    "name": "microphone-slash",
+    "text": "microphone-slash audio muted disabled sound control privacy"
+  },
+  {
+    "name": "microphone-stage",
+    "text": "microphone-stage performance concert live event sound system"
+  },
+  {
+    "name": "microscope",
+    "text": "microscope science biology research laboratory magnification"
+  },
+  {
+    "name": "microsoft-excel-logo",
+    "text": "microsoft-excel-logo spreadsheets data analysis office productivity"
+  },
+  {
+    "name": "microsoft-outlook-logo",
+    "text": "microsoft-outlook-logo email communication scheduling office productivity"
+  },
+  {
+    "name": "microsoft-powerpoint-logo",
+    "text": "microsoft-powerpoint-logo presentations slideshows visual communication office"
+  },
+  {
+    "name": "microsoft-teams-logo",
+    "text": "microsoft-teams-logo collaboration chat video conferencing remote work"
+  },
+  {
+    "name": "microsoft-word-logo",
+    "text": "microsoft-word-logo document editing word processing office productivity"
+  },
+  {
+    "name": "minus",
+    "text": "minus subtraction decrease negative value calculator operation"
+  },
+  {
+    "name": "minus-circle",
+    "text": "minus-circle subtraction removal negative value circular icon"
+  },
+  {
+    "name": "minus-square",
+    "text": "minus-square subtraction decrease negative value square icon"
+  },
+  {
+    "name": "money",
+    "text": "money currency finance transactions payment purchasing"
+  },
+  {
+    "name": "money-wavy",
+    "text": "money-wavy currency finance transactions payment purchasing"
+  },
+  {
+    "name": "monitor",
+    "text": "monitor display screen technology devices visual output"
+  },
+  {
+    "name": "monitor-arrow-up",
+    "text": "monitor-arrow-up upload video sharing screencast screen"
+  },
+  {
+    "name": "monitor-play",
+    "text": "monitor-play video playback media streaming display"
+  },
+  {
+    "name": "moon",
+    "text": "moon night astronomy lunar phases sleep mode"
+  },
+  {
+    "name": "moon-stars",
+    "text": "moon-stars night sky astronomy stargazing constellation"
+  },
+  {
+    "name": "moped",
+    "text": "moped transportation scooter travel urban mobility"
+  },
+  {
+    "name": "moped-front",
+    "text": "moped-front transportation scooter travel urban mobility"
+  },
+  {
+    "name": "mosque",
+    "text": "mosque worship religion islamic architecture community"
+  },
+  {
+    "name": "motorcycle",
+    "text": "motorcycle transportation vehicles travel adventure freedom"
+  },
+  {
+    "name": "mountains",
+    "text": "mountains nature landscape outdoor adventure hiking"
+  },
+  {
+    "name": "mouse",
+    "text": "mouse input device computer navigation clicks"
+  },
+  {
+    "name": "mouse-left-click",
+    "text": "mouse-left-click input device computer selection action"
+  },
+  {
+    "name": "mouse-middle-click",
+    "text": "mouse-middle-click input device computer navigation action"
+  },
+  {
+    "name": "mouse-right-click",
+    "text": "mouse-right-click input device computer context menu action"
+  },
+  {
+    "name": "mouse-scroll",
+    "text": "mouse-scroll input device navigation scrolling action"
+  },
+  {
+    "name": "mouse-simple",
+    "text": "mouse-simple input device basic navigation clicks"
+  },
+  {
+    "name": "music-note",
+    "text": "music-note audio sound melody rhythm"
+  },
+  {
+    "name": "music-note-simple",
+    "text": "music-note-simple audio sound melody rhythm"
+  },
+  {
+    "name": "music-notes",
+    "text": "music-notes audio sound melody rhythm composition"
+  },
+  {
+    "name": "music-notes-minus",
+    "text": "music-notes-minus audio sound subtraction remove notes"
+  },
+  {
+    "name": "music-notes-plus",
+    "text": "music-notes-plus audio sound addition add notes"
+  },
+  {
+    "name": "music-notes-simple",
+    "text": "music-notes-simple audio sound melody rhythm"
+  },
+  {
+    "name": "navigation-arrow",
+    "text": "navigation-arrow direction location travel guidance"
+  },
+  {
+    "name": "needle",
+    "text": "needle sewing crafting textile tailoring"
+  },
+  {
+    "name": "network",
+    "text": "network connectivity internet systems communication"
+  },
+  {
+    "name": "network-slash",
+    "text": "network-slash connectivity error disabled internet access"
+  },
+  {
+    "name": "network-x",
+    "text": "network-x connectivity disabled internet access error"
+  },
+  {
+    "name": "newspaper",
+    "text": "newspaper media journalism reading news"
+  },
+  {
+    "name": "newspaper-clipping",
+    "text": "newspaper-clipping media journalism reading news articles"
+  },
+  {
+    "name": "not-equals",
+    "text": "not-equals mathematics comparison inequality logic"
+  },
+  {
+    "name": "not-member-of",
+    "text": "not-member-of mathematics set theory logic membership"
+  },
+  {
+    "name": "not-subset-of",
+    "text": "not-subset-of mathematics set theory logic relationships"
+  },
+  {
+    "name": "not-superset-of",
+    "text": "not-superset-of mathematics set theory logic relationships"
+  },
+  {
+    "name": "notches",
+    "text": "notches system editor design textarea resize drag handle grip"
+  },
+  {
+    "name": "note",
+    "text": "note office editor office & editing notes note-taking memorandum reminders"
+  },
+  {
+    "name": "note-blank",
+    "text": "note-blank office editor office & editing notes blank note-taking reminders"
+  },
+  {
+    "name": "note-pencil",
+    "text": "note-pencil office editor office & editing notes note-taking pencil writing"
+  },
+  {
+    "name": "notebook",
+    "text": "notebook office editor office & editing notes note-taking journal diary"
+  },
+  {
+    "name": "notepad",
+    "text": "notepad office editor office & editing logs note-taking memorandum journal"
+  },
+  {
+    "name": "notification",
+    "text": "notification system alerts updates messages badge"
+  },
+  {
+    "name": "notion-logo",
+    "text": "notion-logo brands documentation productivity wiki software"
+  },
+  {
+    "name": "nuclear-plant",
+    "text": "nuclear-plant commerce energy power electricity renewable resources"
+  },
+  {
+    "name": "number-circle-eight",
+    "text": "number-circle-eight finances math 8 round numeral digit"
+  },
+  {
+    "name": "number-circle-five",
+    "text": "number-circle-five finances math 5 round numeral digit"
+  },
+  {
+    "name": "number-circle-four",
+    "text": "number-circle-four finances math 4 round numeral digit"
+  },
+  {
+    "name": "number-circle-nine",
+    "text": "number-circle-nine finances math 9 round numeral digit"
+  },
+  {
+    "name": "number-circle-one",
+    "text": "number-circle-one finances math 1 round numeral digit"
+  },
+  {
+    "name": "number-circle-seven",
+    "text": "number-circle-seven finances math 7 round numeral digit"
+  },
+  {
+    "name": "number-circle-six",
+    "text": "number-circle-six finances math 6 round numeral digit"
+  },
+  {
+    "name": "number-circle-three",
+    "text": "number-circle-three finances math 3 round numeral digit"
+  },
+  {
+    "name": "number-circle-two",
+    "text": "number-circle-two finances math 2 round numeral digit"
+  },
+  {
+    "name": "number-circle-zero",
+    "text": "number-circle-zero finances math 0 round numeral digit"
+  },
+  {
+    "name": "number-eight",
+    "text": "number-eight finances math 8 numeral digit"
+  },
+  {
+    "name": "number-five",
+    "text": "number-five finances math 5 numeral digit"
+  },
+  {
+    "name": "number-four",
+    "text": "number-four finances math 4 numeral digit"
+  },
+  {
+    "name": "number-nine",
+    "text": "number-nine finances math 9 numeral digit"
+  },
+  {
+    "name": "number-one",
+    "text": "number-one finances math 1 numeral digit"
+  },
+  {
+    "name": "number-seven",
+    "text": "number-seven finances math 7 numeral digit"
+  },
+  {
+    "name": "number-six",
+    "text": "number-six finances math 6 numeral digit"
+  },
+  {
+    "name": "number-square-eight",
+    "text": "number-square-eight finances math 8 square numeral digit"
+  },
+  {
+    "name": "number-square-five",
+    "text": "number-square-five finances math 5 square numeral digit"
+  },
+  {
+    "name": "number-square-four",
+    "text": "number-square-four finances math 4 square numeral digit"
+  },
+  {
+    "name": "number-square-nine",
+    "text": "number-square-nine finances math 9 square numeral digit"
+  },
+  {
+    "name": "number-square-one",
+    "text": "number-square-one finances math 1 square numeral digit"
+  },
+  {
+    "name": "number-square-seven",
+    "text": "number-square-seven finances math 7 square numeral digit"
+  },
+  {
+    "name": "number-square-six",
+    "text": "number-square-six finances math 6 square numeral digit"
+  },
+  {
+    "name": "number-square-three",
+    "text": "number-square-three finances math 3 square numeral digit"
+  },
+  {
+    "name": "number-square-two",
+    "text": "number-square-two finances math 2 square numeral digit"
+  },
+  {
+    "name": "number-square-zero",
+    "text": "number-square-zero finances math 0 square numeral digit"
+  },
+  {
+    "name": "number-three",
+    "text": "number-three finances math 3 numeral digit"
+  },
+  {
+    "name": "number-two",
+    "text": "number-two finances math 2 numeral digit"
+  },
+  {
+    "name": "number-zero",
+    "text": "number-zero finances math 0 numeral digit"
+  },
+  {
+    "name": "numpad",
+    "text": "numpad communications system dialer keypad telephone"
+  },
+  {
+    "name": "nut",
+    "text": "nut objects system devices hardware tools fasteners"
+  },
+  {
+    "name": "ny-times-logo",
+    "text": "ny-times-logo brands news media reading journalism"
+  },
+  {
+    "name": "octagon",
+    "text": "octagon design shapes polygons geometry"
+  },
+  {
+    "name": "office-chair",
+    "text": "office-chair objects furniture seating workspace ergonomics"
+  },
+  {
+    "name": "onigiri",
+    "text": "onigiri commerce food rice ball japanese cuisine"
+  },
+  {
+    "name": "open-ai-logo",
+    "text": "open-ai-logo technology brands artificial intelligence innovation"
+  },
+  {
+    "name": "option",
+    "text": "option system editor keyboard shortcut modifier key"
+  },
+  {
+    "name": "orange",
+    "text": "orange commerce food fruit citrus vitamin"
+  },
+  {
+    "name": "orange-slice",
+    "text": "orange-slice commerce food fruit citrus garnish"
+  },
+  {
+    "name": "oven",
+    "text": "oven commerce kitchen appliances cooking baking"
+  },
+  {
+    "name": "package",
+    "text": "parcel delivery logistics shipment freight courier storage transport"
+  },
+  {
+    "name": "paint-brush",
+    "text": "brush art creativity painting tools strokes"
+  },
+  {
+    "name": "paint-brush-broad",
+    "text": "wide brush fill color painting tools strokes"
+  },
+  {
+    "name": "paint-brush-household",
+    "text": "home improvement painting tools household decor"
+  },
+  {
+    "name": "paint-bucket",
+    "text": "color fill paint tools container arts"
+  },
+  {
+    "name": "paint-roller",
+    "text": "roller paint application tools home improvement"
+  },
+  {
+    "name": "palette",
+    "text": "color mixing artist tools selection"
+  },
+  {
+    "name": "panorama",
+    "text": "wide view photography landscape images"
+  },
+  {
+    "name": "pants",
+    "text": "trousers apparel fashion clothing style"
+  },
+  {
+    "name": "paper-plane",
+    "text": "send message communication travel mail"
+  },
+  {
+    "name": "paper-plane-right",
+    "text": "message delivery communication travel mail"
+  },
+  {
+    "name": "paper-plane-tilt",
+    "text": "send message communication travel mail"
+  },
+  {
+    "name": "paperclip",
+    "text": "attach documents office organization editing"
+  },
+  {
+    "name": "paperclip-horizontal",
+    "text": "attach documents office organization editing"
+  },
+  {
+    "name": "parachute",
+    "text": "skydiving safety adventure sports"
+  },
+  {
+    "name": "paragraph",
+    "text": "text formatting writing editing structure"
+  },
+  {
+    "name": "parallelogram",
+    "text": "shape design geometry branding logos"
+  },
+  {
+    "name": "park",
+    "text": "recreation nature outdoor activities relaxation"
+  },
+  {
+    "name": "password",
+    "text": "security authentication login access protection"
+  },
+  {
+    "name": "path",
+    "text": "navigation route travel direction mapping"
+  },
+  {
+    "name": "patreon-logo",
+    "text": "crowdfunding support creators platform branding"
+  },
+  {
+    "name": "pause",
+    "text": "media control playback halt stop"
+  },
+  {
+    "name": "pause-circle",
+    "text": "media control playback halt stop round"
+  },
+  {
+    "name": "paw-print",
+    "text": "animal pet care veterinary wildlife"
+  },
+  {
+    "name": "paypal-logo",
+    "text": "online payment transactions finance commerce"
+  },
+  {
+    "name": "peace",
+    "text": "harmony love symbol communication unity"
+  },
+  {
+    "name": "pen",
+    "text": "writing tool office signature creativity"
+  },
+  {
+    "name": "pen-nib",
+    "text": "fountain pen writing tool calligraphy artistry"
+  },
+  {
+    "name": "pen-nib-straight",
+    "text": "fountain pen writing tool calligraphy artistry"
+  },
+  {
+    "name": "pencil",
+    "text": "writing tool sketching drawing creativity"
+  },
+  {
+    "name": "pencil-circle",
+    "text": "drawing tool sketching creativity circular"
+  },
+  {
+    "name": "pencil-line",
+    "text": "drawing tool sketching creativity linear"
+  },
+  {
+    "name": "pencil-ruler",
+    "text": "drawing tool measurement drafting design"
+  },
+  {
+    "name": "pencil-simple",
+    "text": "basic writing tool sketching creativity"
+  },
+  {
+    "name": "pencil-simple-line",
+    "text": "basic drawing tool sketching creativity"
+  },
+  {
+    "name": "pencil-simple-slash",
+    "text": "editing tool read-only writing creativity"
+  },
+  {
+    "name": "pencil-slash",
+    "text": "editing tool read-only writing creativity"
+  },
+  {
+    "name": "pentagon",
+    "text": "shape design geometry polygons five"
+  },
+  {
+    "name": "pentagram",
+    "text": "symbol spirituality design magic religion"
+  },
+  {
+    "name": "pepper",
+    "text": "spice food cooking flavor seasoning"
+  },
+  {
+    "name": "percent",
+    "text": "mathematics finance calculations ratios statistics"
+  },
+  {
+    "name": "person",
+    "text": "individual human user identity travel"
+  },
+  {
+    "name": "person-arms-spread",
+    "text": "gesture health wellness accessibility expression"
+  },
+  {
+    "name": "person-simple",
+    "text": "individual human user identity travel"
+  },
+  {
+    "name": "person-simple-bike",
+    "text": "biking activity health wellness transportation"
+  },
+  {
+    "name": "person-simple-circle",
+    "text": "individual human accessibility representation identity"
+  },
+  {
+    "name": "person-simple-hike",
+    "text": "hiking outdoor activity health wellness"
+  },
+  {
+    "name": "person-simple-run",
+    "text": "running activity health wellness fitness"
+  },
+  {
+    "name": "person-simple-ski",
+    "text": "skiing winter sport health wellness"
+  },
+  {
+    "name": "person-simple-snowboard",
+    "text": "snowboarding winter sport health wellness"
+  },
+  {
+    "name": "person-simple-swim",
+    "text": "swimming aquatic fitness leisure recreation summer activity"
+  },
+  {
+    "name": "person-simple-tai-chi",
+    "text": "tai chi wellness relaxation balance exercise health mindfulness"
+  },
+  {
+    "name": "person-simple-throw",
+    "text": "throwing sports activity fitness recreation outdoor games"
+  },
+  {
+    "name": "person-simple-walk",
+    "text": "walking exercise fitness health commuting outdoor activity"
+  },
+  {
+    "name": "perspective",
+    "text": "3d view design layout graphics visualization"
+  },
+  {
+    "name": "phone",
+    "text": "telephone communication device contact connect talk"
+  },
+  {
+    "name": "phone-call",
+    "text": "voice call communication connect talk conversation"
+  },
+  {
+    "name": "phone-disconnect",
+    "text": "hang up call end communication disconnect"
+  },
+  {
+    "name": "phone-incoming",
+    "text": "incoming call alert notification communication connect"
+  },
+  {
+    "name": "phone-list",
+    "text": "call log contacts communication management organization"
+  },
+  {
+    "name": "phone-outgoing",
+    "text": "outgoing call communication connect talk initiate"
+  },
+  {
+    "name": "phone-pause",
+    "text": "hold call communication pause wait"
+  },
+  {
+    "name": "phone-plus",
+    "text": "add contact call conference communication connect"
+  },
+  {
+    "name": "phone-slash",
+    "text": "call disabled communication disconnect mute"
+  },
+  {
+    "name": "phone-transfer",
+    "text": "transfer call communication redirect connect"
+  },
+  {
+    "name": "phone-x",
+    "text": "missed call error communication notification alert"
+  },
+  {
+    "name": "phosphor-logo",
+    "text": "branding identity logo design"
+  },
+  {
+    "name": "pi",
+    "text": "mathematics ratio circle geometry finance"
+  },
+  {
+    "name": "piano-keys",
+    "text": "musical instrument keyboard music performance"
+  },
+  {
+    "name": "picnic-table",
+    "text": "outdoor dining furniture park gathering"
+  },
+  {
+    "name": "picture-in-picture",
+    "text": "video multitasking media overlay display"
+  },
+  {
+    "name": "piggy-bank",
+    "text": "savings finance money deposit coins"
+  },
+  {
+    "name": "pill",
+    "text": "medication health pharmacy prescription treatment"
+  },
+  {
+    "name": "ping-pong",
+    "text": "table tennis sport game recreation"
+  },
+  {
+    "name": "pint-glass",
+    "text": "beverage drink dining pub social"
+  },
+  {
+    "name": "pinterest-logo",
+    "text": "social media branding inspiration sharing"
+  },
+  {
+    "name": "pinwheel",
+    "text": "toy childhood play fun spinning"
+  },
+  {
+    "name": "pipe",
+    "text": "plumbing construction tube flow transport"
+  },
+  {
+    "name": "pipe-wrench",
+    "text": "plumbing tool repair maintenance construction"
+  },
+  {
+    "name": "pix-logo",
+    "text": "payment branding commerce transaction finance"
+  },
+  {
+    "name": "pizza",
+    "text": "food dining restaurant fast food party"
+  },
+  {
+    "name": "placeholder",
+    "text": "design element empty space missing"
+  },
+  {
+    "name": "planet",
+    "text": "astronomy space celestial body universe"
+  },
+  {
+    "name": "plant",
+    "text": "nature growth gardening agriculture eco-friendly"
+  },
+  {
+    "name": "play",
+    "text": "media audio start resume entertainment"
+  },
+  {
+    "name": "play-circle",
+    "text": "media audio start round resume entertainment"
+  },
+  {
+    "name": "play-pause",
+    "text": "media audio control stop resume toggle"
+  },
+  {
+    "name": "playlist",
+    "text": "music audio collection organization queue"
+  },
+  {
+    "name": "plug",
+    "text": "connection device outlet power integration"
+  },
+  {
+    "name": "plug-charging",
+    "text": "charging power connection device energy"
+  },
+  {
+    "name": "plugs",
+    "text": "connections device outlet integration network"
+  },
+  {
+    "name": "plugs-connected",
+    "text": "connected devices integration power network"
+  },
+  {
+    "name": "plus",
+    "text": "addition increase finance math operation"
+  },
+  {
+    "name": "plus-circle",
+    "text": "addition round increase finance math operation"
+  },
+  {
+    "name": "plus-minus",
+    "text": "math operation addition subtraction balance"
+  },
+  {
+    "name": "plus-square",
+    "text": "addition square finance math operation"
+  },
+  {
+    "name": "poker-chip",
+    "text": "gambling casino games tokens betting"
+  },
+  {
+    "name": "police-car",
+    "text": "law enforcement vehicle emergency response"
+  },
+  {
+    "name": "polygon",
+    "text": "geometric shape design graphics drawing"
+  },
+  {
+    "name": "popcorn",
+    "text": "snack movies theater entertainment cinema"
+  },
+  {
+    "name": "popsicle",
+    "text": "popsicle dessert summer treat cold snack ice cream food truck"
+  },
+  {
+    "name": "potted-plant",
+    "text": "potted-plant gardening home decor indoor plant nature greenery"
+  },
+  {
+    "name": "power",
+    "text": "power energy electricity on off switch control device"
+  },
+  {
+    "name": "prescription",
+    "text": "prescription medication healthcare doctor pharmacy treatment wellness"
+  },
+  {
+    "name": "presentation",
+    "text": "presentation meeting slideshows office collaboration visual aids"
+  },
+  {
+    "name": "presentation-chart",
+    "text": "presentation-chart data visualization graphs office analytics reporting"
+  },
+  {
+    "name": "printer",
+    "text": "printer printing documents office equipment output"
+  },
+  {
+    "name": "prohibit",
+    "text": "prohibit forbidden restrictions security warnings no entry"
+  },
+  {
+    "name": "prohibit-inset",
+    "text": "prohibit-inset forbidden restrictions security warnings no entry"
+  },
+  {
+    "name": "projector-screen",
+    "text": "projector-screen presentation media display office meetings"
+  },
+  {
+    "name": "projector-screen-chart",
+    "text": "projector-screen-chart data presentation graphs office analytics"
+  },
+  {
+    "name": "activity",
+    "text": "activity engagement tasks events productivity"
+  },
+  {
+    "name": "push-pin",
+    "text": "push-pin office organization maps location marking"
+  },
+  {
+    "name": "push-pin-simple",
+    "text": "push-pin-simple office organization maps location marking"
+  },
+  {
+    "name": "push-pin-simple-slash",
+    "text": "push-pin-simple-slash disabled marking location office"
+  },
+  {
+    "name": "push-pin-slash",
+    "text": "push-pin-slash disabled marking location office"
+  },
+  {
+    "name": "puzzle-piece",
+    "text": "puzzle-piece games problem-solving components integration"
+  },
+  {
+    "name": "qr-code",
+    "text": "qr-code scanning products marketing mobile payments"
+  },
+  {
+    "name": "question",
+    "text": "question inquiry support help information"
+  },
+  {
+    "name": "question-mark",
+    "text": "question-mark inquiry help information symbol"
+  },
+  {
+    "name": "queue",
+    "text": "queue media playlist music audio waiting"
+  },
+  {
+    "name": "quotes",
+    "text": "quotes communication writing citations literature"
+  },
+  {
+    "name": "rabbit",
+    "text": "rabbit animal nature fast hare wildlife"
+  },
+  {
+    "name": "racquet",
+    "text": "racquet sports tennis games fitness activity"
+  },
+  {
+    "name": "radical",
+    "text": "radical mathematics square root calculations algebra"
+  },
+  {
+    "name": "radio",
+    "text": "radio communication broadcasting media audio"
+  },
+  {
+    "name": "radio-button",
+    "text": "radio-button selection input options choices"
+  },
+  {
+    "name": "radioactive",
+    "text": "radioactive danger warnings nuclear radiation safety"
+  },
+  {
+    "name": "rainbow",
+    "text": "rainbow weather pride lgbtq+ diversity colors"
+  },
+  {
+    "name": "rainbow-cloud",
+    "text": "rainbow-cloud weather pride lgbtq+ cloudy sunny"
+  },
+  {
+    "name": "ranking",
+    "text": "ranking leaderboard competition sports achievements"
+  },
+  {
+    "name": "read-cv-logo",
+    "text": "read-cv-logo branding resumes job applications"
+  },
+  {
+    "name": "receipt",
+    "text": "receipt transaction purchase finance expense tracking"
+  },
+  {
+    "name": "receipt-x",
+    "text": "receipt-x transaction cancellation finance expense"
+  },
+  {
+    "name": "record",
+    "text": "record audio media music capturing"
+  },
+  {
+    "name": "rectangle",
+    "text": "rectangle shape design geometry box"
+  },
+  {
+    "name": "rectangle-dashed",
+    "text": "rectangle-dashed shape design outline missing"
+  },
+  {
+    "name": "recycle",
+    "text": "recycle sustainability environmental waste management"
+  },
+  {
+    "name": "reddit-logo",
+    "text": "reddit-logo social media community branding platform"
+  },
+  {
+    "name": "repeat",
+    "text": "repeat media music audio looping"
+  },
+  {
+    "name": "repeat-once",
+    "text": "repeat-once media music audio single loop"
+  },
+  {
+    "name": "replit-logo",
+    "text": "replit-logo coding development platform programming"
+  },
+  {
+    "name": "resize",
+    "text": "resize design adjust dimensions expand"
+  },
+  {
+    "name": "rewind",
+    "text": "rewind media audio video playback reverse"
+  },
+  {
+    "name": "rewind-circle",
+    "text": "rewind-circle media audio video playback reverse"
+  },
+  {
+    "name": "road-horizon",
+    "text": "road-horizon travel journey transportation driving"
+  },
+  {
+    "name": "robot",
+    "text": "robot automation technology artificial intelligence"
+  },
+  {
+    "name": "rocket",
+    "text": "rocket space exploration launch technology"
+  },
+  {
+    "name": "rocket-launch",
+    "text": "rocket-launch space travel deployment technology"
+  },
+  {
+    "name": "rows",
+    "text": "rows design layout organization table structure"
+  },
+  {
+    "name": "rows-plus-bottom",
+    "text": "rows-plus-bottom design add stack list table cards append insert"
+  },
+  {
+    "name": "rows-plus-top",
+    "text": "rows-plus-top design add stack list table cards prepend insert"
+  },
+  {
+    "name": "rss",
+    "text": "rss news feed updates syndication blog aggregator"
+  },
+  {
+    "name": "rss-simple",
+    "text": "rss-simple news feed updates syndication blog aggregator"
+  },
+  {
+    "name": "rug",
+    "text": "rug home decor textile floor covering"
+  },
+  {
+    "name": "ruler",
+    "text": "ruler measurement tool design layout"
+  },
+  {
+    "name": "sailboat",
+    "text": "sailboat nautical travel water sports recreation"
+  },
+  {
+    "name": "scales",
+    "text": "scales balance measurement weight law justice"
+  },
+  {
+    "name": "scan",
+    "text": "scan barcode products inventory shopping"
+  },
+  {
+    "name": "scan-smiley",
+    "text": "scan-smiley facial recognition security unlock"
+  },
+  {
+    "name": "scissors",
+    "text": "scissors cut design editing tools"
+  },
+  {
+    "name": "scooter",
+    "text": "scooter urban transport mobility travel"
+  },
+  {
+    "name": "screencast",
+    "text": "screencast screen recording sharing tutorial"
+  },
+  {
+    "name": "screwdriver",
+    "text": "screwdriver tool repair assembly"
+  },
+  {
+    "name": "scribble",
+    "text": "scribble doodle drawing sketch"
+  },
+  {
+    "name": "scribble-loop",
+    "text": "scribble-loop doodle drawing sketch"
+  },
+  {
+    "name": "scroll",
+    "text": "scroll document text ancient writing"
+  },
+  {
+    "name": "circle-wavy",
+    "text": "circle-wavy decorative shape design"
+  },
+  {
+    "name": "circle-wavy-check",
+    "text": "circle-wavy-check approval confirmation design"
+  },
+  {
+    "name": "seal-percent",
+    "text": "seal-percent discount badge sale promotion"
+  },
+  {
+    "name": "circle-wavy-question",
+    "text": "circle-wavy-question inquiry help information"
+  },
+  {
+    "name": "circle-wavy-warning",
+    "text": "circle-wavy-warning alert caution notification"
+  },
+  {
+    "name": "seat",
+    "text": "seat transportation comfort travel vehicle"
+  },
+  {
+    "name": "seatbelt",
+    "text": "seatbelt safety protection vehicle"
+  },
+  {
+    "name": "security-camera",
+    "text": "security-camera surveillance monitoring safety"
+  },
+  {
+    "name": "selection",
+    "text": "selection highlight choose mark"
+  },
+  {
+    "name": "selection-all",
+    "text": "selection-all select everything mark all"
+  },
+  {
+    "name": "selection-background",
+    "text": "selection-background design layer highlight"
+  },
+  {
+    "name": "selection-foreground",
+    "text": "selection-foreground design layer highlight"
+  },
+  {
+    "name": "selection-inverse",
+    "text": "selection-inverse invert selection mark"
+  },
+  {
+    "name": "selection-plus",
+    "text": "selection-plus add selection mark"
+  },
+  {
+    "name": "selection-slash",
+    "text": "selection-slash remove unselect mark"
+  },
+  {
+    "name": "shapes",
+    "text": "shapes geometry design forms"
+  },
+  {
+    "name": "share",
+    "text": "share distribute communicate send"
+  },
+  {
+    "name": "share-fat",
+    "text": "share-fat distribute communicate send"
+  },
+  {
+    "name": "share-network",
+    "text": "share-network distribute communicate send"
+  },
+  {
+    "name": "shield",
+    "text": "shield protection security defense"
+  },
+  {
+    "name": "shield-check",
+    "text": "shield-check verified security protection"
+  },
+  {
+    "name": "shield-checkered",
+    "text": "shield-checkered security defense protection"
+  },
+  {
+    "name": "shield-chevron",
+    "text": "shield-chevron security defense protection"
+  },
+  {
+    "name": "shield-plus",
+    "text": "shield-plus add security protection"
+  },
+  {
+    "name": "shield-slash",
+    "text": "shield-slash unsecured vulnerability risk"
+  },
+  {
+    "name": "shield-star",
+    "text": "shield-star trusted security protection"
+  },
+  {
+    "name": "shield-warning",
+    "text": "shield-warning alert security risk"
+  },
+  {
+    "name": "shipping-container",
+    "text": "shipping-container logistics transport commerce"
+  },
+  {
+    "name": "shirt-folded",
+    "text": "shirt-folded clothing apparel fashion"
+  },
+  {
+    "name": "shooting-star",
+    "text": "shooting-star celestial wish dream"
+  },
+  {
+    "name": "shopping-bag",
+    "text": "shopping-bag retail purchase commerce"
+  },
+  {
+    "name": "shopping-bag-open",
+    "text": "shopping-bag-open retail purchase commerce"
+  },
+  {
+    "name": "shopping-cart",
+    "text": "shopping-cart retail purchase ecommerce"
+  },
+  {
+    "name": "shopping-cart-simple",
+    "text": "shopping cart online shopping retail purchase checkout delivery"
+  },
+  {
+    "name": "shovel",
+    "text": "shovel digging earth moving gardening landscaping"
+  },
+  {
+    "name": "shower",
+    "text": "shower bathing hygiene relaxation water bathroom"
+  },
+  {
+    "name": "shrimp",
+    "text": "shrimp seafood cooking cuisine food dish"
+  },
+  {
+    "name": "shuffle",
+    "text": "shuffle randomize playlist music audio entertainment"
+  },
+  {
+    "name": "shuffle-angular",
+    "text": "shuffle angular media randomize playlist music audio"
+  },
+  {
+    "name": "shuffle-simple",
+    "text": "shuffle simple media randomize playlist music audio"
+  },
+  {
+    "name": "sidebar",
+    "text": "sidebar navigation menu layout ui design"
+  },
+  {
+    "name": "sidebar-simple",
+    "text": "sidebar simple navigation menu layout ui design"
+  },
+  {
+    "name": "sigma",
+    "text": "sigma mathematics statistics finance calculations"
+  },
+  {
+    "name": "sign-in",
+    "text": "sign in authentication access login user"
+  },
+  {
+    "name": "sign-out",
+    "text": "sign out logout exit account user"
+  },
+  {
+    "name": "signature",
+    "text": "signature autograph verification identity signing"
+  },
+  {
+    "name": "signpost",
+    "text": "signpost directions navigation travel guidance"
+  },
+  {
+    "name": "sim-card",
+    "text": "sim card mobile cellular communication device"
+  },
+  {
+    "name": "siren",
+    "text": "siren alarm warning security emergency alerts"
+  },
+  {
+    "name": "sketch-logo",
+    "text": "sketch logo design branding creativity illustration"
+  },
+  {
+    "name": "skip-back",
+    "text": "skip back media playback audio rewind reverse"
+  },
+  {
+    "name": "skip-back-circle",
+    "text": "skip back circle media playback audio rewind reverse"
+  },
+  {
+    "name": "skip-forward",
+    "text": "skip forward media playback audio fast forward next"
+  },
+  {
+    "name": "skip-forward-circle",
+    "text": "skip forward circle media playback audio fast forward next"
+  },
+  {
+    "name": "skull",
+    "text": "skull death danger horror games symbol"
+  },
+  {
+    "name": "skype-logo",
+    "text": "skype logo communication video chat messaging"
+  },
+  {
+    "name": "slack-logo",
+    "text": "slack logo messaging collaboration communication platform"
+  },
+  {
+    "name": "sliders",
+    "text": "sliders settings adjustments controls audio preferences"
+  },
+  {
+    "name": "sliders-horizontal",
+    "text": "sliders horizontal settings adjustments controls audio preferences"
+  },
+  {
+    "name": "slideshow",
+    "text": "slideshow presentation media images gallery display"
+  },
+  {
+    "name": "smiley",
+    "text": "smiley face emoji happiness expression communication"
+  },
+  {
+    "name": "smiley-angry",
+    "text": "smiley angry face emoji frustration expression communication"
+  },
+  {
+    "name": "smiley-blank",
+    "text": "smiley blank face emoji neutrality expression communication"
+  },
+  {
+    "name": "smiley-meh",
+    "text": "smiley meh face emoji indifference expression communication"
+  },
+  {
+    "name": "smiley-melting",
+    "text": "smiley melting face emoji embarrassment expression heat"
+  },
+  {
+    "name": "smiley-nervous",
+    "text": "smiley nervous face emoji anxiety expression discomfort"
+  },
+  {
+    "name": "smiley-sad",
+    "text": "smiley sad face emoji unhappiness expression sorrow"
+  },
+  {
+    "name": "smiley-sticker",
+    "text": "smiley sticker face emoji happiness expression communication"
+  },
+  {
+    "name": "smiley-wink",
+    "text": "smiley wink face emoji flirtation expression playfulness"
+  },
+  {
+    "name": "smiley-x-eyes",
+    "text": "smiley x eyes face emoji death expression unconscious"
+  },
+  {
+    "name": "snapchat-logo",
+    "text": "snapchat logo social media messaging communication platform"
+  },
+  {
+    "name": "sneaker",
+    "text": "sneaker footwear sports fashion athletic shoes"
+  },
+  {
+    "name": "sneaker-move",
+    "text": "sneaker move footwear sports fashion athletic shoes"
+  },
+  {
+    "name": "snowflake",
+    "text": "snowflake winter weather cold ice decoration"
+  },
+  {
+    "name": "soccer-ball",
+    "text": "soccer ball sports game football athletic activity"
+  },
+  {
+    "name": "sock",
+    "text": "sock clothing apparel fashion wearables"
+  },
+  {
+    "name": "solar-panel",
+    "text": "solar panel renewable energy sustainability power generation"
+  },
+  {
+    "name": "solar-roof",
+    "text": "solar roof renewable energy sustainability power generation"
+  },
+  {
+    "name": "sort-ascending",
+    "text": "sort ascending order organization arrangement list"
+  },
+  {
+    "name": "sort-descending",
+    "text": "sort descending order organization arrangement list"
+  },
+  {
+    "name": "soundcloud-logo",
+    "text": "soundcloud logo music audio streaming platform"
+  },
+  {
+    "name": "spade",
+    "text": "spade card games gambling suits gaming"
+  },
+  {
+    "name": "sparkle",
+    "text": "sparkle shine brightness highlight attention beauty"
+  },
+  {
+    "name": "speaker-hifi",
+    "text": "speaker-hifi media objects music audio sound stereo high-fidelity"
+  },
+  {
+    "name": "speaker-high",
+    "text": "speaker-high media system music audio volume sound loud"
+  },
+  {
+    "name": "speaker-low",
+    "text": "speaker-low media system music audio volume sound quiet"
+  },
+  {
+    "name": "speaker-none",
+    "text": "speaker-none media system music audio muted volume sound silence"
+  },
+  {
+    "name": "speaker-simple-high",
+    "text": "speaker-simple-high media system music audio volume sound basic"
+  },
+  {
+    "name": "speaker-simple-low",
+    "text": "speaker-simple-low media system music audio volume sound minimal"
+  },
+  {
+    "name": "speaker-simple-none",
+    "text": "speaker-simple-none media system music audio muted volume sound off"
+  },
+  {
+    "name": "speaker-simple-slash",
+    "text": "speaker-simple-slash media system music audio muted volume sound disabled"
+  },
+  {
+    "name": "speaker-simple-x",
+    "text": "speaker-simple-x media system music audio muted volume sound error"
+  },
+  {
+    "name": "speaker-slash",
+    "text": "speaker-slash media system music audio muted volume sound disabled"
+  },
+  {
+    "name": "speaker-x",
+    "text": "speaker-x media system music audio muted volume sound error"
+  },
+  {
+    "name": "speedometer",
+    "text": "speedometer technology & development objects system gauge dashboard meter speed performance"
+  },
+  {
+    "name": "sphere",
+    "text": "sphere design circle ball 3d mesh model geometry"
+  },
+  {
+    "name": "spinner",
+    "text": "spinner system devices loading loader waiting progress animation"
+  },
+  {
+    "name": "spinner-ball",
+    "text": "spinner-ball system devices loading loader waiting progress animation"
+  },
+  {
+    "name": "spinner-gap",
+    "text": "spinner-gap system devices loading loader waiting progress animation"
+  },
+  {
+    "name": "spiral",
+    "text": "spiral communications design games spin rotate dizzy pattern"
+  },
+  {
+    "name": "split-horizontal",
+    "text": "split-horizontal arrows design editor resize columns layout"
+  },
+  {
+    "name": "split-vertical",
+    "text": "split-vertical arrows design editor resize rows layout"
+  },
+  {
+    "name": "spotify-logo",
+    "text": "spotify-logo brands media music player streaming service"
+  },
+  {
+    "name": "spray-bottle",
+    "text": "spray-bottle objects health wellness design cleaner cleaning tool"
+  },
+  {
+    "name": "square",
+    "text": "square design shapes polygons box geometry"
+  },
+  {
+    "name": "square-half",
+    "text": "square-half design shapes polygons box columns layout"
+  },
+  {
+    "name": "square-half-bottom",
+    "text": "square-half-bottom design shapes polygons box columns layout"
+  },
+  {
+    "name": "square-logo",
+    "text": "square-logo brands commerce finances payment processing"
+  },
+  {
+    "name": "square-split-horizontal",
+    "text": "square-split-horizontal design editor shapes polygons columns layout"
+  },
+  {
+    "name": "square-split-vertical",
+    "text": "square-split-vertical design editor shapes polygons rows layout"
+  },
+  {
+    "name": "squares-four",
+    "text": "squares-four design system shapes polygons grid layout"
+  },
+  {
+    "name": "stack",
+    "text": "stack design office editor cards layers organization"
+  },
+  {
+    "name": "stack-minus",
+    "text": "stack-minus design office editor cards layers remove delete"
+  },
+  {
+    "name": "stack-overflow-logo",
+    "text": "stack-overflow-logo brands technology development code community"
+  },
+  {
+    "name": "stack-plus",
+    "text": "stack-plus design office editor cards layers add"
+  },
+  {
+    "name": "stack-simple",
+    "text": "stack-simple design office editor cards layers basic"
+  },
+  {
+    "name": "stairs",
+    "text": "stairs commerce objects staircase steps exit signs navigation"
+  },
+  {
+    "name": "stamp",
+    "text": "stamp design objects clone seal official mark"
+  },
+  {
+    "name": "standard-definition",
+    "text": "standard-definition media sd resolution video quality"
+  },
+  {
+    "name": "star",
+    "text": "star communications maps travel nature rating favorites"
+  },
+  {
+    "name": "star-and-crescent",
+    "text": "star-and-crescent communications people islam moon religion symbol"
+  },
+  {
+    "name": "star-four",
+    "text": "star-four communications nature weather rating favorites"
+  },
+  {
+    "name": "star-half",
+    "text": "star-half communications rating favorites review"
+  },
+  {
+    "name": "star-of-david",
+    "text": "star-of-david communications people judaism hexagram religion symbol"
+  },
+  {
+    "name": "steam-logo",
+    "text": "steam-logo brands games gaming platform"
+  },
+  {
+    "name": "steering-wheel",
+    "text": "steering-wheel maps travel objects cars driving control"
+  },
+  {
+    "name": "steps",
+    "text": "steps commerce objects maps travel staircase navigation"
+  },
+  {
+    "name": "stethoscope",
+    "text": "stethoscope health wellness objects medical doctor emergency"
+  },
+  {
+    "name": "sticker",
+    "text": "sticker communications stickers label pack messaging"
+  },
+  {
+    "name": "stool",
+    "text": "stool objects commerce chair seat furniture design"
+  },
+  {
+    "name": "stop",
+    "text": "stop media system music audio halt"
+  },
+  {
+    "name": "stop-circle",
+    "text": "stop-circle media system music audio round halt"
+  },
+  {
+    "name": "storefront",
+    "text": "storefront commerce maps travel shops shopping market"
+  },
+  {
+    "name": "strategy",
+    "text": "strategy games planning tactics analysis decision-making competition"
+  },
+  {
+    "name": "stripe-logo",
+    "text": "stripe-logo fintech payment processing online transactions e-commerce"
+  },
+  {
+    "name": "student",
+    "text": "student learner education pupil academic youth classroom"
+  },
+  {
+    "name": "subset-of",
+    "text": "subset-of mathematics set theory inclusion relations"
+  },
+  {
+    "name": "subset-proper-of",
+    "text": "subset-proper-of mathematics set theory proper inclusion relations"
+  },
+  {
+    "name": "subtitles",
+    "text": "subtitles accessibility media translation captions"
+  },
+  {
+    "name": "subtitles-slash",
+    "text": "subtitles-slash accessibility media disabled captions off"
+  },
+  {
+    "name": "subtract",
+    "text": "subtract mathematics operations arithmetic removal"
+  },
+  {
+    "name": "subtract-square",
+    "text": "subtract-square mathematics operations arithmetic removal"
+  },
+  {
+    "name": "subway",
+    "text": "subway public transport urban travel commuting underground"
+  },
+  {
+    "name": "suitcase",
+    "text": "suitcase travel luggage baggage carry-on"
+  },
+  {
+    "name": "suitcase-rolling",
+    "text": "suitcase-rolling travel luggage rolling suitcase carry-on"
+  },
+  {
+    "name": "suitcase-simple",
+    "text": "suitcase-simple travel luggage baggage carry-on"
+  },
+  {
+    "name": "sun",
+    "text": "sun daylight brightness warmth solar"
+  },
+  {
+    "name": "sun-dim",
+    "text": "sun-dim daylight brightness reduced shade"
+  },
+  {
+    "name": "sun-horizon",
+    "text": "sun-horizon sunrise sunset daylight horizon"
+  },
+  {
+    "name": "sunglasses",
+    "text": "sunglasses eyewear fashion protection sun"
+  },
+  {
+    "name": "superset-of",
+    "text": "superset-of mathematics set theory inclusion relations"
+  },
+  {
+    "name": "superset-proper-of",
+    "text": "superset-proper-of mathematics set theory proper inclusion relations"
+  },
+  {
+    "name": "swap",
+    "text": "swap exchange replace change arrangement"
+  },
+  {
+    "name": "swatches",
+    "text": "swatches color palette design samples"
+  },
+  {
+    "name": "swimming-pool",
+    "text": "swimming-pool recreation leisure water sports"
+  },
+  {
+    "name": "sword",
+    "text": "sword weapon combat fighting medieval"
+  },
+  {
+    "name": "synagogue",
+    "text": "synagogue religious worship jewish community"
+  },
+  {
+    "name": "syringe",
+    "text": "syringe medical injection vaccination healthcare"
+  },
+  {
+    "name": "t-shirt",
+    "text": "t-shirt apparel clothing casual wear"
+  },
+  {
+    "name": "table",
+    "text": "table data organization spreadsheets layout"
+  },
+  {
+    "name": "tabs",
+    "text": "tabs navigation interface organization"
+  },
+  {
+    "name": "tag",
+    "text": "tag labeling categorization metadata"
+  },
+  {
+    "name": "tag-chevron",
+    "text": "tag-chevron labeling categorization navigation"
+  },
+  {
+    "name": "tag-simple",
+    "text": "tag-simple labeling categorization metadata"
+  },
+  {
+    "name": "target",
+    "text": "target goal aim focus accuracy"
+  },
+  {
+    "name": "taxi",
+    "text": "taxi transportation ride-hailing urban travel"
+  },
+  {
+    "name": "tea-bag",
+    "text": "tea-bag beverage infusion drink relaxation"
+  },
+  {
+    "name": "telegram-logo",
+    "text": "telegram-logo messaging communication app"
+  },
+  {
+    "name": "television",
+    "text": "television media entertainment broadcasting"
+  },
+  {
+    "name": "television-simple",
+    "text": "television-simple media entertainment broadcasting"
+  },
+  {
+    "name": "tennis-ball",
+    "text": "tennis-ball sports recreation games"
+  },
+  {
+    "name": "tent",
+    "text": "tent camping outdoor recreation shelter"
+  },
+  {
+    "name": "terminal",
+    "text": "terminal command line interface computing"
+  },
+  {
+    "name": "terminal-window",
+    "text": "terminal-window command line interface computing"
+  },
+  {
+    "name": "test-tube",
+    "text": "test-tube laboratory science experimentation"
+  },
+  {
+    "name": "text-a-underline",
+    "text": "text-a-underline typography emphasis formatting"
+  },
+  {
+    "name": "text-aa",
+    "text": "text-aa typography formatting style"
+  },
+  {
+    "name": "text-align-center",
+    "text": "text-align-center typography alignment centered"
+  },
+  {
+    "name": "text-align-justify",
+    "text": "text-align-justify typography alignment justified"
+  },
+  {
+    "name": "text-align-left",
+    "text": "text-align-left typography alignment left"
+  },
+  {
+    "name": "text-align-right",
+    "text": "text-align-right typography alignment right"
+  },
+  {
+    "name": "text-bolder",
+    "text": "text-bolder typography emphasis weight"
+  },
+  {
+    "name": "text-columns",
+    "text": "text-columns typography layout formatting"
+  },
+  {
+    "name": "text-h",
+    "text": "heading title section typography layout design"
+  },
+  {
+    "name": "text-h-five",
+    "text": "heading h5 title typography layout design"
+  },
+  {
+    "name": "text-h-four",
+    "text": "heading h4 title typography layout design"
+  },
+  {
+    "name": "text-h-one",
+    "text": "heading h1 title typography layout design"
+  },
+  {
+    "name": "text-h-six",
+    "text": "heading h6 title typography layout design"
+  },
+  {
+    "name": "text-h-three",
+    "text": "heading h3 title typography layout design"
+  },
+  {
+    "name": "text-h-two",
+    "text": "heading h2 title typography layout design"
+  },
+  {
+    "name": "text-indent",
+    "text": "indentation alignment formatting text layout"
+  },
+  {
+    "name": "text-italic",
+    "text": "italic style emphasis typography font design"
+  },
+  {
+    "name": "text-outdent",
+    "text": "outdent unindent alignment formatting text layout"
+  },
+  {
+    "name": "text-strikethrough",
+    "text": "strikethrough delete remove text formatting"
+  },
+  {
+    "name": "text-subscript",
+    "text": "subscript formatting typography math notation"
+  },
+  {
+    "name": "text-superscript",
+    "text": "superscript formatting typography math notation"
+  },
+  {
+    "name": "text-t",
+    "text": "text typography font design layout"
+  },
+  {
+    "name": "text-t-slash",
+    "text": "clear formatting text typography design"
+  },
+  {
+    "name": "text-underline",
+    "text": "underline emphasis typography text formatting"
+  },
+  {
+    "name": "textbox",
+    "text": "input field text entry user interface"
+  },
+  {
+    "name": "thermometer",
+    "text": "temperature measurement weather health scale"
+  },
+  {
+    "name": "thermometer-cold",
+    "text": "cold temperature measurement weather health"
+  },
+  {
+    "name": "thermometer-hot",
+    "text": "hot temperature measurement weather health"
+  },
+  {
+    "name": "thermometer-simple",
+    "text": "simple temperature measurement weather health"
+  },
+  {
+    "name": "threads-logo",
+    "text": "social media branding communication platform"
+  },
+  {
+    "name": "three-d",
+    "text": "3d modeling technology design development"
+  },
+  {
+    "name": "thumbs-down",
+    "text": "dislike negative feedback emoji communication"
+  },
+  {
+    "name": "thumbs-up",
+    "text": "like positive feedback emoji communication"
+  },
+  {
+    "name": "ticket",
+    "text": "entry admission event travel ticketing"
+  },
+  {
+    "name": "tidal-logo",
+    "text": "music streaming branding media platform"
+  },
+  {
+    "name": "tiktok-logo",
+    "text": "social media branding video platform"
+  },
+  {
+    "name": "tilde",
+    "text": "approximation mathematical symbol comparison"
+  },
+  {
+    "name": "timer",
+    "text": "time tracking events scheduling countdown"
+  },
+  {
+    "name": "tip-jar",
+    "text": "donation contribution financial support"
+  },
+  {
+    "name": "tipi",
+    "text": "tent camping outdoor shelter travel"
+  },
+  {
+    "name": "tire",
+    "text": "vehicle wheel transportation automotive"
+  },
+  {
+    "name": "toggle-left",
+    "text": "switch settings preferences user interface"
+  },
+  {
+    "name": "toggle-right",
+    "text": "switch settings preferences user interface"
+  },
+  {
+    "name": "toilet",
+    "text": "bathroom facility health hygiene"
+  },
+  {
+    "name": "toilet-paper",
+    "text": "bathroom supply hygiene cleanliness"
+  },
+  {
+    "name": "toolbox",
+    "text": "tools storage carpentry construction maintenance"
+  },
+  {
+    "name": "tooth",
+    "text": "dental health hygiene teeth care"
+  },
+  {
+    "name": "tornado",
+    "text": "severe weather storm disaster meteorology"
+  },
+  {
+    "name": "tote",
+    "text": "baggage carrying storage travel"
+  },
+  {
+    "name": "tote-simple",
+    "text": "simple baggage carrying storage travel"
+  },
+  {
+    "name": "towel",
+    "text": "linen drying cleaning bathing swimming"
+  },
+  {
+    "name": "tractor",
+    "text": "farming vehicle agriculture field work"
+  },
+  {
+    "name": "trademark",
+    "text": "intellectual property branding legal protection"
+  },
+  {
+    "name": "trademark-registered",
+    "text": "registered trademark legal protection branding"
+  },
+  {
+    "name": "traffic-cone",
+    "text": "safety marker road construction transit"
+  },
+  {
+    "name": "traffic-sign",
+    "text": "road sign navigation transit safety"
+  },
+  {
+    "name": "traffic-signal",
+    "text": "stoplight control traffic safety transit"
+  },
+  {
+    "name": "train",
+    "text": "public transit vehicle travel transportation"
+  },
+  {
+    "name": "train-regional",
+    "text": "train regional maps travel vehicles subway railroad public transit transportation commuter freight"
+  },
+  {
+    "name": "train-simple",
+    "text": "train simple maps travel vehicles subway light rail public transit transportation commuter"
+  },
+  {
+    "name": "tram",
+    "text": "tram maps travel vehicles subway railroad public transit transportation commuter light rail"
+  },
+  {
+    "name": "translate",
+    "text": "translate communications system translation languages internationalization i18n speech interpretation"
+  },
+  {
+    "name": "trash",
+    "text": "trash office system garbage remove delete destroy recycle waste disposal"
+  },
+  {
+    "name": "trash-simple",
+    "text": "trash simple office system garbage remove delete destroy recycle waste disposal"
+  },
+  {
+    "name": "tray",
+    "text": "tray office communications inbox mailbox storage organization"
+  },
+  {
+    "name": "archive-tray",
+    "text": "archive tray storage organization documents files data management"
+  },
+  {
+    "name": "tray-arrow-up",
+    "text": "tray arrow up office system outbox archival upload send"
+  },
+  {
+    "name": "treasure-chest",
+    "text": "treasure chest games loot inventory rewards gaming pirate adventure"
+  },
+  {
+    "name": "tree",
+    "text": "tree nature weather plants branches leaves green environmental ecology"
+  },
+  {
+    "name": "tree-evergreen",
+    "text": "evergreen tree nature weather plants branches leaves pine conifer"
+  },
+  {
+    "name": "tree-palm",
+    "text": "palm tree nature games tropical beach plants branches leaves"
+  },
+  {
+    "name": "tree-structure",
+    "text": "tree structure technology office data family tree genealogy hierarchy"
+  },
+  {
+    "name": "tree-view",
+    "text": "tree view system hierarchy navigation organization structure"
+  },
+  {
+    "name": "trend-down",
+    "text": "trend down finances math graphs statistics analyze decrease decline"
+  },
+  {
+    "name": "trend-up",
+    "text": "trend up finances math graphs statistics analyze increase growth"
+  },
+  {
+    "name": "triangle",
+    "text": "triangle design shapes polygons geometry angles"
+  },
+  {
+    "name": "triangle-dashed",
+    "text": "dashed triangle design shapes polygons incomplete missing geometry"
+  },
+  {
+    "name": "trolley",
+    "text": "trolley office travel airport baggage luggage transport"
+  },
+  {
+    "name": "trolley-suitcase",
+    "text": "trolley suitcase office travel airport baggage luggage transport"
+  },
+  {
+    "name": "trophy",
+    "text": "trophy games awards medals victory achievement recognition"
+  },
+  {
+    "name": "truck",
+    "text": "truck commerce travel shipping delivery vehicles transport freight"
+  },
+  {
+    "name": "truck-trailer",
+    "text": "truck trailer commerce shipping vehicles transport freight semi"
+  },
+  {
+    "name": "tumblr-logo",
+    "text": "tumblr logo brands communications social media blogging platform"
+  },
+  {
+    "name": "twitch-logo",
+    "text": "twitch logo brands communications games streaming live video"
+  },
+  {
+    "name": "twitter-logo",
+    "text": "twitter logo brands communications social media tweets birds"
+  },
+  {
+    "name": "umbrella",
+    "text": "umbrella objects weather rain protection insurance"
+  },
+  {
+    "name": "umbrella-simple",
+    "text": "simple umbrella objects weather rain protection insurance"
+  },
+  {
+    "name": "union",
+    "text": "union finances technology math set member operations"
+  },
+  {
+    "name": "unite",
+    "text": "unite design editor join merge combine intersection collaboration"
+  },
+  {
+    "name": "unite-square",
+    "text": "unite square design editor join merge combine intersection collaboration"
+  },
+  {
+    "name": "upload",
+    "text": "upload system devices saving archival transfer files"
+  },
+  {
+    "name": "upload-simple",
+    "text": "simple upload system devices saving archival transfer files"
+  },
+  {
+    "name": "usb",
+    "text": "usb objects system devices connection peripheral interface"
+  },
+  {
+    "name": "user",
+    "text": "user people profile account contact login identity"
+  },
+  {
+    "name": "user-check",
+    "text": "user check people profile account verified authentication"
+  },
+  {
+    "name": "user-circle",
+    "text": "user circle people profile account contact login identity"
+  },
+  {
+    "name": "user-circle-check",
+    "text": "user circle check people profile account verified authentication"
+  },
+  {
+    "name": "user-circle-dashed",
+    "text": "user circle dashed people profile account pending missing"
+  },
+  {
+    "name": "user-circle-gear",
+    "text": "user circle gear people profile account settings preferences"
+  },
+  {
+    "name": "user-circle-minus",
+    "text": "user circle minus people profile account delete remove"
+  },
+  {
+    "name": "user-circle-plus",
+    "text": "user circle plus people profile account add create"
+  },
+  {
+    "name": "user-focus",
+    "text": "user focus identification biometrics profile person account"
+  },
+  {
+    "name": "user-gear",
+    "text": "user gear people profile account settings preferences"
+  },
+  {
+    "name": "user-list",
+    "text": "user list people profiles accounts members directory"
+  },
+  {
+    "name": "user-minus",
+    "text": "user minus people profile account delete remove"
+  },
+  {
+    "name": "user-plus",
+    "text": "user plus people profile account add create"
+  },
+  {
+    "name": "user-rectangle",
+    "text": "user rectangle people profile account contact login identity"
+  },
+  {
+    "name": "user-sound",
+    "text": "user sound people profile speech voice communication"
+  },
+  {
+    "name": "user-square",
+    "text": "user-square people person users profile account contact login identity"
+  },
+  {
+    "name": "user-switch",
+    "text": "user-switch people person users profile account login logout signin signout preferences"
+  },
+  {
+    "name": "users",
+    "text": "users people user group team profiles accounts contacts community"
+  },
+  {
+    "name": "users-four",
+    "text": "users-four people user group team department community profiles accounts"
+  },
+  {
+    "name": "users-three",
+    "text": "users-three people user group team community profiles accounts"
+  },
+  {
+    "name": "van",
+    "text": "van maps & travel objects westfalia microbus vanagon cars vehicles transit"
+  },
+  {
+    "name": "vault",
+    "text": "vault objects system finances security safe bank authentication locked"
+  },
+  {
+    "name": "vector-three",
+    "text": "vector-three arrows technology & development design 3d coordinates mathematics"
+  },
+  {
+    "name": "vector-two",
+    "text": "vector-two arrows technology & development design 2d coordinates mathematics"
+  },
+  {
+    "name": "vibrate",
+    "text": "vibrate system devices audio volume ringer silent notifications"
+  },
+  {
+    "name": "video",
+    "text": "video people education training course tutorial media"
+  },
+  {
+    "name": "video-camera",
+    "text": "video-camera media system objects videography films recording"
+  },
+  {
+    "name": "video-camera-slash",
+    "text": "video-camera-slash media system videography recording disabled"
+  },
+  {
+    "name": "video-conference",
+    "text": "video-conference media system communications video call meeting"
+  },
+  {
+    "name": "vignette",
+    "text": "vignette design photography darkroom effects"
+  },
+  {
+    "name": "vinyl-record",
+    "text": "vinyl-record media office recording audio music album"
+  },
+  {
+    "name": "virtual-reality",
+    "text": "virtual-reality games media vr headset metaverse immersive"
+  },
+  {
+    "name": "virus",
+    "text": "virus health & wellness germs disease infection"
+  },
+  {
+    "name": "visor",
+    "text": "visor technology & development media goggles vision protection"
+  },
+  {
+    "name": "voicemail",
+    "text": "voicemail system communication phonecalls missed messages"
+  },
+  {
+    "name": "volleyball",
+    "text": "volleyball games health & wellness sports recreation"
+  },
+  {
+    "name": "wall",
+    "text": "wall objects system security firewall barriers"
+  },
+  {
+    "name": "wallet",
+    "text": "wallet commerce finances objects money payment transactions"
+  },
+  {
+    "name": "warehouse",
+    "text": "warehouse commerce maps & travel storage industry logistics"
+  },
+  {
+    "name": "warning",
+    "text": "warning system security alert danger caution"
+  },
+  {
+    "name": "warning-circle",
+    "text": "warning-circle system security alert danger caution round"
+  },
+  {
+    "name": "warning-diamond",
+    "text": "warning-diamond system security alert danger caution"
+  },
+  {
+    "name": "warning-octagon",
+    "text": "warning-octagon system security alert danger caution eight"
+  },
+  {
+    "name": "washing-machine",
+    "text": "washing-machine commerce maps & travel objects laundry cleaning"
+  },
+  {
+    "name": "watch",
+    "text": "watch system objects time timer schedule events"
+  },
+  {
+    "name": "wave-sawtooth",
+    "text": "wave-sawtooth media synth synthesizer sound audio music"
+  },
+  {
+    "name": "wave-sine",
+    "text": "wave-sine media synth synthesizer sound audio music"
+  },
+  {
+    "name": "wave-square",
+    "text": "wave-square media synth synthesizer sound audio music"
+  },
+  {
+    "name": "wave-triangle",
+    "text": "wave-triangle media synth synthesizer sound audio music"
+  },
+  {
+    "name": "waveform",
+    "text": "waveform media audio sound spectrum music"
+  },
+  {
+    "name": "waveform-slash",
+    "text": "waveform-slash media audio sound spectrum music disabled"
+  },
+  {
+    "name": "waves",
+    "text": "waves nature weather ocean tides surf"
+  },
+  {
+    "name": "webcam",
+    "text": "webcam objects system communications media video conference"
+  },
+  {
+    "name": "webcam-slash",
+    "text": "webcam-slash communications objects system media video conference disabled"
+  },
+  {
+    "name": "webhooks-logo",
+    "text": "webhooks-logo technology & development brands api integration"
+  },
+  {
+    "name": "wechat-logo",
+    "text": "wechat-logo brands weixin messaging communication"
+  },
+  {
+    "name": "whatsapp-logo",
+    "text": "whatsapp-logo brands communications messaging chat"
+  },
+  {
+    "name": "wheelchair",
+    "text": "wheelchair health & wellness maps & travel accessibility"
+  },
+  {
+    "name": "wheelchair-motion",
+    "text": "wheelchair-motion health & wellness maps & travel accessibility mobility"
+  },
+  {
+    "name": "wifi-high",
+    "text": "wifi-high system devices wireless internet connectivity"
+  },
+  {
+    "name": "wifi-low",
+    "text": "wifi-low system devices wireless internet connectivity"
+  },
+  {
+    "name": "wifi-medium",
+    "text": "wifi-medium system devices wireless internet connectivity"
+  },
+  {
+    "name": "wifi-none",
+    "text": "wifi-none system devices wireless internet no connection"
+  },
+  {
+    "name": "wifi-slash",
+    "text": "wifi-slash system devices wireless internet disabled"
+  },
+  {
+    "name": "wifi-x",
+    "text": "wifi-x system devices wireless internet errors disconnected"
+  },
+  {
+    "name": "wind",
+    "text": "airflow breeze climate nature outdoors environment weather patterns"
+  },
+  {
+    "name": "windmill",
+    "text": "agriculture energy production rural heritage eco-friendly machinery"
+  },
+  {
+    "name": "windows-logo",
+    "text": "operating system software interface desktop computing technology"
+  },
+  {
+    "name": "wine",
+    "text": "alcoholic beverage fermentation grapes tasting sommelier celebration"
+  },
+  {
+    "name": "wrench",
+    "text": "adjustment maintenance repair tools hardware settings"
+  },
+  {
+    "name": "x",
+    "text": "delete remove cancel close error multiplication exclusion"
+  },
+  {
+    "name": "x-circle",
+    "text": "error alert dismiss cancel close round icon"
+  },
+  {
+    "name": "x-logo",
+    "text": "social media branding communication networking tweets"
+  },
+  {
+    "name": "x-square",
+    "text": "cancel close dismiss error alert square icon"
+  },
+  {
+    "name": "yarn",
+    "text": "crafting textile fiber arts knitting crochet sewing"
+  },
+  {
+    "name": "yin-yang",
+    "text": "balance duality philosophy harmony opposites symbol"
+  },
+  {
+    "name": "youtube-logo",
+    "text": "video platform streaming entertainment content creator vlogs"
+  }
+]

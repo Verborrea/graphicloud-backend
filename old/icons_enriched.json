@@ -1,0 +1,104 @@
+[
+  {
+    "name": "brain",
+    "categories": ["health", "nature"],
+    "tags": ["mind", "mental"],
+    "text": "brain health nature mind mental neural network model intelligence cognition reasoning ai thinking"
+  },
+  {
+    "name": "graph",
+    "categories": ["office", "development"],
+    "tags": ["nodes", "tree"],
+    "text": "graph office development nodes tree knowledge graph network nodes edges topology structure"
+  },
+  {
+    "name": "chart-bar",
+    "categories": ["finance", "office"],
+    "tags": [
+      "graphs",
+      "graphing",
+      "charts",
+      "statistics",
+      "histogram",
+      "analyze",
+      "analysis"
+    ],
+    "text": "chart bar finance office graphs graphing charts statistics histogram analyze analysis benchmark evaluation metrics performance results comparison"
+  },
+  {
+    "name": "chart-line",
+    "categories": ["finance", "office"],
+    "tags": [
+      "graphs",
+      "graphing",
+      "charts",
+      "statistics",
+      "analyze",
+      "analysis",
+      "stocks"
+    ],
+    "text": "chart line finance office graphs graphing charts statistics analyze analysis stocks training loss curve learning rate convergence epoch progress"
+  },
+  {
+    "name": "file-text",
+    "categories": ["office", "editor"],
+    "tags": ["documents", "files", "save", "write"],
+    "text": "file text office editor documents files save write paper research document abstract methodology arxiv publication"
+  },
+  {
+    "name": "magnifying-glass",
+    "categories": ["editor", "system"],
+    "tags": ["search", "find", "locate", "query", "inspect"],
+    "text": "magnifying glass editor system search find locate query inspect retrieval search semantic similarity query embedding lookup"
+  },
+  {
+    "name": "books",
+    "categories": ["office", "map", "media", "objects"],
+    "tags": [
+      "reading",
+      "reader",
+      "bookshelf",
+      "library",
+      "places",
+      "locations"
+    ],
+    "text": "books office map media objects reading reader bookshelf library places locations dataset corpus bibliography references literature survey"
+  },
+  {
+    "name": "cpu",
+    "categories": ["development"],
+    "tags": ["processor", "microchip", "computer", "circuit"],
+    "text": "cpu development processor microchip computer circuit inference compute hardware accelerator resource processing"
+  },
+  {
+    "name": "arrows-clockwise",
+    "categories": ["arrows"],
+    "tags": [
+      "directional",
+      "pointer",
+      "pointing",
+      "arrowhead",
+      "redo",
+      "refreshing",
+      "sync",
+      "synchronize",
+      "rotate",
+      "spin",
+      "flip"
+    ],
+    "text": "arrows clockwise arrows directional pointer pointing arrowhead redo refreshing sync synchronize rotate spin flip training iteration fine-tuning update cycle loop optimization"
+  },
+  {
+    "name": "chart-scatter",
+    "categories": ["finance", "office"],
+    "tags": [
+      "graphs",
+      "graphing",
+      "charts",
+      "statistics",
+      "analyze",
+      "analysis"
+    ],
+    "text": "chart scatter finance office graphs graphing charts statistics analyze analysis embedding visualization umap cluster latent space distribution"
+  }
+]
