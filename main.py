@@ -16,6 +16,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
+from sklearn.cluster import HDBSCAN
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
@@ -23,40 +24,23 @@ from umap import UMAP
 
 from stopwords import STOPWORDS
 
-try:
-    from sklearn.cluster import HDBSCAN  # type: ignore
-
-    HAS_HDBSCAN = True
-except ImportError:
-    try:
-        from hdbscan import HDBSCAN  # type: ignore
-
-        HAS_HDBSCAN = True
-    except ImportError:
-        HAS_HDBSCAN = False
-
 load_dotenv()
 
 # ── Configuración ─────────────────────────────────────────────────────────────
-ICON_PACKS_DIR = os.getenv("ICON_PACKS_DIR", "icon-packs")
-ICON_PACK = os.getenv("ICON_PACK", "material")
-SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD", "0.05"))
-PHRASE_MODE = os.getenv("ICON_PHRASE_MODE", "words_bigrams")
-EXACT_MATCH_BONUS = float(os.getenv("ICON_EXACT_BONUS", "1.0"))
-
+ICON_PACKS_DIR = "icon-packs"
+ICON_PACK = "material"
+SCORE_THRESHOLD = "0.1"
+PHRASE_MODE = "words_bigrams"
+EXACT_MATCH_BONUS = "1.0"
+NAME_MATCH_BONUS = "2.0"
+NAME_PARTIAL_BONUS = "0.6"
 HEAD_PAGES = 2
-
-# Subir este número invalida los caches de embeddings de todos los packs.
-# (Necesario porque cambió el formato: ahora se cachean vectores por frase.)
 CACHE_VERSION = 2
-
 SAMPLE_CHUNK_CHARS = 1_200
 SAMPLE_POSITIONS = (0.0, 0.25, 0.5, 0.75)
-
 MAX_CANDIDATES_PER_DOC = 100  # candidatos para keywords semánticas (MMR)
 MMR_DIVERSITY = 0.4
 QUERY_CACHE_SIZE = 1_024
-
 TOP_K_TFIDF_LOCAL = 80
 
 REGEX_CLEAN = [
@@ -137,12 +121,25 @@ class IconPack:
         self.cache_dir = os.path.join(self.root, ".cache")
 
         self.names: list[str] = []
+        self.name_phrases: list[str] = []  # name normalizado (sin _ ni -)
+
         # Frases por ícono + estructuras derivadas para búsqueda híbrida.
         self.icon_phrases: list[list[str]] = []
         self.icon_phrase_sets: list[set[str]] = []
-        self.phrase_to_icons: dict[str, list[int]] = {}  # índice invertido léxico
+        self.phrase_to_icons: dict[
+            str, list[int]
+        ] = {}  # índice invertido léxico (tags)
         self.phrase_vectors: np.ndarray | None = None  # (n_frases_totales, dim)
         self.phrase_owner: np.ndarray | None = None  # (n_frases_totales,) -> ícono
+
+        # Índices invertidos sobre el NAME (separados de los tags, para que el
+        # bonus de nombre se pueda aplicar sin penalización y en O(1)).
+        self.name_phrase_to_icon: dict[str, int] = {}  # name completo -> ícono único
+        self.name_word_to_icons: dict[str, list[int]] = {}  # palabra del name -> íconos
+
+        # Penalización por tamaño de bag de tags (no afecta al bonus de name).
+        self.icon_tag_penalty: np.ndarray | None = None  # (n_icons,)
+
         self._svg_cache: dict[str, str | None] = {}
 
     # -- split del campo `text` en frases --------------------------------------
@@ -180,12 +177,40 @@ class IconPack:
         enriched: list[dict] = json.loads(raw.decode("utf-8"))
 
         self.names = [item["name"] for item in enriched]
-        self.icon_phrases = [
-            self._split_phrases(item.get("text") or item["name"]) for item in enriched
+        self.name_phrases = [
+            _norm_phrase(n.replace("_", " ").replace("-", " ")) for n in self.names
         ]
+
+        # -- índices invertidos sobre el name (independientes de los tags) --
+        self.name_phrase_to_icon = {}
+        self.name_word_to_icons = {}
+        for i, name_phrase in enumerate(self.name_phrases):
+            # Si dos íconos comparten name (no debería pasar, pero por si acaso
+            # se queda el primero) — un dict ya da esa semántica por defecto
+            # si no sobreescribimos explícitamente.
+            self.name_phrase_to_icon.setdefault(name_phrase, i)
+            for w in name_phrase.split():
+                self.name_word_to_icons.setdefault(w, []).append(i)
+
+        # -- frases por ícono: el name siempre entra como frase de búsqueda --
+        self.icon_phrases = []
+        for item, name_phrase in zip(enriched, self.name_phrases):
+            phrases = self._split_phrases(item.get("text") or item["name"])
+            if name_phrase not in phrases:
+                phrases = [name_phrase] + phrases
+            self.icon_phrases.append(phrases)
         self.icon_phrase_sets = [set(p) for p in self.icon_phrases]
 
-        # Aplanado de frases + índice invertido (frase -> íconos que la tienen).
+        # -- penalización por tamaño de bag de tags --
+        # log2 amortigua la diferencia: un ícono con 40 tags no se penaliza
+        # 4x más que uno con 10, pero sí lo suficiente para que el bonus
+        # léxico de un tag perdido entre 40 no compita con uno de pocos tags.
+        n_phrases_per_icon = np.array(
+            [len(p) for p in self.icon_phrases], dtype="float32"
+        )
+        self.icon_tag_penalty = 1.0 / np.log2(n_phrases_per_icon + 2)
+
+        # Aplanado de frases + índice invertido léxico (frase -> íconos que la tienen).
         self.phrase_to_icons = {}
         flat_phrases: list[str] = []
         owner: list[int] = []
@@ -244,7 +269,7 @@ class IconPack:
                 f,
             )
 
-    # -- búsqueda híbrida: max sobre frases + bonus léxico exacto ---------------
+    # -- búsqueda híbrida: max sobre frases + bonus léxico jerárquico -----------
     # Con varios miles de íconos y decenas de frases cada uno (cientos de miles
     # de vectores x 384 dims), un matmul de NumPy resuelve la búsqueda exacta en
     # pocos ms. La cuantización 4-bit (TurboVec) solo agregaría error sin
@@ -258,13 +283,25 @@ class IconPack:
     ):
         """query_matrix: (Q, dim) L2-normalizada (centroide semántico por grupo).
         query_keywords: Q listas de strings normalizados (para match léxico).
-        Devuelve (scores, indices) con shape (Q, k), score = semántico + bonus."""
+        Devuelve (scores, indices) con shape (Q, k), score = semántico + bonus.
+
+        Bonus léxico en tres niveles (de mayor a menor confianza):
+            1) keyword == name completo del ícono       -> NAME_MATCH_BONUS
+            2) keyword es palabra del name compuesto     -> NAME_PARTIAL_BONUS
+            3) keyword == un tag de `text`                -> EXACT_MATCH_BONUS,
+               escalado por icon_tag_penalty (castiga bags de tags grandes)
+
+        El bonus de name NUNCA se penaliza por tamaño de bag: el nombre es
+        siempre la señal más confiable, independientemente de cuántos tags
+        tenga el ícono.
+        """
         assert self.phrase_vectors is not None and self.phrase_owner is not None
+        assert self.icon_tag_penalty is not None
         Q = query_matrix.shape[0]
         n_icons = len(self.names)
         k = min(k, n_icons)
 
-        # 1) Semántico: similitud query↔frase, reducida a MAX por ícono.
+        # 1) Semántico: similitud query ↔ frase, reducida a MAX por ícono.
         #    (Aquí está el arreglo: "team members" matchea la FRASE del ícono,
         #     no el centroide diluido de todo su texto.)
         sims = query_matrix @ self.phrase_vectors.T  # (Q, n_frases)
@@ -272,11 +309,21 @@ class IconPack:
         for q in range(Q):
             np.maximum.at(icon_scores[q], self.phrase_owner, sims[q])
 
-        # 2) Léxico: bonus por coincidencia EXACTA de keyword con frase del ícono.
+        # 2) Léxico jerárquico, todo vía índices invertidos -> O(Q × keywords).
         for q in range(Q):
             for kw in query_keywords[q]:
+                # 2a) Tag exacto en `text`, penalizado por tamaño de bag.
                 for ic in self.phrase_to_icons.get(kw, ()):
-                    icon_scores[q, ic] += EXACT_MATCH_BONUS
+                    icon_scores[q, ic] += EXACT_MATCH_BONUS * self.icon_tag_penalty[ic]
+
+                # 2b) Match exacto con el name completo (sin penalizar).
+                exact_icon = self.name_phrase_to_icon.get(kw)
+                if exact_icon is not None:
+                    icon_scores[q, exact_icon] += NAME_MATCH_BONUS
+
+                # 2c) Match con una palabra del name compuesto (sin penalizar).
+                for ic in self.name_word_to_icons.get(kw, ()):
+                    icon_scores[q, ic] += NAME_PARTIAL_BONUS
 
         # 3) top-k por fila.
         idx = np.argpartition(-icon_scores, kth=k - 1, axis=1)[:, :k]
@@ -644,9 +691,8 @@ def compute_2d(doc_embs: np.ndarray) -> np.ndarray | None:
         n_neighbors=min(n - 1, 15),
         min_dist=0.15,
         metric="cosine",
-        random_state=42,
         low_memory=True,
-        n_jobs=1,
+        n_jobs=-1,
     )
     return reducer.fit_transform(doc_embs)
 
@@ -663,10 +709,10 @@ def cluster_2d(coords: np.ndarray | None) -> list[int | None]:
     if coords is None:
         return []
     n = coords.shape[0]
-    if not HAS_HDBSCAN or n < 4:
+    if n < 3:
         return [None] * n
 
-    labels = HDBSCAN(min_cluster_size=2, min_samples=1).fit_predict(
+    labels = HDBSCAN(min_cluster_size=2, min_samples=1, copy=False).fit_predict(
         coords.astype("float64")
     )
     return [int(label) for label in labels]
