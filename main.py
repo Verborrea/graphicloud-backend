@@ -29,11 +29,11 @@ load_dotenv()
 # ── Configuración ─────────────────────────────────────────────────────────────
 ICON_PACKS_DIR = "icon-packs"
 ICON_PACK = "material"
-SCORE_THRESHOLD = "0.1"
+SCORE_THRESHOLD = 0.1
 PHRASE_MODE = "words_bigrams"
-EXACT_MATCH_BONUS = "1.0"
-NAME_MATCH_BONUS = "2.0"
-NAME_PARTIAL_BONUS = "0.6"
+EXACT_MATCH_BONUS = 1.0
+NAME_MATCH_BONUS = 2.0
+NAME_PARTIAL_BONUS = 0.6
 HEAD_PAGES = 2
 CACHE_VERSION = 2
 SAMPLE_CHUNK_CHARS = 1_200
@@ -675,10 +675,12 @@ def merge_keyword_results(per_doc: list[list[dict]], top_n: int = 30) -> list[di
     return deduplicate_keywords(combined, top_n=top_n)
 
 
-# ── Layout 2D + clustering (UNA sola reducción, ambos en 2D) ─────────────────
+# ── Layout 2D (solo para dibujar) + clustering (sobre embeddings crudos) ─────
 def compute_2d(doc_embs: np.ndarray) -> np.ndarray | None:
-    """Coordenadas 2D reales (sin posiciones falsas). Devuelve coords SIN
-    normalizar para no distorsionar distancias al clusterizar."""
+    """Coordenadas 2D reales (sin posiciones falsas), SOLO para dibujar.
+    No se usan para clusterizar: proyectar a 2D antes de clusterizar pierde
+    estructura y da peor calidad que clusterizar sobre los embeddings crudos
+    (ver cluster_by_embedding)."""
     n = doc_embs.shape[0]
     if n < 2:
         return None
@@ -697,24 +699,28 @@ def compute_2d(doc_embs: np.ndarray) -> np.ndarray | None:
     return reducer.fit_transform(doc_embs)
 
 
-def normalize_xy(coords: np.ndarray) -> np.ndarray:
-    """Escala a [0,1] por eje SOLO para dibujar (no para clusterizar)."""
+def normalize_coords(coords: np.ndarray) -> np.ndarray:
+    """Escala a [0,1] con UN solo factor para ambos ejes (el mayor rango de
+    los dos), preservando las proporciones reales del layout. Escalar cada
+    eje por separado (minmax) deforma el layout si un eje tiene más rango
+    que el otro."""
     mins, maxs = coords.min(axis=0), coords.max(axis=0)
-    ranges = np.where(maxs - mins == 0, 1, maxs - mins)
-    return (coords - mins) / ranges
+    span = np.where(maxs - mins == 0, 1, maxs - mins)
+    return (coords - mins) / span.max()
 
 
-def cluster_2d(coords: np.ndarray | None) -> list[int | None]:
-    """HDBSCAN directamente sobre las coordenadas 2D del layout."""
-    if coords is None:
-        return []
-    n = coords.shape[0]
+def cluster_by_embedding(doc_embs: np.ndarray) -> list[int | None]:
+    """HDBSCAN directo sobre los embeddings de documento (384 dims, distancia
+    coseno) en vez de sobre la proyección 2D. Es la opción de mejor calidad
+    (no hereda la distorsión de comprimir a 2D) y no cuesta una reducción
+    extra, así que tampoco es más lenta."""
+    n = doc_embs.shape[0]
     if n < 3:
         return [None] * n
 
-    labels = HDBSCAN(min_cluster_size=2, min_samples=1, copy=False).fit_predict(
-        coords.astype("float64")
-    )
+    labels = HDBSCAN(
+        min_cluster_size=2, min_samples=1, metric="cosine", copy=False
+    ).fit_predict(doc_embs.astype("float64"))
     return [int(label) for label in labels]
 
 
@@ -856,8 +862,11 @@ def resolve_icon_groups(groups: list[list[KeywordItem]], k: int = 3) -> list[dic
 
 
 # ── Rutas: PDFs ───────────────────────────────────────────────────────────────
-@app.post("/convert-pdfs/")
-async def convert_pdfs(files: List[UploadFile] = File(...)):
+@app.post("/project-pdfs/")
+async def project_pdfs(files: List[UploadFile] = File(...)):
+    """Proyección 2D + clustering de una lista de documentos. No calcula
+    keywords (eso vive aparte en /extract-keywords/, sobre el subconjunto
+    que pida el frontend para las nubes de palabras)."""
     # Parte 1: Extracción de texto
     t0 = time.perf_counter()
     filenames, raw_results = await extract_all_texts(
@@ -868,7 +877,63 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
     )
     print(f"1. PDF text extraction: {time.perf_counter() - t0:.2f}s")
 
-    valid_names = filenames
+    clean_texts = [clean_text(res) for res in raw_results]
+
+    n = len(clean_texts)
+    if n == 0:
+        raise HTTPException(status_code=422, detail="Ningún PDF pudo procesarse.")
+
+    # Parte 2: embeddings de documento
+    t0 = time.perf_counter()
+    doc_embs = compute_doc_embeddings(clean_texts)
+    print(f"Doc embeddings ({n} docs): {time.perf_counter() - t0:.2f}s")
+
+    # Parte 3: layout 2D (solo para dibujar) + clustering sobre los embeddings
+    # crudos (mejor precisión que clusterizar sobre la proyección 2D, y sin
+    # costo extra: no hace falta ninguna reducción adicional).
+    t0 = time.perf_counter()
+    coords = compute_2d(doc_embs)
+    clusters = cluster_by_embedding(doc_embs)
+    layout = normalize_coords(coords) if coords is not None else None
+    print(f"Layout + clustering: {time.perf_counter() - t0:.2f}s")
+
+    similarity = None
+    if n == 2:
+        similarity = round(float(doc_embs[0] @ doc_embs[1]), 4)
+
+    locals_response = []
+    if layout is not None:
+        locals_response = [
+            {
+                "filename": filenames[i],
+                "x": round(float(layout[i, 0]), 4),
+                "y": round(float(layout[i, 1]), 4),
+                "cluster": clusters[i],
+            }
+            for i in range(n)
+        ]
+
+    return {
+        "locals": locals_response,
+        "similarity": similarity,
+    }
+
+
+@app.post("/extract-keywords/")
+async def extract_keywords(files: List[UploadFile] = File(...)):
+    """Keywords (TF-IDF local + semánticas) para un subconjunto de documentos,
+    usadas por el frontend para armar las nubes de palabras. Se llama por
+    separado de /project-pdfs/ porque solo hace falta para los documentos que
+    el usuario quiere ver como nube, no para todos los que se proyectan."""
+    t0 = time.perf_counter()
+    filenames, raw_results = await extract_all_texts(
+        files,
+        executor,
+        max_concurrent_reads=16,
+        sample_fraction="auto",
+    )
+    print(f"1. PDF text extraction: {time.perf_counter() - t0:.2f}s")
+
     clean_texts = [clean_text(res) for res in raw_results]
 
     n = len(clean_texts)
@@ -893,9 +958,7 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
 
     # Un solo top-k por doc (tamaño = el mayor de los dos usos: candidatos
     # semánticos), reutilizado tanto para local_tfidf_keywords como para
-    # extract_semantic_keywords. Antes se calculaba el top-k DOS VECES
-    # (una en este loop, otra dentro de extract_semantic_keywords sobre
-    # dense_tfidf completo) — ahora es una sola pasada.
+    # extract_semantic_keywords.
     tfidf_topk = top_k_per_row_sparse(tfidf_matrix, k=MAX_CANDIDATES_PER_DOC * 2)
 
     local_tfidf_keywords = []
@@ -909,14 +972,14 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
         local_tfidf_keywords.append(deduplicate_keywords(candidates, top_n=30))
     print(f"TF-IDF: {time.perf_counter() - t0:.2f}s")
 
-    # Parte 3: embeddings de documento
+    # Parte 3: embeddings de documento (necesarios para las keywords
+    # semánticas vía MMR).
     t0 = time.perf_counter()
     doc_embs = compute_doc_embeddings(clean_texts)
     print(f"Doc embeddings ({n} docs): {time.perf_counter() - t0:.2f}s")
 
     # Parte 4: keywords semánticas (MMR), reutilizando el top-k ya calculado
-    # arriba — antes este paso volvía a recorrer la matriz densa completa
-    # para sacar SU PROPIO top-k, duplicando ese costo.
+    # arriba.
     t0 = time.perf_counter()
     per_doc_semantic = extract_semantic_keywords(
         doc_embs, tfidf_topk, feature_names, top_n=40
@@ -924,34 +987,14 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
     global_keywords = merge_keyword_results(per_doc_semantic, top_n=30)
     print(f"Keywords semánticas ({n} docs): {time.perf_counter() - t0:.2f}s")
 
-    # Parte 5: layout + clustering (UNA reducción a 2D, reutilizada para ambos)
-    t0 = time.perf_counter()
-    coords = compute_2d(doc_embs)
-    clusters = cluster_2d(coords)
-    layout = normalize_xy(coords) if coords is not None else None
-    print(f"Layout + clustering: {time.perf_counter() - t0:.2f}s")
-
-    similarity = None
-    if n == 2:
-        similarity = round(float(doc_embs[0] @ doc_embs[1]), 4)
-
-    locals_response = []
-    if layout is not None:
-        locals_response = [
-            {
-                "filename": valid_names[i],
-                "x": round(float(layout[i, 0]), 4),
-                "y": round(float(layout[i, 1]), 4),
-                "cluster": clusters[i],
-                "keywords": local_tfidf_keywords[i],
-            }
-            for i in range(n)
-        ]
+    locals_response = [
+        {"filename": filenames[i], "keywords": local_tfidf_keywords[i]}
+        for i in range(n)
+    ]
 
     return {
         "global": global_keywords,
         "locals": locals_response,
-        "similarity": similarity,
     }
 
 
